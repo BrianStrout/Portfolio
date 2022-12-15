@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --header-text: "";
+  --main-text: "";
+  --sub-text: "";
+  --accent-color: orangered;
+  --background-color: rgb(5, 255, 255);
+  --textcolor: black;
+  --button-text-color: var(var(--background-color));
+  --d-accent-color: #d0d066;
+  --d-background-color: #333;
+  --d-textcolor: white;
+  --trans: 1.5s;
+  --landscape: rgba(0, 128, 0, 0.3);
+}
