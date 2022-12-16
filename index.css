@@ -1,6 +1,10 @@
 @import "src/components/css/root.css";
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
 
+body {
+  overflow: hidden;
+}
+
 .wrapper {
   width: 100vw;
   display: flex;
@@ -9,7 +13,7 @@
   align-items: center;
   background-color: var(--background-color);
   color: var(--textcolor);
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .wrapper.dark {
@@ -169,6 +173,8 @@
   justify-content: flex-start;
   align-items: center;
   overflow: hidden;
+
+  /* border: 1px solid black; */
 }
 .astrology {
   display: flex;
@@ -216,8 +222,8 @@
   align-items: center;
   width: 300px;
   height: 300px;
-  border-radius: 50%;
-  border: 5px solid rgba(0, 0, 0, 0.25);
+  /* border-radius: 50%; */
+  /* border: 5px solid rgba(0, 0, 0, 0.25); */
 }
 #image {
   width: 300px;
@@ -395,7 +401,7 @@
 .down-and-out {
   opacity: 0%;
   top: 140%;
-  transition: top 0.4s linear 0s, opacity 0s linear 1s;
+  transition: top 0.4s linear 0s, opacity 0s linear 0.5s;
 }
 
 #hiBox {
@@ -445,7 +451,7 @@
 
 .wrap2 {
   width: 100vw;
-  height: 300vh;
+  height: 100vh;
   display: flex;
   align-items: flex-start;
   border-top: 3px solid black;
@@ -476,25 +482,92 @@
   position: relative;
   width: 100%;
   height: 100%;
-  /* background-color: #2d0fed;      */
   grid-area: skillRight;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
+.skill-set-div {
+  vertical-align: middle;
+}
 .list-header {
+  /* opacity: 50%; */
 }
-
 .list-header > h4 {
   text-decoration: underline;
   font-family: "Oswald", sans-serif;
   font-size: 2rem;
 }
-
+#listed_skills_front > h4 {
+  transition: transform 0.75s cubic-bezier(0.44, 1.86, 0.5, 1.29) 0.25s;
+}
+#listed_skills_back > h4 {
+  transition: transform 0.75s cubic-bezier(0.44, 1.86, 0.5, 1.29) 0.5s;
+}
+#listed_skills_media > h4 {
+  transition: transform 0.75s cubic-bezier(0.44, 1.86, 0.5, 1.29) 0.75s;
+}
+#listed_skills_other > h4 {
+  transition: transform 0.75s cubic-bezier(0.44, 1.86, 0.5, 1.29) 1s;
+}
+.shrunk {
+  transform: scale(0%);
+  transition: transform 0.75s cubic-bezier(0.44, 1.86, 0.5, 1.29) 1s;
+}
 .list-header > li {
   font-family: "Oswald", sans-serif;
   font-size: 1.5rem;
   margin: 0.1rem 2rem;
-
   list-style: none;
+}
+#li1 {
+  transition: transform 0.75s ease-in 0.0625s;
+}
+#li2 {
+  transition: transform 0.75s ease-in 0.125s;
+}
+#li3 {
+  transition: transform 0.75s ease-in 0.1875s;
+}
+#li4 {
+  transition: transform 0.75s ease-in 0.25s;
+}
+#li5 {
+  transition: transform 0.75s ease-in 0.3125s;
+}
+#li6 {
+  transition: transform 0.75s ease-in 0.375s;
+}
+#li7 {
+  transition: transform 0.75s ease-in 0.4375s;
+}
+#li8 {
+  transition: transform 0.75s ease-in 0.5s;
+}
+#li9 {
+  transition: transform 0.75s ease-in 0.5625s;
+}
+#li10 {
+  transition: transform 0.75s ease-in 0.625s;
+}
+#li11 {
+  transition: transform 0.75s ease-in 0.6875s;
+}
+#li12 {
+  transition: transform 0.75s ease-in 0.75s;
+}
+#li13 {
+  transition: transform 0.75s ease-in 0.8125s;
+}
+#li14 {
+  transition: transform 0.75s ease-in 0.875s;
+}
+#li15 {
+  transition: transform 0.75s ease-in 0.9375s;
+}
+
+.list-fixer {
+  transform: translateX(-50vw);
 }
 
 .skill-div {
@@ -540,22 +613,23 @@
 }
 
 .brian-working {
+  /* background-color: #d0d066; */
   position: absolute;
   top: 0;
   right: 0;
   width: 25vw;
   height: 100vh;
-  /* background-color: crimson; */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .brianSecondPageBox {
   position: relative;
+  /* z-index: 3; */
   top: -120vh;
-
-  /* background-color: darkmagenta; */
+  right: 15%;
   height: 300px;
   width: 300px;
   opacity: 0;
@@ -564,20 +638,67 @@
 
 .brianUp {
   position: relative;
-  top: 0vh;
+  top: -10vh;
   opacity: 1;
 }
+
 .brianSecondChair {
-  /* position: absolute; */
-  /* z-index: 1;
-  top: 0;
-  left: 0; */
+  position: absolute;
   height: 300px;
   width: 300px;
+  transform: translateX(30vw);
+}
+
+.slide-chair-in {
+  transform: translateX(-5vw);
 }
 
 .brianSecondPage {
   position: absolute;
   transform: translateX(50px);
-  /* transition: top 2.4s linear 0s, opacity 0s linear 2s; */
+}
+
+#skill-set-h {
+  color: rgba(51, 51, 51, 0.243);
+  margin-left: auto;
+  margin-right: 25vw;
+  writing-mode: vertical-lr;
+  transform: rotateZ(180deg);
+  text-orientation: sideways-right;
+  right: 0;
+  letter-spacing: 15px;
+  font-family: "Oswald", sans-serif;
+  font-size: 10rem;
+}
+
+.wrapper3 {
+  width: 100%;
+  min-height: 100vh;
+  background-color: coral;
+  padding: 1rem;
+}
+
+.project-grid {
+  width: 100%;
+  min-height: 100vh;
+  background-color: darkgreen;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1rem;
+}
+.project-grid > div {
+  padding: 1rem;
+}
+
+.project-grid-left {
+  background-color: #d0d06663;
+}
+.project-grid-right {
+  background-color: #d0d06663;
+}
+
+.project_disp {
+  width: 100%;
+  height: 80vh;
+  background-color: fuchsia;
 }

@@ -25,6 +25,7 @@ let brianSecondPageBox = document.getElementById("brianSecondPageBox");
 brianSecondPage.src = b1;
 
 setInterval(volgendefoto, 200);
+const body = document.body;
 
 const launch = document.getElementById("launch");
 const clear = document.getElementById("clear");
@@ -63,8 +64,18 @@ const cloud11 = document.getElementById("c11");
 const sun = document.getElementById("sun");
 const moon = document.getElementById("moon");
 const target = document.getElementById("target");
-// const brianSecondPage = document.getElementById("brianSecondPage");
+const chair = document.getElementById("brianSecondChair");
+const ul = document.getElementById("listOfSkills");
+const grabULTitle = document.querySelectorAll(".shrunk");
+const ULTitleArray = [...grabULTitle];
 
+const lastTitle = document.getElementById("listed_skills_other");
+
+console.log(ULTitleArray);
+const liTags = document.getElementsByTagName("li");
+const liTagList = [...liTags];
+
+// const brianSecondPage = document.getElementById("brianSecondPage");
 moodRing.addEventListener("click", () => {
   wrapper.classList.toggle("dark");
   sun.classList.toggle("sunset");
@@ -91,26 +102,34 @@ const cueBrian = () => {
   }, 3500);
 };
 
-launch.addEventListener("click", () => {
-  //detranslate
-  hi.classList.remove("translatedHi");
-  iam.classList.remove("translatedIam");
-
-  let brian_array = [...firstNameLetters]; // converts NodeList to Array
-  brian_array.forEach((letter) => {
-    letter.classList.add("first-name-falling-in");
-  });
-
-  strout.classList.remove("translatedStrout");
-  title.classList.remove("translatedTitle");
+window.addEventListener("load", (event) => {
+  console.log("losad");
+  window.scrollTo(0, 0);
 
   setTimeout(() => {
-    CueClouds();
-  }, 2000);
+    hi.classList.remove("translatedHi");
+    iam.classList.remove("translatedIam");
+
+    let brian_array = [...firstNameLetters]; // converts NodeList to Array
+    brian_array.forEach((letter) => {
+      letter.classList.add("first-name-falling-in");
+    });
+
+    strout.classList.remove("translatedStrout");
+    title.classList.remove("translatedTitle");
+
+    setTimeout(() => {
+      CueClouds();
+    }, 2000);
+
+    setTimeout(() => {
+      cueBrian();
+    }, 3500);
+  }, 1000);
 
   setTimeout(() => {
-    cueBrian();
-  }, 3500);
+    clearOut();
+  }, 7500);
 });
 
 const clearOut = () => {
@@ -126,6 +145,7 @@ const clearOut = () => {
   }, 2000);
 
   setTimeout(() => {
+    body.style.overflow = "visible";
     fallingShell.classList.add("down-and-out");
     clouds_array1.forEach((cloud) => {
       cloud.classList.add("unseen");
@@ -133,20 +153,21 @@ const clearOut = () => {
     clouds_array2.forEach((cloud) => {
       cloud.classList.add("unseen");
     });
-  }, 3000);
+  }, 2500);
 
   setTimeout(() => {
     remainder.classList.remove("unseen");
-  }, 8000);
+  }, 6000);
 
   setTimeout(() => {
     target.scrollIntoView({ behavior: "smooth" });
-  }, 4500);
+  }, 2800);
 
   setTimeout(() => {
-    // brianSecondPageBox.classList.remove("unseen");
+    brianSecondPageBox.classList.remove("unseen");
+    brianSecondChair.classList.add("slide-chair-in");
     brianSecondPageBox.classList.add("brianUp");
-  }, 6500);
+  }, 3500);
 };
 
 clear.addEventListener("click", () => {
@@ -159,4 +180,15 @@ clear.addEventListener("click", () => {
 
 brianSecondPageBox.addEventListener("transitionend", function () {
   console.log("transition complete, put Brian in a desk here");
+  brianSecondPage.src = "src/components/images/workingatdesk.png";
+  brianSecondChair.classList.add("unseen");
+  ULTitleArray.forEach((title) => {
+    title.classList.remove("shrunk");
+  });
+});
+
+lastTitle.addEventListener("transitionend", function () {
+  liTagList.forEach((list) => {
+    list.classList.remove("list-fixer");
+  });
 });
