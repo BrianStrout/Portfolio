@@ -1,12 +1,15 @@
 @import "src/components/css/root.css";
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
 
 body {
+  position: relative;
   overflow: hidden;
 }
 
 .wrapper {
   width: 100vw;
+  /* height: 400vw; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,6 +26,7 @@ body {
   --background-color: #333;
   --textcolor: white;
   --landscape: rgba(210, 232, 229, 0.5);
+  --skillsetfont: rgba(255, 255, 255, 0.248);
 }
 .wrapper-top {
   width: 100vw;
@@ -36,8 +40,8 @@ body {
 .remainderCloud {
   display: inline;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: calc(50vh - 100px);
+  left: calc(50vw - 100px);
   width: 200px;
   height: 200px;
   transition: display 0s linear 2s;
@@ -448,13 +452,16 @@ body {
 * {
   transition: color 0.001s linear 0s;
 }
-
+/*
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII    Wrapper 2 IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
 .wrap2 {
+  position: relative;
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: flex-start;
-  border-top: 3px solid black;
+  /* border-top: 3px solid black; */
+  /* background-color: deeppink; */
 }
 
 .target {
@@ -475,7 +482,7 @@ body {
   height: 100%;
   /* background-color: #d0d066; */
   grid-area: skillLeft;
-  padding: 2rem 6rem;
+  padding: 2rem 0rem 2rem 6rem;
 }
 
 .skill-right {
@@ -496,7 +503,7 @@ body {
 .list-header > h4 {
   text-decoration: underline;
   font-family: "Oswald", sans-serif;
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 #listed_skills_front > h4 {
   transition: transform 0.75s cubic-bezier(0.44, 1.86, 0.5, 1.29) 0.25s;
@@ -516,8 +523,8 @@ body {
 }
 .list-header > li {
   font-family: "Oswald", sans-serif;
-  font-size: 1.5rem;
-  margin: 0.1rem 2rem;
+  font-size: 0.5rem;
+  margin: 0.2rem 6rem;
   list-style: none;
 }
 #li1 {
@@ -572,10 +579,11 @@ body {
 
 .skill-div {
   display: flex;
-  /* height: 100px; */
-  width: fit-content;
+  height: 2rem;
+  width: 23rem;
   background-color: var(--accent-color);
   /* display: block; */
+  /* padding-bottom: 10px; */
 }
 
 .skill-div-left {
@@ -584,7 +592,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding-right: 10px;
 }
 .skill-div-left > svg {
@@ -598,7 +605,8 @@ body {
 }
 
 .li-skills {
-  display: inline-block;
+  display: block;
+  font-size: 1rem;
 }
 .skill-div-right {
   display: flex;
@@ -607,7 +615,7 @@ body {
   padding: 0px 10px;
 }
 .li-skills-out {
-  display: inline-block;
+  display: block;
   font-family: "Oswald", sans-serif;
   font-size: 1rem;
 }
@@ -621,7 +629,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -638,7 +646,8 @@ body {
 
 .brianUp {
   position: relative;
-  top: -10vh;
+  /* top: -20vh; */
+  top: 0;
   opacity: 1;
 }
 
@@ -650,7 +659,8 @@ body {
 }
 
 .slide-chair-in {
-  transform: translateX(-5vw);
+  transform: translate(-5vw, -20vh);
+  /* transform: translateY(-25vh); */
 }
 
 .brianSecondPage {
@@ -659,7 +669,7 @@ body {
 }
 
 #skill-set-h {
-  color: rgba(51, 51, 51, 0.243);
+  color: var(--skillsetfont);
   margin-left: auto;
   margin-right: 25vw;
   writing-mode: vertical-lr;
@@ -671,17 +681,38 @@ body {
   font-size: 10rem;
 }
 
+.absolute-cloud {
+  position: absolute;
+  bottom: 0;
+  left: 50vw;
+  opacity: 100%;
+  transition: transform 0.3s linear 2s, opacity 0.3s linear 2s;
+}
+.absolute-cloud > h2 {
+  font-family: "Amatic SC", cursive;
+}
+
+.pulled-down {
+  transform: translateY(-50vh);
+  opacity: 0%;
+}
+
+/*
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII    Wrapper 3 IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
+
 .wrapper3 {
+  /* border-top: 3px solid black; */
+
   width: 100%;
   min-height: 100vh;
-  background-color: coral;
+  /* background-color: coral; */
   padding: 1rem;
 }
 
 .project-grid {
   width: 100%;
   min-height: 100vh;
-  background-color: darkgreen;
+  /* background-color: darkgreen; */
   display: grid;
   grid-template-columns: 50% 50%;
   gap: 1rem;
@@ -691,14 +722,69 @@ body {
 }
 
 .project-grid-left {
-  background-color: #d0d06663;
+  /* background-color: #d0d06663; */
 }
 .project-grid-right {
-  background-color: #d0d06663;
+  /* background-color: #d0d06663; */
 }
 
-.project_disp {
+.project-display {
   width: 100%;
   height: 80vh;
-  background-color: fuchsia;
+  /* background-color: var(--skillsetfont); */
+  margin-bottom: 2rem;
+  border: 5px solid pink;
+  border-radius: 10px 0 0 0;
+  padding: 30px;
+}
+
+.project-display-header {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 200px;
+  background-color: var(--skillsetfont);
+  overflow-y: hidden;
+  border-bottom: 3px solid black;
+}
+.project-thumbnail {
+  width: 100%;
+}
+.project-title > h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 3rem;
+}
+
+.made-with-div {
+  display: flex;
+}
+.made-with-icon {
+  min-height: 10px;
+  min-width: 10px;
+  background-color: #d0d066;
+}
+.porfolio-link-container {
+  margin-top: 5%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 5px;
+}
+.porfolio-link-container > button {
+  font-size: 2rem;
+  font-family: "Amatic SC", cursive;
+}
+
+/* <button
+  id="mashagithub"
+  > G!Code</button
+  > <button
+  id="mashnetlify"
+  > N!Live</button */
+.project-display > p {
+  background-color: var();
+  margin-top: 10px;
+  font-size: 2rem;
+  font-family: "Amatic SC", cursive;
 }

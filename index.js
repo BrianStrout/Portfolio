@@ -71,9 +71,10 @@ const ULTitleArray = [...grabULTitle];
 
 const lastTitle = document.getElementById("listed_skills_other");
 
-console.log(ULTitleArray);
 const liTags = document.getElementsByTagName("li");
 const liTagList = [...liTags];
+
+const absoluteCloud = document.getElementById("absolute-cloud");
 
 // const brianSecondPage = document.getElementById("brianSecondPage");
 moodRing.addEventListener("click", () => {
@@ -102,8 +103,11 @@ const cueBrian = () => {
   }, 3500);
 };
 
+window.addEventListener("onbeforeload", () => {
+  window.scrollTo(0, 0);
+});
+
 window.addEventListener("load", (event) => {
-  console.log("losad");
   window.scrollTo(0, 0);
 
   setTimeout(() => {
@@ -191,4 +195,5 @@ lastTitle.addEventListener("transitionend", function () {
   liTagList.forEach((list) => {
     list.classList.remove("list-fixer");
   });
+  absoluteCloud.classList.remove("pulled-down");
 });
