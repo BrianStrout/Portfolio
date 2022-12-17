@@ -176,14 +176,6 @@ const clearOut = () => {
   }, 3500);
 };
 
-clear.addEventListener("click", () => {
-  if (!launched) {
-    return;
-  } else {
-    clearOut();
-  }
-});
-
 brianSecondPageBox.addEventListener("transitionend", function () {
   brianBlurbP.classList.remove("tucked-up");
   console.log("transition complete, put Brian in a desk here");
@@ -202,3 +194,41 @@ lastTitle.addEventListener("transitionend", function () {
   });
   absoluteCloud.classList.remove("pulled-down");
 });
+
+const portLinkCode_Portfolio = document.getElementById("portgithub");
+const portLinkCode_Mash = document.getElementById("mashagithub");
+const portLinkLive_Portfolio = document.getElementById("mashanetlify");
+const portLinkCode_Fuga = document.getElementById("fugagithub");
+const portLinkLive_Fuga = document.getElementById("fuganetlify");
+
+wrapper.addEventListener("click", (event) => {
+  const isButton = event.target.nodeName === "BUTTON";
+  if (!isButton) {
+    return;
+  }
+  let clicked = event.target.id;
+  console.log(clicked);
+  switch (clicked) {
+    case "portgithub":
+      followingLink("github.com/BrianStrout/Portfolio");
+      break;
+    case "mashagithub":
+      followingLink("github.com/BrianStrout/masha");
+      break;
+    case "mashnetlify":
+      followingLink("mashaoflisbon.netlify.app/");
+      break;
+    case "fugagithub":
+      followingLink("github.com/BrianStrout/Fugitiva");
+      break;
+    case "fuganetlify":
+      followingLink("lafugitiva.netlify.app/");
+      break;
+    default:
+      break;
+  }
+});
+
+const followingLink = (dest) => {
+  window.location.href = `https://${dest}`;
+};

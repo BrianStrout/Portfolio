@@ -758,7 +758,7 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   border: 5px solid var(--skillsetfont);
   border-radius: 10px 0 0 0;
   /* padding: 30px; */
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 .project-display-header {
   position: relative;
@@ -779,14 +779,14 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 .ptcTop {
   position: absolute;
   height: 200px;
-  /* z-index: 0; */
+  z-index: 5;
   top: -5px;
   left: -5px;
   width: 50%;
-  border: 7px solid white;
+  border: 1px solid white;
   border-right: 0px;
   border-bottom: 0px;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.412);
+  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.412);
 }
 
 .project-thumbnail {
@@ -850,6 +850,13 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 
 #port-masha {
   background-image: url("src/components/images/MashaSiteScreenShot.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: none;
+}
+
+#port-fugativa {
+  background-image: url("src/components/images/FugativaSiteScreenShot.png");
   background-position: center;
   background-size: contain;
   background-repeat: none;
