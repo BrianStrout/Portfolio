@@ -65,11 +65,13 @@ const sun = document.getElementById("sun");
 const moon = document.getElementById("moon");
 const target = document.getElementById("target");
 const chair = document.getElementById("brianSecondChair");
+const brianBlurbP = document.getElementById("brianBlurbP");
+
 const ul = document.getElementById("listOfSkills");
 const grabULTitle = document.querySelectorAll(".shrunk");
 const ULTitleArray = [...grabULTitle];
 
-const lastTitle = document.getElementById("listed_skills_other");
+const lastTitle = document.getElementById("listed_skills_media");
 
 const liTags = document.getElementsByTagName("li");
 const liTagList = [...liTags];
@@ -183,9 +185,12 @@ clear.addEventListener("click", () => {
 });
 
 brianSecondPageBox.addEventListener("transitionend", function () {
+  brianBlurbP.classList.remove("tucked-up");
   console.log("transition complete, put Brian in a desk here");
   brianSecondPage.src = "src/components/images/workingatdesk.png";
+  brianSecondPage.style = "width: 260px; height: 260px;";
   brianSecondChair.classList.add("unseen");
+
   ULTitleArray.forEach((title) => {
     title.classList.remove("shrunk");
   });

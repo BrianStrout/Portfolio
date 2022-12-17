@@ -167,7 +167,7 @@ body {
 }
 
 .sky {
-  position: absolute;
+  position: fixed;
   z-index: 15;
   top: 25px;
   right: 50px;
@@ -672,6 +672,17 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   font-family: "Amatic SC", cursive;
   font-size: 1.5rem;
   padding-right: 1rem;
+  overflow-y: hidden;
+}
+.brian-blurb > p {
+  /* transform: translateY(0%); */
+  /* transition-duration: 2s; */
+  transition: all 0.5s ease-in;
+}
+
+.tucked-up {
+  /* opacity: 50%; */
+  transform: translateY(-100%);
 }
 
 #skill-set-h {
@@ -701,9 +712,6 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 .pulled-down {
   transform: translateY(-50vh);
   opacity: 0%;
-}
-
-.pulled-up {
 }
 
 .pulled-right {
@@ -737,7 +745,8 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   /* background-color: #d0d06663; */
 }
 .project-grid-right {
-  /* margin-top: 40vh; */
+  margin-top: 40vh;
+
   /* background-color: #d0d06663; */
 }
 
@@ -746,25 +755,40 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   height: 80vh;
   /* background-color: var(--skillsetfont); */
   margin-bottom: 2rem;
-  border: 5px solid pink;
+  border: 5px solid var(--skillsetfont);
   border-radius: 10px 0 0 0;
   /* padding: 30px; */
+  overflow-y: scroll;
 }
 .project-display-header {
+  position: relative;
   display: grid;
   grid-template-columns: 50% 50%;
   height: 200px;
   background: linear-gradient(var(--skillsetfont), transparent);
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 /* .project-display-header > img {
   border: 1px solid black;
 } */
+
 .project-thumbnail-container {
-  width: 100%;
   margin-bottom: 10px;
-  box-shadow: 3px 3px rgba(0, 0, 0, 0.412);
 }
+
+.ptcTop {
+  position: absolute;
+  height: 200px;
+  /* z-index: 0; */
+  top: -5px;
+  left: -5px;
+  width: 50%;
+  border: 7px solid white;
+  border-right: 0px;
+  border-bottom: 0px;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.412);
+}
+
 .project-thumbnail {
   width: 100%;
 }
