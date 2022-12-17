@@ -754,7 +754,7 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   display: grid;
   grid-template-columns: 50% 50%;
   height: 200px;
-  background-color: var(--skillsetfont);
+  background: linear-gradient(var(--skillsetfont), transparent);
   overflow-y: hidden;
 }
 /* .project-display-header > img {
