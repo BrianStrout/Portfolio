@@ -30,7 +30,7 @@ const body = document.body;
 const launch = document.getElementById("launch");
 const clear = document.getElementById("clear");
 let launched = false;
-
+const topTarget = document.getElementById("top-target");
 const hi = document.getElementById("hi");
 const hiBox = document.getElementById("hiBox");
 const iam = document.getElementById("iam");
@@ -66,17 +66,16 @@ const moon = document.getElementById("moon");
 const target = document.getElementById("target");
 const chair = document.getElementById("brianSecondChair");
 const brianBlurbP = document.getElementById("brianBlurbP");
-
 const ul = document.getElementById("listOfSkills");
 const grabULTitle = document.querySelectorAll(".shrunk");
 const ULTitleArray = [...grabULTitle];
-
 const lastTitle = document.getElementById("listed_skills_media");
-
 const liTags = document.getElementsByTagName("li");
 const liTagList = [...liTags];
-
 const absoluteCloud = document.getElementById("absolute-cloud");
+const linkToGmail = document.getElementById("copy-gmail");
+const linkToLinkedIn = document.getElementById("brianlinkedin");
+const linkToGitHub = document.getElementById("briangithub");
 
 // const brianSecondPage = document.getElementById("brianSecondPage");
 moodRing.addEventListener("click", () => {
@@ -109,9 +108,9 @@ window.addEventListener("onbeforeload", () => {
   window.scrollTo(0, 0);
 });
 
-window.addEventListener("load", (event) => {
+window.addEventListener("load", () => {
   window.scrollTo(0, 0);
-
+  topTarget.scrollIntoView({ behavior: "smooth" });
   setTimeout(() => {
     hi.classList.remove("translatedHi");
     iam.classList.remove("translatedIam");
@@ -232,3 +231,24 @@ wrapper.addEventListener("click", (event) => {
 const followingLink = (dest) => {
   window.location.href = `https://${dest}`;
 };
+linkToGitHub.addEventListener("click", () => {
+  window.location.href = `https://github.com/brianstrout`;
+});
+linkToLinkedIn.addEventListener("click", () => {
+  window.location.href = `https://www.linkedin.com/in/brian-strout-a11a8bb9/`;
+});
+
+const copy = document.getElementById("copy-gmail");
+
+copy.onclick = function () {
+  navigator.clipboard.writeText("Brianjstrout@gmail.com");
+  // copy.after.style="display: inline-block";
+};
+
+// span.addEventListener("copy", function (event) {
+//   event.preventDefault();
+//   if (event.clipboardData) {
+//     event.clipboardData.setData("text/plain", "span.textContent");
+//     console.log(event.clipboardData.getData("text"));
+//   }
+// });
