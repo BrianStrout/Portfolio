@@ -7,14 +7,16 @@
   --header-text: "";
   --main-text: "";
   --sub-text: "";
-  --accent-color: orangered;
+  --accent-color: #fff700;
   --background-color: rgb(5, 255, 255);
+  --dbackground-color: rgb(100, 173, 173);
   --textcolor: black;
   --button-text-color: var(var(--background-color));
-  --d-accent-color: #d0d066;
+  --d-accent-color: #ffff8a;
   --d-background-color: #333;
   --d-textcolor: white;
   --trans: 1.5s;
   --landscape: rgba(0, 128, 0, 0.3);
   --skillsetfont: rgba(51, 51, 51, 0.243);
+  --paper: #f5f5e6;
 }
