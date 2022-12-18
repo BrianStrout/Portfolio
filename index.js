@@ -76,6 +76,7 @@ const absoluteCloud = document.getElementById("absolute-cloud");
 const linkToGmail = document.getElementById("copy-gmail");
 const linkToLinkedIn = document.getElementById("brianlinkedin");
 const linkToGitHub = document.getElementById("briangithub");
+const resumeLink = document.getElementById("resume-link");
 
 // const brianSecondPage = document.getElementById("brianSecondPage");
 moodRing.addEventListener("click", () => {
@@ -236,6 +237,9 @@ linkToGitHub.addEventListener("click", () => {
 });
 linkToLinkedIn.addEventListener("click", () => {
   window.location.href = `https://www.linkedin.com/in/brian-strout-a11a8bb9/`;
+});
+resumeLink.addEventListener("click", () => {
+  window.location.href = `https://drive.google.com/file/d/1IpDsegsobxp_G6XtKly2PJxoOOrr8OSZ/view?usp=share_link`;
 });
 
 const copy = document.getElementById("copy-gmail");

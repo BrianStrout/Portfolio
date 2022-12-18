@@ -979,15 +979,18 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   width: 25vh;
   height: 35vh;
   background-color: var(--skillsetfont);
-
-  /* padding: 5px; */
 }
+
 .resume-box > h4 {
   font-family: var(--business-font);
   margin-left: 0.5rem;
 }
+
 .resume-link {
   background-color: hotpink;
   width: 100%;
   height: 100%;
+  background-image: url("src/components/images/resume-rough.jpg");
+  background-position: center;
+  background-size: contain;
 }
