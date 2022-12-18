@@ -14,7 +14,6 @@ body {
 
 .wrapper {
   width: 100vw;
-  /* height: 400vw; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,7 +26,6 @@ body {
 .wrapper.dark {
   color: var(--d-textcolor);
   background-color: var(--d-background-color);
-  /* --accent-color: #d0d066; */
   --accent-color: #ffff8a;
   --background-color: #333;
   --textcolor: white;
@@ -184,8 +182,6 @@ body {
   justify-content: flex-start;
   align-items: center;
   overflow: hidden;
-
-  /* border: 1px solid black; */
 }
 .astrology {
   display: flex;
@@ -237,8 +233,6 @@ body {
   align-items: center;
   width: 300px;
   height: 300px;
-  /* border-radius: 50%; */
-  /* border: 5px solid rgba(0, 0, 0, 0.25); */
 }
 #image {
   width: 300px;
@@ -316,7 +310,6 @@ body {
 }
 #iam {
   transition: transform 0.25s ease-out 0.375s, color 0.001s linear 0s;
-  /* transition-delay: 0.375s; */
 }
 .translatedIam {
   transform: translateX(-100vw) translateY(0px);
@@ -471,8 +464,6 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   height: 100vh;
   display: flex;
   align-items: flex-start;
-  /* border-top: 3px solid black; */
-  /* background-color: deeppink; */
 }
 
 .target {
@@ -482,7 +473,6 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 .skill-wrapper {
   width: 100vw;
   height: 100vh;
-
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-areas: "skillLeft skillRight";
@@ -491,7 +481,6 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 .skill-left {
   width: 100%;
   height: 100%;
-  /* background-color: #d0d066; */
   grid-area: skillLeft;
   padding: 2rem 0rem 2rem 6rem;
 }
@@ -508,9 +497,7 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 .skill-set-div {
   vertical-align: middle;
 }
-.list-header {
-  /* opacity: 50%; */
-}
+
 .list-header > h4 {
   text-decoration: underline;
   font-family: var(--business-font);
@@ -593,8 +580,6 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   height: 2rem;
   width: 23rem;
   background-color: var(--skillsetfont);
-  /* display: block; */
-  /* padding-bottom: 10px; */
 }
 
 .skill-div-left {
@@ -612,10 +597,6 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   fill: var(--accent-color);
 }
 
-/* .skill-div-left > svg > polygon {
-  stroke: var(--background-color);
-} */
-
 .li-skills {
   display: block;
   font-size: 1rem;
@@ -625,7 +606,6 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   align-items: center;
   justify-content: center;
   padding: 0px 10px;
-  /* padding-left: 0.5rem; */
 }
 .li-skills-out {
   display: block;
@@ -647,7 +627,6 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 
 .brianSecondPageBox {
   position: relative;
-  /* z-index: 3; */
   top: -120vh;
   right: 15%;
   height: 300px;
@@ -658,7 +637,6 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 
 .brianUp {
   position: relative;
-  /* top: -20vh; */
   top: 0;
   opacity: 1;
 }
@@ -672,7 +650,6 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 
 .slide-chair-in {
   transform: translate(-5vw, -20vh);
-  /* transform: translateY(-25vh); */
 }
 
 .brianSecondPage {
@@ -686,13 +663,10 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   overflow-y: hidden;
 }
 .brian-blurb > p {
-  /* transform: translateY(0%); */
-  /* transition-duration: 2s; */
   transition: all 0.5s ease-in;
 }
 
 .tucked-up {
-  /* opacity: 50%; */
   transform: translateY(-100%);
 }
 
@@ -732,18 +706,14 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII    Wrapper 3 IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
 
 .wrapper3 {
-  /* border-top: 3px solid black; */
-
   width: 100%;
   min-height: 100vh;
-  /* background-color: coral; */
   padding: 2rem;
 }
 
 .project-grid {
   width: 100%;
   min-height: 100vh;
-  /* background-color: darkgreen; */
   display: grid;
   grid-template-columns: 50% 50%;
   gap: 1rem;
@@ -753,23 +723,17 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 }
 
 .project-grid-left {
-  /* background-color: #d0d06663; */
 }
 .project-grid-right {
   margin-top: 40vh;
-
-  /* background-color: #d0d06663; */
 }
 
 .project-display {
   width: 100%;
   height: 80vh;
-  /* background-color: var(--skillsetfont); */
   margin-bottom: 2rem;
   border: 5px solid var(--skillsetfont);
   border-radius: 10px;
-  /* padding: 30px; */
-  /* overflow-y: scroll; */
 }
 .project-display-header {
   position: relative;
@@ -777,11 +741,7 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   grid-template-columns: 50% 50%;
   height: 200px;
   background: linear-gradient(var(--skillsetfont), transparent);
-  /* overflow-y: hidden; */
 }
-/* .project-display-header > img {
-  border: 1px solid black;
-} */
 
 .project-thumbnail-container {
   margin-bottom: 10px;
@@ -841,12 +801,6 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   scale: 110%;
 }
 
-/* <button
-  id="mashagithub"
-  > G!Code</button
-  > <button
-  id="mashnetlify"
-  > N!Live</button */
 .project-display > p {
   background-color: var();
   margin-top: 20px;
@@ -932,7 +886,6 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 }
 
 .contact-details {
-  /* background-color: var(--skillsetfont); */
   padding: 1rem;
 }
 .contact-details > h2 {
@@ -948,26 +901,21 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   padding-bottom: 0.5rem;
 }
 .contact-details > ul > li > div > svg > path {
-  /* opacity: 50%; */
-  /* color: var(--moody-background-color); */
   fill: var(--moody-background-color);
 }
 
 .contact-details > ul > li :hover {
-  /* background-color: var(--accent-color); */
   transform-origin: left;
   scale: 110%;
 }
 
 #copy-gmail:hover::after {
-  /* display: none; */
   content: var(--copy-svg);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 1rem;
 }
 #copy-gmail:active::after {
-  /* display: none; */
   content: url(src/components/images/check-mark-line-icon.svg);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
