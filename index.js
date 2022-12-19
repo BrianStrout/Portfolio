@@ -246,13 +246,4 @@ const copy = document.getElementById("copy-gmail");
 
 copy.onclick = function () {
   navigator.clipboard.writeText("Brianjstrout@gmail.com");
-  // copy.after.style="display: inline-block";
 };
-
-// span.addEventListener("copy", function (event) {
-//   event.preventDefault();
-//   if (event.clipboardData) {
-//     event.clipboardData.setData("text/plain", "span.textContent");
-//     console.log(event.clipboardData.getData("text"));
-//   }
-// });
