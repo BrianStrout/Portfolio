@@ -42,6 +42,7 @@ const title = document.getElementById("title");
 const titleBox = document.getElementById("titleBox");
 
 const firstNameLetters = document.querySelectorAll(".first-letters");
+const firstN = document.getElementById("first-n");
 const fallingShell = document.getElementById("fallingShell");
 const wrapper = document.getElementById("wrapper");
 const moodRing = document.getElementById("moodring");
@@ -120,7 +121,6 @@ window.addEventListener("load", () => {
     brian_array.forEach((letter) => {
       letter.classList.add("first-name-falling-in");
     });
-
     strout.classList.remove("translatedStrout");
     title.classList.remove("translatedTitle");
 
@@ -136,6 +136,10 @@ window.addEventListener("load", () => {
   setTimeout(() => {
     clearOut();
   }, 7500);
+});
+
+firstN.addEventListener("transitionend", function () {
+  console.log("brian here");
 });
 
 const clearOut = () => {
@@ -165,9 +169,9 @@ const clearOut = () => {
     remainder.classList.remove("unseen");
   }, 6000);
 
-  setTimeout(() => {
-    target.scrollIntoView({ behavior: "smooth" });
-  }, 2800);
+  // setTimeout(() => {
+  //   target.scrollIntoView({ behavior: "smooth" });
+  // }, 2800);
 
   setTimeout(() => {
     brianSecondPageBox.classList.remove("unseen");
