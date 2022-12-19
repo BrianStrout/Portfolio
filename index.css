@@ -687,7 +687,7 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   bottom: 0;
   display: flex;
   justify-content: center;
-  width: 140px;
+  width: fit-content;
   left: calc(50vw - 70px);
   opacity: 100%;
   transition: transform 0.3s linear 2s, opacity 0.3s linear 2s;
@@ -988,11 +988,11 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   .wrapper {
     width: 100vw;
     overflow-x: hidden;
-    padding-bottom: 10vh;
+    padding-bottom: 6vh;
   }
 
   h1 {
-    font-size: 1rem;
+    font-size: 10vh;
   }
   .sky {
     right: -40px;
@@ -1012,13 +1012,15 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     position: relative;
     width: 100%;
     z-index: 1;
+    padding-right: 1rem;
   }
   .first-letters > h1 {
-    font-size: 10px;
+    font-size: 10vh;
   }
 
   #brianBox {
-    padding-right: 1rem;
+    /* padding-right: 1rem; */
+    margin-top: 2rem;
   }
   #brianBox > h1 {
     line-height: 80px;
@@ -1028,7 +1030,7 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     /* border: 5px solid #333; */
   }
   #stroutBox > h1 {
-    margin-right: 1rem;
+    /* margin-right: 1rem; */
     font-size: 28vw;
     text-decoration: underline;
   }
@@ -1218,7 +1220,7 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 
   .wrapper4 {
     padding: 0;
-    margin-bottom: 15vh;
+    /* margin-bottom: 15vh; */
   }
 
   .business-card {
