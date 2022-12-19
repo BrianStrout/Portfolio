@@ -915,6 +915,9 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   font-family: var(--business-font);
   font-size: 2rem;
 }
+.contact-details > text {
+  font-family: var(--letter-font);
+}
 .contact-details > ul {
   padding-left: 2rem;
   list-style: none;
@@ -1094,6 +1097,7 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     margin: 2vw;
     width: calc(100% - 4vw);
     min-height: 100vh;
+    height: fit-content;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 50% 50%;
@@ -1106,10 +1110,11 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     padding: 1rem;
   }
   .project-grid-left {
-    height: auto;
+    height: fit-content;
   }
   .project-grid-right {
     grid-area: project-grid-right;
+    margin-top: auto;
     /* margin-top: 30vh; */
   }
 
@@ -1284,6 +1289,14 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     font-size: 1rem;
   }
 
+  .wrapper4 > h1 {
+    margin-left: 23.5px;
+  }
+
+  .wrapper4 > p {
+    margin: 0 23.5px;
+  }
+
   .resume-box {
     padding: 0 10px;
     width: 25vh;
@@ -1298,17 +1311,19 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     grid-row-end: 3;
     display: flex;
     justify-content: center;
+
+    padding-bottom: 2vw;
   }
 
   .resume-box > h4 {
     font-family: var(--business-font);
-    margin-left: 0.5rem;
+    margin-left: 2vw;
     margin-right: 1.5rem;
   }
 
   .resume-link {
     margin-top: 1rem;
-    width: 25vh;
+    width: 50%;
     height: 30vh;
     border: 1px solid var(--skillsetfont);
     background-image: url("src/components/images/resume-thumb.jpg");
