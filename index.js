@@ -169,9 +169,9 @@ const clearOut = () => {
     remainder.classList.remove("unseen");
   }, 6000);
 
-  // setTimeout(() => {
-  //   target.scrollIntoView({ behavior: "smooth" });
-  // }, 2800);
+  setTimeout(() => {
+    target.scrollIntoView({ behavior: "smooth" });
+  }, 2800);
 
   setTimeout(() => {
     brianSecondPageBox.classList.remove("unseen");

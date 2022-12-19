@@ -918,6 +918,7 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 .contact-details > text {
   font-family: var(--letter-font);
 }
+
 .contact-details > ul {
   padding-left: 2rem;
   list-style: none;
@@ -1024,7 +1025,7 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     font-size: 30vw;
   }
   #stroutBox {
-    border: 5px solid #333;
+    /* border: 5px solid #333; */
   }
   #stroutBox > h1 {
     margin-right: 1rem;
@@ -1032,7 +1033,7 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     text-decoration: underline;
   }
   #strout {
-    transition: transform 1.2s ease-out 3.8s, color 0.001s linear 0s;
+    transition: transform 1.2s ease-out 2s, color 0.001s linear 0s;
   }
   .wrap2 {
     height: 200vh;
