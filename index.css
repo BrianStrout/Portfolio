@@ -853,11 +853,18 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   /* background-position: center; */
 }
 
+#port-rotary {
+  background-image: url("src/components/images/RotarySiteScreenShot.jpeg");
+}
+
 #port-fugativa {
   background-image: url("src/components/images/FugativaSiteScreenShot.png");
   /* background-position: center;
   background-size: contain;
   background-repeat: none; */
+}
+#port-gitm {
+  background-image: url("src/components/images/GitmSiteScreenShot.jpeg");
 }
 
 .wrapper4 {
@@ -1334,7 +1341,7 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     height: 30vh;
     border: 1px solid var(--skillsetfont);
     background-image: url("src/components/images/resume-thumb.jpg");
-    background-position: center;
+    background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
   }
