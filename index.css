@@ -812,6 +812,10 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   scale: 110%;
 }
 
+.porfolio-link-container > button > svg {
+  pointer-events: none;
+}
+
 .project-display > p {
   background-color: var();
   margin-top: 20px;
