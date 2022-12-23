@@ -219,7 +219,7 @@ wrapper.addEventListener("click", (event) => {
     case "mashagithub":
       followingLink("github.com/BrianStrout/masha");
       break;
-    case "mashnetlify":
+    case "mashanetlify":
       followingLink("mashaoflisbon.netlify.app/");
       break;
     case "fugagithub":
