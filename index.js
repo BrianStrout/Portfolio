@@ -249,7 +249,7 @@ linkToLinkedIn.addEventListener("click", () => {
   window.location.href = `https://www.linkedin.com/in/brian-strout-a11a8bb9/`;
 });
 resumeLink.addEventListener("click", () => {
-  window.location.href = `https://drive.google.com/file/d/1wIMyd15xM0NtXHXwYl6aNp8F3Svb6iOS/view?usp=share_link`;
+  window.location.href = `https://drive.google.com/file/d/10sLczM7zkozE4p8tbZ-IWBFh-6IGBYE6/view?usp=share_link`;
 });
 
 const copy = document.getElementById("copy-gmail");
