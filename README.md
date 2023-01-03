@@ -2,7 +2,7 @@
 <br />
 <div align="center">
 <p>
-  <img align="center" width="300"  src="./src/images/PortfolioSiteScreenShot.png" alt="Logo" >
+  <img align="center" width="300"  src="./src/components/images/PortfolioSiteScreenShot.png" alt="Logo" >
 </p>
 </div>
 <h1>My Portfolio</h1>
