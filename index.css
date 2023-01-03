@@ -1063,7 +1063,7 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     grid-template-areas: "skillLeft" "skillRight";
   }
   .skill-left {
-    border-top: 1px solid black;
+    /* border-top: 1px solid black; */
     padding: 0;
   }
   .skill-left > ul {
