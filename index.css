@@ -23,6 +23,10 @@ body {
   overflow: scroll;
 }
 
+.wrapper > div {
+  overflow-y: hidden;
+}
+
 .wrapper.dark {
   color: var(--d-textcolor);
   background-color: var(--d-background-color);
