@@ -1,7 +1,8 @@
 @import "src/components/css/root.css";
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&display=swap");
 body {
   position: relative;
   overflow: hidden;
@@ -674,9 +675,11 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 }
 .brian-blurb {
   font-family: var(--letter-font);
-  font-size: 3vh;
+  font-size: clamp(16px, 3vw, 32px);
+  padding-top: 0.5rem;
   padding-right: 1rem;
-  overflow-y: hidden;
+  overflow-y: scroll;
+  line-height: 2rem;
 }
 .brian-blurb > p {
   transition: all 0.5s ease-in;
@@ -811,6 +814,9 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   font-size: 2rem;
   font-family: var(--letter-font);
   background-color: #f5f5e6;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
 }
 .porfolio-link-container > button:hover {
   scale: 110%;
