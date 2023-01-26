@@ -626,8 +626,8 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 }
 .li-skills-out {
   display: block;
-  font-family: var(--business-font);
-  font-size: 1rem;
+  font-family: var(--letter-font);
+  font-size: 1.1rem;
 }
 
 .brian-working {
@@ -678,6 +678,7 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   font-size: clamp(16px, 3vw, 32px);
   padding-top: 0.5rem;
   padding-right: 1rem;
+  margin-bottom: 2rem;
   overflow-y: scroll;
   line-height: 2rem;
 }
@@ -686,7 +687,7 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 }
 
 .tucked-up {
-  transform: translateY(-100%);
+  transform: translateY(-120%);
 }
 
 .absolute-cloud {
@@ -764,7 +765,7 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   position: absolute;
   height: 200px;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   z-index: 5;
   top: -5px;
@@ -792,6 +793,9 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
+}
+.made-with-div > h4 {
+  font-family: var(--business-font);
 }
 .icons-for-grid {
   display: flex;
