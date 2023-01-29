@@ -1,3 +1,29 @@
 {
-  // make a json body of projects to then make a funciton that pulls project up?
+  "projects": [
+    {
+      "project-name": "name1",
+      "made with": "html",
+      "description": "here is a description"
+    },
+    {
+      "project-name": "name2",
+      "made with": "html",
+      "description": "here is a description"
+    },
+    {
+      "project-name": "name3",
+      "made with": "html",
+      "description": "here is a description"
+    },
+    {
+      "project-name": "name4",
+      "made with": "html",
+      "description": "here is a description"
+    },
+    {
+      "project-name": "name5",
+      "made with": "html",
+      "description": "here is a description"
+    }
+  ]
 }
