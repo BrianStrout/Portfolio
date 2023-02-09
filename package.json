@@ -1,7 +1,7 @@
 {
-  "name": "squarespacetrial",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "<!-- PROJECT LOGO --> <br /> <div align=\"center\"> <p>   <img align=\"center\" width=\"300\"  src=\"./src/components/images/PortfolioSiteScreenShot.png\" alt=\"Logo\" > </p> </div> <h1>My Portfolio</h1> <p display=inline> Made with...",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
