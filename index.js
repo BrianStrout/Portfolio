@@ -21,6 +21,26 @@ function volgendefoto() {
 }
 let brianSecondPage = document.getElementById("brianSecondPage");
 let brianSecondPageBox = document.getElementById("brianSecondPageBox");
+const switchFreeLance = document.getElementById("switchfree");
+const switchProfessional = document.getElementById("switchprof");
+
+switchFreeLance.addEventListener("click", (e) => {
+  console.log(e.target);
+
+  linkToGitHub.addEventListener("click", () => {
+    window.location.href = `https://github.com/brianstrout`;
+  });
+});
+
+switchProfessional.addEventListener("click", (e) => {
+  let displayables = Array.from(document.querySelectorAll(".notdisplayed"));
+  displayables.forEach((div) => {
+    div.classList.remove("notdisplayed");
+  });
+  setTimeout(() => {
+    target.scrollIntoView({ behavior: "smooth" });
+  }, 2800);
+});
 
 brianSecondPage.src = b1;
 
