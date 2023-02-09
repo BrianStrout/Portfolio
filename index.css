@@ -463,6 +463,90 @@ body {
 }
 /*
 IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII    Wrapper 2 IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
+
+.switchwrap {
+  display: none;
+  width: 110vw;
+  height: 100vh;
+  overflow-x: scroll;
+}
+.switch-board {
+  width: 100vw;
+  height: 100vh;
+  /* background-color: #ffff8a; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.switch-cloud-box {
+  position: relative;
+}
+#switchfree {
+}
+.switch-cloud {
+  width: 200px;
+  height: 200px;
+  background-image: url("./src/components/images/c3.png");
+  background-position: center;
+  background-size: cover;
+  animation: cloudbob 2s ease-in-out 0s infinite alternate none;
+  /* transition: display 0s linear 2s; */
+}
+
+.switch-cloud-box:hover {
+  border: 5px solid black;
+  background-color: #ffff8a;
+}
+.switch-cloud-box:nth-child(1):hover:after {
+  position: absolute;
+  top: 0;
+  left: 105%;
+  width: 100px;
+  content: "Considering hiring me for your site? Let's start by seeing some others I've done.";
+}
+.switch-cloud-box:nth-child(2):hover:after {
+  position: absolute;
+  top: 0;
+  left: 105%;
+  width: 100px;
+  content: "Curious about my technical skills and want to peek behind the curtain, grab a resume, the good stuff, etc. ";
+}
+
+.switch-cloud:nth-child(1) {
+  animation-delay: 1500ms;
+}
+@keyframes cloudbob {
+  0% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+.switch-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* border: 3px solid black; */
+}
+.freelance-showcase {
+  width: 100vw;
+  height: 100vh;
+  background-color: green;
+}
+/*
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII    Wrapper 2 IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII */
+
 .wrap2 {
   position: relative;
   width: 100vw;
