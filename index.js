@@ -1,8 +1,14 @@
+import { tester1, Animator } from "./src/components/modules/animate.js";
+import { observeIntroToServices } from "./src/components/modules/observeIntroToServ.js";
+let dev = false;
+tester1();
 const f1 = "src/components/images/falling1.png";
 const f2 = "src/components/images/falling2.png";
 const f3 = "src/components/images/falling5.png";
 const f4 = "src/components/images/falling4.png";
 const f6 = "src/components/images/falling6.png";
+
+Animator("class", "d", "remove", "d");
 
 const b1 = "src/components/images/panic1.png";
 const b2 = "src/components/images/panic4.png";
@@ -22,14 +28,25 @@ function volgendefoto() {
 let brianSecondPage = document.getElementById("brianSecondPage");
 let brianSecondPageBox = document.getElementById("brianSecondPageBox");
 const switchFreeLance = document.getElementById("switchfree");
-const switchProfessional = document.getElementById("switchprof");
+const switchProfessional = document.getElementById("switchPort");
 
-switchFreeLance.addEventListener("click", (e) => {
-  console.log(e.target);
+switchProfessional.addEventListener("click", () => {
+  target.scrollIntoView({ behavior: "smooth" });
+});
 
-  linkToGitHub.addEventListener("click", () => {
-    window.location.href = `https://github.com/brianstrout`;
-  });
+// switchFreeLance.addEventListener("click", (e) => {
+//   console.log(e.target);
+
+// linkToGitHub.addEventListener("click", () => {
+//   window.location.href = `https://github.com/brianstrout`;
+// });
+
+// });
+
+const introsOnScreen = document.querySelectorAll("#introToServices");
+
+introsOnScreen.forEach((intro) => {
+  observeIntroToServices.observe(intro);
 });
 
 switchProfessional.addEventListener("click", (e) => {
@@ -38,7 +55,11 @@ switchProfessional.addEventListener("click", (e) => {
     div.classList.remove("notdisplayed");
   });
   setTimeout(() => {
-    target.scrollIntoView({ behavior: "smooth" });
+    if (dev) {
+      target.scrollIntoView({ behavior: "smooth" });
+    } else {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
   }, 2800);
 });
 
@@ -85,6 +106,9 @@ const cloud11 = document.getElementById("c11");
 const sun = document.getElementById("sun");
 const moon = document.getElementById("moon");
 const target = document.getElementById("target");
+const switchFree = document.getElementById("switchFree");
+const switchPort = document.getElementById("switchPort");
+
 const chair = document.getElementById("brianSecondChair");
 const brianBlurbP = document.getElementById("brianBlurbP");
 const ul = document.getElementById("listOfSkills");

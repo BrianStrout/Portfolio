@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/BrianStrout/squarespacetrial/issues"
   },
-  "homepage": "https://github.com/BrianStrout/squarespacetrial#readme"
+  "homepage": "https://github.com/BrianStrout/squarespacetrial#readme",
+  "dependencies": {
+    "sass": "^1.58.0"
+  }
 }
