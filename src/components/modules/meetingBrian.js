@@ -1,4 +1,4 @@
-console.log("test");
+console.log("modules running");
 
 var image = document.getElementById("image");
 var currentPos = 0;
