@@ -148,29 +148,26 @@
 }
 
 .balloons {
+  position: relative;
   width: 100px;
   height: 360px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   > .balloon {
+    position: relative;
     width: 100px;
     height: 100px;
-    background-image: url("../src/components/images/ball1.png");
+    // background-image: url("../src/components/images/ball1.png");
     background-position: center top;
     transform-origin: center center;
     transition: transform 2s linear;
-    &:hover {
-      scale: 1.2;
-    }
-    &.in-wind {
-      animation: 4s ease-in-out infinite alternate bobnwig;
-    }
+
     &#bab1 {
       transition: transform 1s ease-out 0s;
     }
     &#bab2 {
-      transition: transform 1s ease-out 0.5s;
+      transition: transform 0.09s ease-out 0.5s;
       // transition-delay: 1s;
     }
     &#bab3 {
@@ -179,6 +176,27 @@
     }
   }
 }
+.balloon-ball {
+  position: absolute;
+  z-index: 10;
+  background-image: url("../src/components/images/ball1.png");
+  width: 100px;
+  height: 100px;
+  &:hover {
+    scale: 1.2;
+  }
+  &.in-wind {
+    animation: 4s ease-in-out infinite alternate bobnwig;
+  }
+}
+.balloon-string {
+  position: absolute;
+  z-index: 9;
+  height: 200px;
+  width: 100px;
+  background-image: url("../src/components/images/balloonstring.png");
+}
+
 .sad-child {
   transform: translateY(100vh);
 }

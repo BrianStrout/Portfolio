@@ -1,6 +1,9 @@
+import { Animator } from "./animate.js";
+
 const imgOptions = {
   threshold: 0.8,
 };
+
 const outs = Array.from(document.querySelectorAll(".out-of-question"));
 const introGrid1 = document.getElementById("intro-grid-one");
 const introGrid2 = document.getElementById("intro-grid-two");
@@ -15,7 +18,6 @@ const observeIntroToServices = new IntersectionObserver(
         return;
       } else if (entry.isIntersecting) {
         console.log("run fun");
-
         console.log("fun running");
         outs.forEach((out, index) => {
           console.log(index);
@@ -57,6 +59,9 @@ const observeIntroToServices = new IntersectionObserver(
                 child.classList.remove("sad-child");
               });
             }, 4500);
+            setTimeout(() => {
+              Animator("class", "balloon-ball", "add", "in-wind");
+            }, 5000);
           }
         });
       }
