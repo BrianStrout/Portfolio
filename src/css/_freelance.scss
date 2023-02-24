@@ -3,10 +3,10 @@
 .freelance-presenter {
   position: absolute;
   z-index: 5;
-  background-color: pink;
+  background-color: var(--background-color);
   width: 100%;
   height: 100%;
-  // opacity: 0.2;
+  border: 5px solid black;
   transition: all 1s ease-in-out;
 }
 .hanging-from-heaven {
@@ -118,7 +118,31 @@
 }
 
 .pitcher-box {
-  width: 500px;
+  width: 600px;
+  transform-origin: center center;
+  transition: all 0.5s ease-out;
+  display: flex;
+}
+.tiny-boy {
+  background-color: chocolate;
+  transform: scale(0);
+  // scale: 0.25;
+}
+
+.balloons {
+  width: 100px;
+  height: 300px;
+  // background-color: darkgreen;
+  > .balloon {
+    width: 100px;
+    height: 100px;
+    // aspect-ratio: 1/1;
+    border: 1px solid black;
+    background-image: url("../components/images/ball1.png");
+    background-size: cover;
+    // background-position: center;
+    // background-color: orange;
+  }
 }
 
 .unpresented {

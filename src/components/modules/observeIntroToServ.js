@@ -4,6 +4,7 @@ const imgOptions = {
 const outs = Array.from(document.querySelectorAll(".out-of-question"));
 const introGrid1 = document.getElementById("intro-grid-one");
 const introGrid2 = document.getElementById("intro-grid-two");
+const tiny = document.querySelector(".tiny-boy");
 
 const observeIntroToServices = new IntersectionObserver(
   (entries, observeIntroToServices) => {
@@ -48,10 +49,9 @@ const observeIntroToServices = new IntersectionObserver(
             setTimeout(() => {
               introGrid1.remove();
               introGrid2.remove();
-            }, 5000);
+              tiny.classList.remove("tiny-boy");
+            }, 4000);
           }
-
-          // out.classList.remove("out-of-question");
         });
       }
     });
