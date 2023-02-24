@@ -27,21 +27,20 @@ function volgendefoto() {
 }
 let brianSecondPage = document.getElementById("brianSecondPage");
 let brianSecondPageBox = document.getElementById("brianSecondPageBox");
-const switchFreeLance = document.getElementById("switchfree");
+const switchFree = document.getElementById("switchFree");
 const switchProfessional = document.getElementById("switchPort");
-
+const freelancePresenter = document.getElementById("freelancePresenter");
+const backCloud = document.getElementById("backCloud");
 switchProfessional.addEventListener("click", () => {
   target.scrollIntoView({ behavior: "smooth" });
 });
 
-// switchFreeLance.addEventListener("click", (e) => {
-//   console.log(e.target);
-
-// linkToGitHub.addEventListener("click", () => {
-//   window.location.href = `https://github.com/brianstrout`;
-// });
-
-// });
+switchFree.addEventListener("click", (e) => {
+  freelancePresenter.classList.remove("unpresented");
+});
+backCloud.addEventListener("click", () => {
+  freelancePresenter.classList.add("unpresented");
+});
 
 const introsOnScreen = document.querySelectorAll("#introToServices");
 
@@ -106,7 +105,7 @@ const cloud11 = document.getElementById("c11");
 const sun = document.getElementById("sun");
 const moon = document.getElementById("moon");
 const target = document.getElementById("target");
-const switchFree = document.getElementById("switchFree");
+// const switchFree = document.getElementById("switchFree");
 const switchPort = document.getElementById("switchPort");
 
 const chair = document.getElementById("brianSecondChair");

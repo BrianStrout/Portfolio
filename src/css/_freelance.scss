@@ -4,7 +4,10 @@
   position: absolute;
   z-index: 5;
   background-color: pink;
-  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+  // opacity: 0.2;
+  transition: all 1s ease-in-out;
 }
 .hanging-from-heaven {
   position: absolute;
@@ -22,7 +25,6 @@
 }
 .hanging-cloud {
   width: 100%;
-
   height: 100%;
   background-image: url("./images/c3.png");
   background-size: cover;
@@ -31,7 +33,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   animation: 4s ease-in-out infinite alternate bob;
 }
 .hanging-cloud > p {
@@ -58,9 +59,7 @@
 }
 
 .sheet {
-  // background-color: rgb(5, 255, 255);
   width: 100%;
-
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -72,16 +71,56 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 60%;
+  > div {
+    position: relative;
+    border: 5px solid black;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    font-size: 2rem;
+    transition: transform 0.5s ease-in;
+  }
 }
 .intro-grid-one {
-  border: 5px solid black;
   border-right: none;
+  justify-content: flex-end;
 }
 .intro-grid-two {
   border: 5px solid black;
   border-left: none;
+  > div {
+    position: absolute;
+    top: calc(49% - 2rem);
+    overflow-y: hidden;
+  }
+}
+
+.clear {
+  color: transparent;
+}
+
+.line-of-questioning {
+  transition: transform 0.5s ease-in-out;
+}
+.out-of-question {
+  transform: translateY(100px);
+}
+.upn-out-of-question {
+  transform: translateY(-100px);
+}
+
+.get-up {
+  transform: translateY(-100vh);
+}
+
+.get-down {
+  transform: translateY(100vh);
 }
 
 .pitcher-box {
   width: 500px;
+}
+
+.unpresented {
+  transform: translateX(100vw);
 }

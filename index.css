@@ -11,7 +11,7 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 
 .switch-board {
@@ -127,7 +127,9 @@
   position: absolute;
   z-index: 5;
   background-color: pink;
-  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+  transition: all 1s ease-in-out;
 }
 
 .hanging-from-heaven {
@@ -195,19 +197,61 @@
   grid-template-columns: 1fr 1fr;
   width: 60%;
 }
+.intro-grid-box > div {
+  position: relative;
+  border: 5px solid black;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  font-size: 2rem;
+  transition: transform 0.5s ease-in;
+}
 
 .intro-grid-one {
-  border: 5px solid black;
   border-right: none;
+  justify-content: flex-end;
 }
 
 .intro-grid-two {
   border: 5px solid black;
   border-left: none;
 }
+.intro-grid-two > div {
+  position: absolute;
+  top: calc(49% - 2rem);
+  overflow-y: hidden;
+}
+
+.clear {
+  color: transparent;
+}
+
+.line-of-questioning {
+  transition: transform 0.5s ease-in-out;
+}
+
+.out-of-question {
+  transform: translateY(100px);
+}
+
+.upn-out-of-question {
+  transform: translateY(-100px);
+}
+
+.get-up {
+  transform: translateY(-100vh);
+}
+
+.get-down {
+  transform: translateY(100vh);
+}
 
 .pitcher-box {
   width: 500px;
+}
+
+.unpresented {
+  transform: translateX(100vw);
 }
 
 body {
