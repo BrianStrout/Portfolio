@@ -42,10 +42,6 @@
   background-color: #ffff8a;
 }
 
-.switch-cloud-box:hover > div > h3 {
-  /* color: pink; */
-}
-
 .switch-cloud-box:nth-child(1):hover:after {
   position: absolute;
   top: 0;
@@ -276,6 +272,7 @@
 }
 
 .balloons {
+  position: relative;
   width: 100px;
   height: 360px;
   display: flex;
@@ -283,27 +280,43 @@
   justify-content: space-between;
 }
 .balloons > .balloon {
+  position: relative;
   width: 100px;
   height: 100px;
-  background-image: url("../src/components/images/ball1.png");
   background-position: center top;
   transform-origin: center center;
   transition: transform 2s linear;
-}
-.balloons > .balloon:hover {
-  scale: 1.2;
-}
-.balloons > .balloon.in-wind {
-  animation: 4s ease-in-out infinite alternate bobnwig;
 }
 .balloons > .balloon#bab1 {
   transition: transform 1s ease-out 0s;
 }
 .balloons > .balloon#bab2 {
-  transition: transform 1s ease-out 0.5s;
+  transition: transform 0.09s ease-out 0.5s;
 }
 .balloons > .balloon#bab3 {
   transition: transform 1s ease-out 1.2s;
+}
+
+.balloon-ball {
+  position: absolute;
+  z-index: 10;
+  background-image: url("../src/components/images/ball1.png");
+  width: 100px;
+  height: 100px;
+}
+.balloon-ball:hover {
+  scale: 1.2;
+}
+.balloon-ball.in-wind {
+  animation: 4s ease-in-out infinite alternate bobnwig;
+}
+
+.balloon-string {
+  position: absolute;
+  z-index: 9;
+  height: 200px;
+  width: 100px;
+  background-image: url("../src/components/images/balloonstring.png");
 }
 
 .sad-child {
@@ -335,10 +348,6 @@ body {
   background-color: var(--background-color);
   color: var(--textcolor);
   overflow: scroll;
-}
-
-.notdisplayed {
-  /* display: none !important; */
 }
 
 .wrapper > div {

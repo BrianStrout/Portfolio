@@ -17,10 +17,10 @@ const observeIntroToServices = new IntersectionObserver(
       if (!entry.isIntersecting) {
         return;
       } else if (entry.isIntersecting) {
-        console.log("run fun");
-        console.log("fun running");
+        // console.log("run fun");
+        // console.log("fun running");
         outs.forEach((out, index) => {
-          console.log(index);
+          // console.log(index);
 
           if (index === 0) {
             setTimeout(() => {

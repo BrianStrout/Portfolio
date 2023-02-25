@@ -1,28 +1,23 @@
 import { tester1, Animator } from "./src/components/modules/animate.js";
 import { observeIntroToServices } from "./src/components/modules/observeIntroToServ.js";
+import { freelanceClicker } from "./src/components/modules/freelanceSwitcher.js";
 let dev = false;
-tester1();
 const f1 = "src/components/images/falling1.png";
 const f2 = "src/components/images/falling2.png";
 const f3 = "src/components/images/falling5.png";
 const f4 = "src/components/images/falling4.png";
 const f6 = "src/components/images/falling6.png";
-
-Animator("class", "d", "remove", "d");
-
 const b1 = "src/components/images/panic1.png";
 const b2 = "src/components/images/panic4.png";
 const b3 = "src/components/images/panic3.png";
 
 let image = document.getElementById("image");
-
 let currentPos = 0;
 let images = [f1, f2, f1, f6, f3, f4, f3, f4, f1, f3, f4, f3, f6, f1, f2];
 let images2 = [b1, b2, b3, b2];
 
 function volgendefoto() {
   if (++currentPos >= images.length) currentPos = 0;
-
   image.src = images[currentPos];
 }
 let brianSecondPage = document.getElementById("brianSecondPage");
@@ -105,9 +100,7 @@ const cloud11 = document.getElementById("c11");
 const sun = document.getElementById("sun");
 const moon = document.getElementById("moon");
 const target = document.getElementById("target");
-// const switchFree = document.getElementById("switchFree");
 const switchPort = document.getElementById("switchPort");
-
 const chair = document.getElementById("brianSecondChair");
 const brianBlurbP = document.getElementById("brianBlurbP");
 const ul = document.getElementById("listOfSkills");
@@ -121,8 +114,6 @@ const linkToGmail = document.getElementById("copy-gmail");
 const linkToLinkedIn = document.getElementById("brianlinkedin");
 const linkToGitHub = document.getElementById("briangithub");
 const resumeLink = document.getElementById("resume-link");
-
-// const brianSecondPage = document.getElementById("brianSecondPage");
 moodRing.addEventListener("click", () => {
   wrapper.classList.toggle("dark");
   sun.classList.toggle("sunset");
@@ -130,8 +121,6 @@ moodRing.addEventListener("click", () => {
 });
 
 const CueClouds = () => {
-  // launch cloud scape
-
   clouds_array1.forEach((cloud) => {
     cloud.classList.add("clouds-movement-foreground");
   });
@@ -240,6 +229,13 @@ lastTitle.addEventListener("transitionend", function () {
     list.classList.remove("list-fixer");
   });
   absoluteCloud.classList.remove("pulled-down");
+});
+
+const balloonToClick = Array.from(document.querySelectorAll(".balloon"));
+balloonToClick.forEach((balloon) => {
+  balloon.addEventListener("click", (e) => {
+    freelanceClicker(e);
+  });
 });
 
 const portLinkCode_Portfolio = document.getElementById("portgithub");

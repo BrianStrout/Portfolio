@@ -1,5 +1,3 @@
-console.log("modules running");
-
 var image = document.getElementById("image");
 var currentPos = 0;
 var images = [f1, f1, f1];
