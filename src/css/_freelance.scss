@@ -26,7 +26,7 @@
 .hanging-cloud {
   width: 100%;
   height: 100%;
-  background-image: url("./images/c3.png");
+  background-image: url("../components/images/c3.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -158,7 +158,7 @@
     position: relative;
     width: 100px;
     height: 100px;
-    // background-image: url("../src/components/images/ball1.png");
+    // background-image: url("../components/images/ball1.png");
     background-position: center top;
     transform-origin: center center;
     transition: transform 2s linear;
@@ -179,7 +179,7 @@
 .balloon-ball {
   position: absolute;
   z-index: 10;
-  background-image: url("../src/components/images/ball1.png");
+  background-image: url("../components/images/ball1.png");
   width: 100px;
   height: 100px;
   &:hover {
@@ -194,7 +194,7 @@
   z-index: 9;
   height: 200px;
   width: 100px;
-  background-image: url("../src/components/images/balloonstring.png");
+  background-image: url("../components/images/balloonstring.png");
 }
 
 .sad-child {
