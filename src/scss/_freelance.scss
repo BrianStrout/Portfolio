@@ -146,6 +146,12 @@
   transform: scale(0);
   // scale: 0.25;
 }
+.words-header {
+  font-family: var(--business-font);
+}
+.handy {
+  font-family: var(--letter-font);
+}
 
 .balloons {
   position: relative;

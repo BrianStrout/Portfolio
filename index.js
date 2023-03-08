@@ -297,10 +297,10 @@ resumeLink.addEventListener("click", () => {
   window.location.href = `https://drive.google.com/file/d/10sLczM7zkozE4p8tbZ-IWBFh-6IGBYE6/view?usp=share_link`;
 });
 
-const copy = document.getElementById("copy-gmail");
+// const copy = document.getElementById("copy-gmail");
 
-copy.onclick = function () {
-  navigator.clipboard.writeText("Brianjstrout@gmail.com");
+linkToGmail.onclick = function () {
+  navigator.clipboard.writeText("strout.co@gmail.com");
 };
 
 //code for disabling scroll//

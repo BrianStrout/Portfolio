@@ -271,6 +271,14 @@
   transform: scale(0);
 }
 
+.words-header {
+  font-family: var(--business-font);
+}
+
+.handy {
+  font-family: var(--letter-font);
+}
+
 .balloons {
   position: relative;
   width: 100px;
@@ -397,13 +405,22 @@ body {
 }
 
 .remainderCloud {
-  display: inline;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
+  z-index: 50;
   top: calc(50vh - 100px);
   left: calc(50vw - 100px);
+  background-image: url("src/components/images/c3.png");
+  background-size: cover;
+  background-position: center;
   width: 200px;
   height: 200px;
   transition: display 0s linear 2s;
+}
+.remainderCloud:hover:after {
+  content: "bored?";
 }
 
 .clouds {
