@@ -5,7 +5,6 @@ const tester1 = () => {
 function Animator(selector, alias, action, noun, style) {
   let animTarget;
   let animTargetArray;
-  let tt = action;
 
   if (selector === "id") {
     animTarget = document.getElementById(`${alias}`);
@@ -22,18 +21,3 @@ function Animator(selector, alias, action, noun, style) {
 }
 
 export { tester1, Animator };
-
-// switch (action){
-// case "add":{
-//     animTarget.classList.add(`.${noun}`);
-
-// }
-// case "remove":{
-//     animTarget.classList.remove(`.${noun}`);
-// }
-// case "toggle":{
-//     animTarget.classList.toggle(`.${noun}`);
-// } case "style":{
-//     animTarget.style.add(`.${noun}`);
-// }
-// }
