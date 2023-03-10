@@ -241,7 +241,7 @@
 }
 
 .linkOutTo {
-  width: 250px;
+  width: 180px;
   height: 100px;
   background-repeat: none;
   background-size: cover;
@@ -251,6 +251,19 @@
 #fugi {
   background-image: url("src/components/images/FugativaSiteScreenShot.png");
 }
+
+#winter {
+  background-image: url("src/components/images/winterboyss.png");
+}
+
+#mookies {
+  background-image: url("src/components/images/mookiesss.png");
+}
+
+#masha {
+  background-image: url("src/components/images/MashaSiteScreenShot.png");
+}
+
 .grid2 {
   display: grid;
   grid-template-columns: 250px 1fr;

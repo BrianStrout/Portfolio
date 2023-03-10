@@ -7,7 +7,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&display=swap");
 .switchwrap {
-  display: none;
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -378,7 +377,7 @@ ul {
 }
 
 .linkOutTo {
-  width: 250px;
+  width: 180px;
   height: 100px;
   background-repeat: none;
   background-size: cover;
@@ -387,6 +386,18 @@ ul {
 
 #fugi {
   background-image: url("src/components/images/FugativaSiteScreenShot.png");
+}
+
+#winter {
+  background-image: url("src/components/images/winterboyss.png");
+}
+
+#mookies {
+  background-image: url("src/components/images/mookiesss.png");
+}
+
+#masha {
+  background-image: url("src/components/images/MashaSiteScreenShot.png");
 }
 
 .grid2 {

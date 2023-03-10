@@ -48,7 +48,7 @@ const freelanceClicker = (e) => {
       </div>
     </li>
     <li class="grid2">
-      <div class="linkOutTo" id="mookie"></div>
+      <div class="linkOutTo" id="mookies"></div>
       <div>
         <h2 class="words-header">Playfully introduce your shop</h2>
         <p class="handy">
@@ -58,19 +58,9 @@ const freelanceClicker = (e) => {
       </div>
     </li>
     <li class="grid2">
-      <div class="linkOutTo" id="Masha"></div>
+      <div class="linkOutTo" id="masha"></div>
       <div>
         <h2 class="words-header">Proper Introductions</h2>
-        <p class="handy">
-          Bring heads to a stop with elegant animation intros to display your
-          fashion or personal modeling
-        </p>
-      </div>
-    </li>
-    <li class="grid2">
-      <div class="linkOutTo" id="Masha"></div>
-      <div>
-        <h2 class="words-header">Dynamic Landing Page</h2>
         <p class="handy">
           Bring heads to a stop with elegant animation intros to display your
           fashion or personal modeling
@@ -93,11 +83,31 @@ const freelanceClicker = (e) => {
       </div>
       `;
       break;
-  }
 
-  //
-  //
-  // General Reference
+    case "fugi":
+      window.open("https://lafugitiva.netlify.app", "_blank");
+      break;
+    case "winter":
+      window.open("https://winterdemo.netlify.app/", "_blank");
+      break;
+    case "mookies":
+      window.open("https://mookies.netlify.app/", "_blank");
+      break;
+    case "masha":
+      window.open("https://mashaoflisbon.netlify.app/", "_blank");
+      break;
+  }
 };
 
 export { freelanceClicker };
+
+// <li class="grid2">
+//   <div class="linkOutTo" id="Masha"></div>
+//   <div>
+//     <h2 class="words-header">Dynamic Landing Page</h2>
+//     <p class="handy">
+//       Bring heads to a stop with elegant animation intros to display your
+//       fashion or personal modeling
+//     </p>
+//   </div>
+// </li>

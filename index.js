@@ -244,6 +244,10 @@ balloonToClick.forEach((balloon) => {
   });
 });
 
+document.addEventListener("click", (e) => {
+  freelanceClicker(e);
+});
+
 const portLinkCode_Portfolio = document.getElementById("portgithub");
 const portLinkCode_Mash = document.getElementById("mashagithub");
 const portLinkLive_Portfolio = document.getElementById("mashanetlify");
@@ -285,7 +289,8 @@ wrapper.addEventListener("click", (event) => {
 });
 
 const followingLink = (dest) => {
-  window.location.href = `https://${dest}`;
+  window.open(`https://${dest}`, "_blank");
+  // window.location.href = ;
 };
 linkToGitHub.addEventListener("click", () => {
   window.location.href = `https://github.com/brianstrout`;
