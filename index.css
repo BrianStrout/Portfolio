@@ -119,6 +119,27 @@
   --checked-svg: url("<?xml version='1.0' encoding='utf-8'?><svg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='122.881px' height='89.842px' viewBox='0 0 122.881 89.842' enable-background='new 0 0 122.881 89.842' xml:space='preserve'><g><path d='M1.232,55.541c-1.533-1.388-1.652-3.756-0.265-5.289c1.388-1.534,3.756-1.652,5.29-0.265l34.053,30.878l76.099-79.699 c1.429-1.501,3.804-1.561,5.305-0.132c1.502,1.428,1.561,3.803,0.133,5.305L43.223,88.683l-0.005-0.005 c-1.396,1.468-3.716,1.563-5.227,0.196L1.232,55.541L1.232,55.541z'/></g></svg>");
 }
 
+ul {
+  list-style: none;
+}
+
+.ind {
+  margin-left: 1rem;
+}
+
+.words-header {
+  font-family: var(--business-font);
+}
+
+.handy {
+  font-family: var(--letter-font);
+  font-size: 1.5rem;
+}
+
+.under {
+  text-decoration: underline;
+}
+
 .freelance-presenter {
   position: absolute;
   z-index: 5;
@@ -129,20 +150,22 @@
   transition: all 1s ease-in-out;
 }
 
-.hanging-from-heaven {
+.freelance-container .hanging-from-heaven {
   position: absolute;
   z-index: 10;
   top: 50;
   left: 200;
   display: flex;
   gap: 10px;
-  background-color: rgba(255, 0, 0, 0.333);
 }
 
 .hanging-cloud-box {
   width: 150px;
   height: 100px;
+}
+.hanging-cloud-box:hover {
   border: 3px solid black;
+  scale: 105%;
 }
 
 .hanging-cloud {
@@ -202,7 +225,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .intro-grid-box {
@@ -260,7 +283,7 @@
 }
 
 .pitcher-box {
-  width: 600px;
+  width: 700px;
   transform-origin: center center;
   transition: all 0.5s ease-out;
   display: flex;
@@ -269,14 +292,6 @@
 .tiny-boy {
   background-color: chocolate;
   transform: scale(0);
-}
-
-.words-header {
-  font-family: var(--business-font);
-}
-
-.handy {
-  font-family: var(--letter-font);
 }
 
 .balloons {
@@ -350,12 +365,33 @@
 }
 
 .freelance-container {
-  width: 30vw;
+  width: 40vw;
+}
+.freelance-container ul li p {
+  margin-left: 1rem;
+  font-size: 1.5rem;
 }
 
 @keyframes identifier {}
 .unpresented {
   transform: translateX(100vw);
+}
+
+.linkOutTo {
+  width: 250px;
+  height: 100px;
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
+}
+
+#fugi {
+  background-image: url("src/components/images/FugativaSiteScreenShot.png");
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 250px 1fr;
 }
 
 body {
