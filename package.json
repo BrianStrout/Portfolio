@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/BrianStrout/squarespacetrial#readme",
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "sass": "^1.58.0"
   }
 }
