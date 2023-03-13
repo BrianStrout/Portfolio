@@ -110,9 +110,10 @@ const freelanceClicker = (e) => {
       <p id="words-para" class="handy">
       Need to toss me some bucks?
       </p>
-      <div class="payboxes"></div>
-      <div class="paybox">https://paypal.me/BStrout</div>
-      <div class="paybox">https://account.venmo.com/u/brian-strout-2</div>
+      <div class="payboxes">
+      <div id="paypal" class="paybox paypal"></div>
+      <div id="venmo" class="paybox venmo"></div>
+      </div>
       <form id="myForm">
       <!-- name -->
       <div class="form-group">
@@ -128,7 +129,7 @@ const freelanceClicker = (e) => {
 
       <!-- email -->
       <div class="form-group">
-        <label for="email">Email address</label>
+        <label for="email">Email</label>
         <input
           type="email"
           name="email"
@@ -137,24 +138,10 @@ const freelanceClicker = (e) => {
           placeholder="enter your email"
         />
       </div>
-
-      <!-- subject -->
-      <div class="form-group">
-        <label for="subject">Subject</label>
-        <input
-          type="text"
-          name="subject"
-          class="form-control"
-          id="subject"
-          placeholder="enter email subject"
-        />
-      </div>
-
       <div class="form-group">
         <label for="message">Message</label>
         <textarea class="form-control" id="message" name="message" rows="5"></textarea>
       </div>
-
       <button type="submit" id="submit" class="btn btn-primary">Submit</button>
     </form>
       </div>
@@ -164,13 +151,20 @@ const freelanceClicker = (e) => {
       setTimeout(() => {
         balloon3.classList.add("air");
       }, 500);
-
       setTimeout(() => {
         balloon3.classList.remove("air");
         string3.classList.remove("air");
         balloon3.firstElementChild.classList.remove("popped");
       }, 1300);
       break;
+
+    case "paypal":
+      window.open("https://paypal.me/BStrout", "_blank");
+      break;
+    case "venmo":
+      window.open("https://account.venmo.com/u/brian-strout-2", "_blank");
+      break;
+
     case "fugi":
       window.open("https://lafugitiva.netlify.app", "_blank");
       break;
@@ -192,7 +186,12 @@ const freelanceClicker = (e) => {
 
       // send the email here
       emailjs
-        .sendForm(serviceID, templateID, formSelector, "oYymItkIoREaVvBlM")
+        .sendForm(
+          "contact_service",
+          templateID,
+          formSelector,
+          "oYymItkIoREaVvBlM"
+        )
         .then((response) => {
           console.log("SUCCESS!", response.status, response.text);
           alert("SUCCESS!");

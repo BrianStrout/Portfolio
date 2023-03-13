@@ -245,7 +245,25 @@
   }
 }
 
-@keyframes identifier {
+.payboxes {
+  width: 80%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  .paybox {
+    border: 3px solid black;
+    width: 100px;
+    height: 100px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .paypal {
+    background-image: url("/src/components/images/paypal_icon.png");
+  }
+  .venmo {
+    background-image: url("/src/components/images/venmo_icon.png");
+  }
 }
 
 .unpresented {
@@ -279,4 +297,31 @@
 .grid2 {
   display: grid;
   grid-template-columns: 250px 1fr;
+}
+
+#myForm {
+  position: relative;
+  // background-color: pink;
+  border: 3px solid black;
+  width: 80%;
+  padding: 1rem;
+  margin-top: 8px;
+
+  > .form-group {
+    // border: 3px solid black;
+    display: flex;
+    align-content: flex-start;
+    margin: 1rem;
+    > label {
+      width: 90px;
+      text-transform: uppercase;
+      display: inline-block;
+      font-family: var(--header-font);
+    }
+  }
+  #submit {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+  }
 }

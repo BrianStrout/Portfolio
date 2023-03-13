@@ -1187,43 +1187,5 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("service_kyqoxgr");
-      })();
-    </script>
   </body>
 </html>
-
-<script
-  type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-></script>
-<script type="text/javascript">
-  (function () {
-    emailjs.init("user_UHpNJFij8MtQD1aAfs38X");
-  })();
-</script>
-<script>
-  // listen to the form submission
-  document
-    .getElementById("myForm")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      const serviceID = "service_b4qmiqc";
-      const templateID = "template_fv38whr";
-
-      // send the email here
-      emailjs.sendForm(serviceID, templateID, this).then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          alert("SUCCESS!");
-        },
-        (error) => {
-          console.log("FAILED...", error);
-          alert("FAILED...", error);
-        }
-      );
-    });
-</script>
