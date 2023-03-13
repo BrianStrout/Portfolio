@@ -197,7 +197,7 @@
 .balloon-ball {
   position: absolute;
   z-index: 10;
-  background-image: url("./src/components/images/ball1.png");
+  background-image: url("./src/components/images/balloonknot.png");
   width: 100px;
   height: 100px;
 
@@ -218,6 +218,18 @@
 
 .sad-child {
   transform: translateY(100vh);
+}
+
+.popped {
+  background-image: url("/src/components/images/balloonpop.png");
+  opacity: 50%;
+  pointer-events: none;
+}
+.air {
+  // display: none;
+  opacity: 0%;
+  transition: all 0s;
+  transform: translateY(90vh);
 }
 
 .freelance-container {

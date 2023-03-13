@@ -1,13 +1,22 @@
+// import emailjs;
+
 const balloon1 = document.getElementById("bab1");
+const string1 = balloon1.querySelector(".balloon-string");
 const balloon2 = document.getElementById("bab2");
+const string2 = balloon2.querySelector(".balloon-string");
 const balloon3 = document.getElementById("bab3");
+const string3 = balloon3.querySelector(".balloon-string");
 const words = document.getElementById("pitcherWords");
 const wordHeader = document.getElementById("words-header");
 const wordPara = document.getElementById("words-para");
 
+// const init = () => {
+//   emailjs.init("oYymItkIoREaVvBlM");
+// };
+
 const freelanceClicker = (e) => {
   console.log(e.target.id);
-
+  console.log(string1);
   switch (e.target.id) {
     case "ball1":
       words.innerHTML = `
@@ -20,6 +29,19 @@ const freelanceClicker = (e) => {
     I take great joy in helping individuals, businesses, and small organizations evolve how they interact with the web on a budget that is within their means. Whether it's regarding building a site bound to catch an eye, increasing your engagement and lowering your bounce rate; helping with management and keeping your online presence current and crisp, or helping with your video projects, I look forward to the opportunity to chat and start a lasting business relationship.
     <br>
     </p></div>`;
+      // console.log(balloon1.firstElementChild.classList);
+      balloon1.firstElementChild.classList.add("popped");
+      string1.classList.add("air");
+      setTimeout(() => {
+        balloon1.classList.add("air");
+      }, 500);
+
+      setTimeout(() => {
+        balloon1.classList.remove("air");
+        string1.classList.remove("air");
+        balloon1.firstElementChild.classList.remove("popped");
+      }, 1300);
+
       break;
     case "ball2":
       words.innerHTML = ` <div class="freelance-container"><h1 id="words-header">Examples</h1>
@@ -69,6 +91,17 @@ const freelanceClicker = (e) => {
     </li>
   </ul>
     </p></div>`;
+      balloon2.firstElementChild.classList.add("popped");
+      string2.classList.add("air");
+      setTimeout(() => {
+        balloon2.classList.add("air");
+      }, 500);
+
+      setTimeout(() => {
+        balloon2.classList.remove("air");
+        string2.classList.remove("air");
+        balloon2.firstElementChild.classList.remove("popped");
+      }, 1300);
       break;
     case "ball3":
       words.innerHTML = `
@@ -80,10 +113,64 @@ const freelanceClicker = (e) => {
       <div class="payboxes"></div>
       <div class="paybox">https://paypal.me/BStrout</div>
       <div class="paybox">https://account.venmo.com/u/brian-strout-2</div>
+      <form id="myForm">
+      <!-- name -->
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="name"
+          name="name"
+          class="form-control"
+          id="name"
+          placeholder="enter your name"
+        />
+      </div>
+
+      <!-- email -->
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input
+          type="email"
+          name="email"
+          class="form-control"
+          id="email"
+          placeholder="enter your email"
+        />
+      </div>
+
+      <!-- subject -->
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input
+          type="text"
+          name="subject"
+          class="form-control"
+          id="subject"
+          placeholder="enter email subject"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+      </div>
+
+      <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+    </form>
       </div>
       `;
-      break;
+      balloon3.firstElementChild.classList.add("popped");
+      string3.classList.add("air");
+      setTimeout(() => {
+        balloon3.classList.add("air");
+      }, 500);
 
+      setTimeout(() => {
+        balloon3.classList.remove("air");
+        string3.classList.remove("air");
+        balloon3.firstElementChild.classList.remove("popped");
+      }, 1300);
+      break;
     case "fugi":
       window.open("https://lafugitiva.netlify.app", "_blank");
       break;
@@ -96,18 +183,51 @@ const freelanceClicker = (e) => {
     case "masha":
       window.open("https://mashaoflisbon.netlify.app/", "_blank");
       break;
+    case "submit":
+      e.preventDefault();
+      const formSelector = document.getElementById("myForm");
+
+      const serviceID = "service_kyqoxgr";
+      const templateID = "template_36awvk9";
+
+      // send the email here
+      emailjs
+        .sendForm(serviceID, templateID, formSelector, "oYymItkIoREaVvBlM")
+        .then((response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          alert("SUCCESS!");
+        });
+
+      break;
   }
 };
 
 export { freelanceClicker };
 
-// <li class="grid2">
-//   <div class="linkOutTo" id="Masha"></div>
-//   <div>
-//     <h2 class="words-header">Dynamic Landing Page</h2>
-//     <p class="handy">
-//       Bring heads to a stop with elegant animation intros to display your
-//       fashion or personal modeling
-//     </p>
-//   </div>
-// </li>
+{
+  /* <script type="text/javascript">
+      (function () {
+        emailjs.init("user_UHpNJFij8MtQD1aAfs38X");
+      })();
+    </script>
+    <script>
+      // listen to the form submission
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const serviceID = "service_b4qmiqc";
+          const templateID = "template_fv38whr";
+
+          // send the email here
+          emailjs.sendForm(serviceID, templateID, this).then(
+            (response) => {
+              console.log("SUCCESS!", response.status, response.text);
+              alert("SUCCESS!");
+            },
+            (error) => {
+              console.log("FAILED...", error);
+              alert("FAILED...", error);
+            } */
+}
