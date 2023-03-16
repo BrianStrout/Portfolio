@@ -172,6 +172,7 @@
         right: -50px;
         top: 40%;
         content: "Services";
+        font-family: var(--letter-font);
       }
     }
     &#bab2 {
@@ -181,6 +182,7 @@
         right: -50px;
         top: 40%;
         content: "Examples";
+        font-family: var(--letter-font);
       }
     }
     &#bab3 {
@@ -190,6 +192,7 @@
         right: -50px;
         top: 40%;
         content: "Reference";
+        font-family: var(--letter-font);
       }
     }
   }
@@ -323,5 +326,126 @@
     position: absolute;
     bottom: 1rem;
     right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .intro-grid-box {
+    width: 100%;
+    > div {
+      font-size: 12px;
+    }
+  }
+  .intro-grid-two > div {
+    position: absolute;
+    top: calc(49% - 12px);
+    overflow-y: hidden;
+  }
+
+  .freelance-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .ball,
+  .balloon-ball {
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+  }
+  .balloon-string {
+    background-size: cover;
+    width: 80px;
+    height: 160px;
+  }
+  .payboxes {
+    padding: 0;
+    width: 100%;
+    margin-top: 10px;
+
+    .paybox {
+      padding: 0;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .pitcher-box {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    width: 100%;
+    min-height: 500px;
+    padding: 16px;
+  }
+  .freelance-container {
+    position: relative;
+    width: 100%;
+    // overflow-y: scroll;
+    ol {
+      font-family: var(--letter-font);
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      height: 350px;
+      overflow-y: hidden;
+      li {
+        opacity: 0.4;
+      }
+      :first-child {
+        opacity: 1;
+      }
+    }
+  }
+
+  .arrowdown {
+    position: absolute;
+    left: 65px;
+    top: 338px;
+    z-index: 50;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(240, 248, 255, 0.559);
+    background-image: url("/src/components/images/arrowdown.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px dashed black;
+    border-radius: 50%;
+    &:after {
+      content: "see more";
+      position: absolute;
+      top: -20px;
+      left: -5px;
+      width: 60px;
+      display: block;
+    }
+    &:active {
+      scale: 0.9;
+    }
+  }
+  .handy {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  .grid2 {
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 1fr;
+    height: 250px;
+  }
+
+  .words-header {
+    font-size: 1rem;
+    text-decoration: underline;
+  }
+
+  #myForm {
+    width: 100%;
+    height: 300px;
   }
 }

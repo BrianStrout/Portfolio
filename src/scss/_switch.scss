@@ -1,5 +1,5 @@
 .switchwrap {
-  display: none;
+  // display: none;
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -70,7 +70,10 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  /* border: 3px solid black; */
+  font-family: var(--header-font);
+  h3 {
+    font-size: 1rem;
+  }
 }
 .freelance-showcase {
   width: 100vw;

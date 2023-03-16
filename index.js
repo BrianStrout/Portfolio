@@ -1,5 +1,6 @@
 import { tester1, Animator } from "./src/components/modules/animate.js";
 import { observeIntroToServices } from "./src/components/modules/observeIntroToServ.js";
+import { observeIntroToSkills } from "./src/components/modules/observeIntroToSkills.js";
 import { freelanceClicker } from "./src/components/modules/freelanceSwitcher.js";
 let dev = false;
 const f1 = "src/components/images/falling1.png";
@@ -28,12 +29,13 @@ const freelancePresenter = document.getElementById("freelancePresenter");
 const backCloud = document.getElementById("backCloud");
 const switchWrap = document.querySelector(".switchwrap");
 switchProfessional.addEventListener("click", () => {
+  enableScroll();
   target.scrollIntoView({ behavior: "smooth" });
 });
 
 switchFree.addEventListener("click", (e) => {
   //scroll to and lock
-  disableScroll();
+  // disableScroll();
   switchWrap.scrollIntoView({ behavior: "smooth" });
 
   freelancePresenter.classList.remove("unpresented");
@@ -41,6 +43,11 @@ switchFree.addEventListener("click", (e) => {
 backCloud.addEventListener("click", () => {
   freelancePresenter.classList.add("unpresented");
   enableScroll();
+});
+
+const skillSetPage = document.querySelectorAll("#target");
+skillSetPage.forEach((page) => {
+  observeIntroToSkills.observe(page);
 });
 
 const introsOnScreen = document.querySelectorAll("#introToServices");
@@ -149,8 +156,9 @@ window.addEventListener("onbeforeload", () => {
 });
 
 window.addEventListener("load", () => {
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
   topTarget.scrollIntoView({ behavior: "smooth" });
+
   setTimeout(() => {
     hi.classList.remove("translatedHi");
     iam.classList.remove("translatedIam");
@@ -208,15 +216,35 @@ const clearOut = () => {
   }, 6000);
 
   setTimeout(() => {
-    target.scrollIntoView({ behavior: "smooth" });
+    switchWrap.scrollIntoView({ behavior: "smooth" });
+    disableScroll();
   }, 2800);
 
   setTimeout(() => {
-    brianSecondPageBox.classList.remove("unseen");
-    brianSecondChair.classList.add("slide-chair-in");
-    brianSecondPageBox.classList.add("brianUp");
+    // brianSecondPageBox.classList.remove("unseen");
+    // brianSecondChair.classList.add("slide-chair-in");
+    // brianSecondPageBox.classList.add("brianUp");
   }, 3500);
 };
+
+// brianSecondPageBox.addEventListener("transitionend", function () {
+//   brianBlurbP.classList.remove("tucked-up");
+//   console.log("transition complete, put Brian in a desk here");
+//   brianSecondPage.src = "src/components/images/workingatdesk.png";
+//   brianSecondPage.style = "width: 260px; height: 260px;";
+//   brianSecondChair.classList.add("unseen");
+
+//   ULTitleArray.forEach((title) => {
+//     title.classList.remove("shrunk");
+//   });
+// });
+
+// lastTitle.addEventListener("transitionend", function () {
+//   liTagList.forEach((list) => {
+//     list.classList.remove("list-fixer");
+//   });
+//   absoluteCloud.classList.remove("pulled-down");
+// });
 
 brianSecondPageBox.addEventListener("transitionend", function () {
   brianBlurbP.classList.remove("tucked-up");
@@ -224,17 +252,15 @@ brianSecondPageBox.addEventListener("transitionend", function () {
   brianSecondPage.src = "src/components/images/workingatdesk.png";
   brianSecondPage.style = "width: 260px; height: 260px;";
   brianSecondChair.classList.add("unseen");
-
   ULTitleArray.forEach((title) => {
     title.classList.remove("shrunk");
   });
-});
-
-lastTitle.addEventListener("transitionend", function () {
-  liTagList.forEach((list) => {
-    list.classList.remove("list-fixer");
+  lastTitle.addEventListener("transitionend", function () {
+    liTagList.forEach((list) => {
+      list.classList.remove("list-fixer");
+    });
+    absoluteCloud.classList.remove("pulled-down");
   });
-  absoluteCloud.classList.remove("pulled-down");
 });
 
 const balloonToClick = Array.from(document.querySelectorAll(".balloon"));

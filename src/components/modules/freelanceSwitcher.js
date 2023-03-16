@@ -10,25 +10,50 @@ const words = document.getElementById("pitcherWords");
 const wordHeader = document.getElementById("words-header");
 const wordPara = document.getElementById("words-para");
 
+const mob_fl_arrow = document.getElementById("mob_fl_arrow");
+
 // const init = () => {
 //   emailjs.init("oYymItkIoREaVvBlM");
 // };
 
 const freelanceClicker = (e) => {
   console.log(e.target.id);
-  console.log(string1);
+  // console.log(string1);
   switch (e.target.id) {
     case "ball1":
       words.innerHTML = `
       <div class="freelance-container">
       <h1 class="words-header">Time To Up Your Web Presence?</h1>
-      <h3 class="handy under"><i>
-    If it's time to create or rethink your web presence,  get help with keeping it updated, or gain some guidance for your path forward, it's time we talk.
-    </i></h3><br>
-    <p id="words-para" class="handy ind">
-    I take great joy in helping individuals, businesses, and small organizations evolve how they interact with the web on a budget that is within their means. Whether it's regarding building a site bound to catch an eye, increasing your engagement and lowering your bounce rate; helping with management and keeping your online presence current and crisp, or helping with your video projects, I look forward to the opportunity to chat and start a lasting business relationship.
-    <br>
-    </p></div>`;
+      <h3 class="handy under">
+        <i>
+          If you're unsure of how to make your mark on the internet,
+          or improve your old one, it's time we talk about...
+        </i>
+      </h3>
+
+      <ol style="margin-left: 52px; list-style: circle">
+        <li>Designing/building your custom site</li>
+        <li>
+          Updating/maintaining your website, Wix, SquareSpace, or
+          WordPress
+        </li>
+        <li>Consulting on improvements</li>
+        <li>Photo & video content editing</li>
+      </ol>
+      <p id="words-para" class="handy ind">
+        I take great joy in helping individuals, businesses, and
+        small organizations evolve how they interact with the web on
+        a budget that is within their means. Whether it's regarding
+        building a site bound to catch an eye, increasing your
+        engagement and lowering your bounce rate; helping with
+        management and keeping your online presence current and
+        crisp, or helping with your video projects, I look forward
+        to the opportunity to chat and start a lasting business
+        relationship.
+        <br />
+      </p>
+    </div>
+    `;
       // console.log(balloon1.firstElementChild.classList);
       balloon1.firstElementChild.classList.add("popped");
       string1.classList.add("air");
@@ -45,8 +70,9 @@ const freelanceClicker = (e) => {
       break;
     case "ball2":
       words.innerHTML = ` <div class="freelance-container"><h1 id="words-header">Examples</h1>
+      <div id="mob_fl_arrow" class= "arrowdown"></div>
     <p id="handy">
-    <ul>
+    <ul id="fl_ex_list">
     <li class="grid2">
       <div class="linkOutTo" id="fugi"></div>
       <div>
@@ -114,6 +140,9 @@ const freelanceClicker = (e) => {
       <div id="paypal" class="paybox paypal"></div>
       <div id="venmo" class="paybox venmo"></div>
       </div>
+      <p id="words-para" class="handy">
+      Need to get in touch?
+      </p>
       <form id="myForm">
       <!-- name -->
       <div class="form-group">
@@ -197,6 +226,20 @@ const freelanceClicker = (e) => {
           alert("SUCCESS!");
         });
 
+      break;
+    case "mob_fl_arrow":
+      console.log("arrow clicked");
+
+      let fl_ex_list = document.getElementById("fl_ex_list");
+      let li_switch = fl_ex_list.firstElementChild;
+      // li_switch.detach().sort();
+      // fl_ex_list.append(li_switch);
+
+      fl_ex_list.appendChild(li_switch);
+
+      console.log(li_switch);
+
+      // fl_ex_list.firstElementChild.remove();
       break;
   }
 };

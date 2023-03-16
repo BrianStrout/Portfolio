@@ -81,7 +81,10 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  /* border: 3px solid black; */
+  font-family: var(--header-font);
+}
+.switch-text h3 {
+  font-size: 1rem;
 }
 
 .freelance-showcase {
@@ -318,6 +321,7 @@ ul {
   right: -50px;
   top: 40%;
   content: "Services";
+  font-family: var(--letter-font);
 }
 .balloons > .balloon#bab2 {
   transition: transform 1s ease-out 0.25s;
@@ -327,6 +331,7 @@ ul {
   right: -50px;
   top: 40%;
   content: "Examples";
+  font-family: var(--letter-font);
 }
 .balloons > .balloon#bab3 {
   transition: transform 1s ease-out 0.5s;
@@ -336,6 +341,7 @@ ul {
   right: -50px;
   top: 40%;
   content: "Reference";
+  font-family: var(--letter-font);
 }
 
 .balloon-ball {
@@ -462,6 +468,116 @@ ul {
   right: 1rem;
 }
 
+@media only screen and (max-width: 950px) {
+  .intro-grid-box {
+    width: 100%;
+  }
+  .intro-grid-box > div {
+    font-size: 12px;
+  }
+  .intro-grid-two > div {
+    position: absolute;
+    top: calc(49% - 12px);
+    overflow-y: hidden;
+  }
+  .freelance-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .ball,
+  .balloon-ball {
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+  }
+  .balloon-string {
+    background-size: cover;
+    width: 80px;
+    height: 160px;
+  }
+  .payboxes {
+    padding: 0;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .payboxes .paybox {
+    padding: 0;
+    width: 80px;
+    height: 80px;
+  }
+  .pitcher-box {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    width: 100%;
+    min-height: 500px;
+    padding: 16px;
+  }
+  .freelance-container {
+    position: relative;
+    width: 100%;
+  }
+  .freelance-container ol {
+    font-family: var(--letter-font);
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  .freelance-container ul {
+    height: 350px;
+    overflow-y: hidden;
+  }
+  .freelance-container ul li {
+    opacity: 0.4;
+  }
+  .freelance-container ul :first-child {
+    opacity: 1;
+  }
+  .arrowdown {
+    position: absolute;
+    left: 65px;
+    top: 338px;
+    z-index: 50;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(240, 248, 255, 0.559);
+    background-image: url("/src/components/images/arrowdown.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px dashed black;
+    border-radius: 50%;
+  }
+  .arrowdown:after {
+    content: "see more";
+    position: absolute;
+    top: -20px;
+    left: -5px;
+    width: 60px;
+    display: block;
+  }
+  .arrowdown:active {
+    scale: 0.9;
+  }
+  .handy {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+  .grid2 {
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 1fr;
+    height: 250px;
+  }
+  .words-header {
+    font-size: 1rem;
+    text-decoration: underline;
+  }
+  #myForm {
+    width: 100%;
+    height: 300px;
+  }
+}
 body {
   position: relative;
   overflow: hidden;
@@ -471,6 +587,13 @@ body {
   -webkit-user-select: none; /* Safari */ /* IE 10 and IE 11 */
   -moz-user-select: none;
        user-select: none; /* Standard syntax */
+}
+
+#top-target {
+  position: absolute;
+  z-index: 5;
+  width: 100px;
+  height: 100px;
 }
 
 .wrapper {
@@ -1560,7 +1683,10 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     padding-bottom: 6vh;
   }
   h1 {
-    font-size: 10vh;
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
   }
   .sky {
     right: -40px;
