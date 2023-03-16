@@ -1,7 +1,7 @@
 import { Animator } from "./animate.js";
 
 const imgOptions = {
-  threshold: 0.8,
+  threshold: 0.7,
 };
 
 const outs = Array.from(document.querySelectorAll(".out-of-question"));

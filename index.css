@@ -385,6 +385,10 @@ ul {
 .freelance-container {
   width: 40vw;
 }
+.freelance-container ol {
+  font-family: var(--letter-font);
+  font-size: 1.2rem;
+}
 .freelance-container ul li p {
   margin-left: 1rem;
   font-size: 1.5rem;
