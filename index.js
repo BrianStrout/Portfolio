@@ -219,12 +219,6 @@ const clearOut = () => {
     switchWrap.scrollIntoView({ behavior: "smooth" });
     disableScroll();
   }, 2800);
-
-  setTimeout(() => {
-    // brianSecondPageBox.classList.remove("unseen");
-    // brianSecondChair.classList.add("slide-chair-in");
-    // brianSecondPageBox.classList.add("brianUp");
-  }, 3500);
 };
 
 // brianSecondPageBox.addEventListener("transitionend", function () {
@@ -333,24 +327,19 @@ resumeLink.addEventListener("click", () => {
 linkToGmail.onclick = function () {
   navigator.clipboard.writeText("strout.co@gmail.com");
 };
-
 //code for disabling scroll//
-
 // left: 37, up: 38, right: 39, down: 40,
 // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
 var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
-
 function preventDefault(e) {
   e.preventDefault();
 }
-
 function preventDefaultForScrollKeys(e) {
   if (keys[e.keyCode]) {
     preventDefault(e);
     return false;
   }
 }
-
 // modern Chrome requires { passive: false } when adding event
 var supportsPassive = false;
 try {
