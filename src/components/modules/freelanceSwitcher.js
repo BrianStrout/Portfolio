@@ -84,26 +84,7 @@ const freelanceClicker = (e) => {
         </p>
       </div>
     </li>
-    <li class="grid2">
-      <div class="linkOutTo" id="winter"></div>
-      <div>
-        <h2 class="words-header">Motion Based Landing Page</h2>
-        <p class="handy">
-          Capture your audiences attention with a landing page that has animated
-          elements made from your own art or photos
-        </p>
-      </div>
-    </li>
-    <li class="grid2">
-    <div class="linkOutTo" id="winter"></div>
-    <div>
-      <h2 class="words-header">Motion Based Landing Page</h2>
-      <p class="handy">
-        Capture your audiences attention with a landing page that has animated
-        elements made from your own art or photos
-      </p>
-    </div>
-  </li>
+   
     <li class="grid2">
       <div class="linkOutTo" id="winter"></div>
       <div>
