@@ -70,7 +70,9 @@ const freelanceClicker = (e) => {
       break;
     case "ball2":
       words.innerHTML = ` <div class="freelance-container"><h1 id="words-header">Examples</h1>
-      <div id="mob_fl_arrow" class= "arrowdown"></div>
+    
+    <div class="circle">
+      <div id="mob_fl_arrow" class= "arrowdown"></div></div>
     <p id="handy">
     <ul id="fl_ex_list">
     <li class="grid2">
@@ -95,6 +97,19 @@ const freelanceClicker = (e) => {
         </p>
       </div>
     </li>
+
+
+    <li class="grid2">
+    <div class="linkOutTo" id="rotary"></div>
+    <div>
+      <h2 class="words-header">Camp Promotional Video</h2>
+      <p class="handy">
+        Promotional video shot and edited by Strout.Co with motion graphics and engaging transitions for an energetic video edit.
+      </p>
+    </div>
+  </li>
+
+
     <li class="grid2">
       <div class="linkOutTo" id="mookies"></div>
       <div>
@@ -115,6 +130,15 @@ const freelanceClicker = (e) => {
         </p>
       </div>
     </li>
+    <li class="grid2">
+    <div class="linkOutTo" id="ghost"></div>
+    <div>
+      <h2 class="words-header">Tattoo Promotional Video</h2>
+      <p class="handy">
+      Promotional video shot and edited by Strout.Co with motion graphics and engaging transitions for an energetic video edit.
+      </p>
+    </div>
+  </li>
   </ul>
     </p></div>`;
       balloon2.firstElementChild.classList.add("popped");
@@ -205,6 +229,12 @@ const freelanceClicker = (e) => {
       break;
     case "masha":
       window.open("https://mashaoflisbon.netlify.app/", "_blank");
+      break;
+    case "rotary":
+      window.open("https://www.youtube.com/watch?v=RNCwRMOqxVs", "_blank");
+      break;
+    case "ghost":
+      window.open("https://www.youtube.com/watch?v=l_2cQxfxDrs", "_blank");
       break;
     case "submit":
       e.preventDefault();

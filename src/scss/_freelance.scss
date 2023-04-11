@@ -290,7 +290,9 @@
 #fugi {
   background-image: url("src/components/images/FugativaSiteScreenShot.png");
 }
-
+#rotary {
+  background-image: url("src/components/images/RotarySiteScreenShot.jpeg");
+}
 #winter {
   background-image: url("src/components/images/winterboyss.png");
 }
@@ -298,7 +300,9 @@
 #mookies {
   background-image: url("src/components/images/mookiesss.png");
 }
-
+#ghost {
+  background-image: url("src/components/images/GitmSiteScreenShot.jpeg");
+}
 #masha {
   background-image: url("src/components/images/MashaSiteScreenShot.png");
 }
@@ -332,6 +336,43 @@
     position: absolute;
     bottom: 1rem;
     right: 1rem;
+  }
+}
+.circle {
+  position: absolute;
+  right: calc(50vw - 25px);
+  bottom: 10px;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  background-color: rgb(255, 3, 179);
+  background-color: rgba(240, 248, 255, 0.9);
+}
+.arrowdown {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(240, 248, 255, 0.9);
+  background-image: url("/src/components/images/arrowdown.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 3px dashed black;
+  border-radius: 50%;
+  &:after {
+    content: "see more";
+    position: absolute;
+    bottom: -27px;
+    left: 12%;
+    width: 60px;
+    display: block;
+  }
+  &:active {
+    scale: 0.9;
   }
 }
 
@@ -408,15 +449,22 @@
     }
   }
 
+  .circle {
+    left: 40px;
+    width: 100px;
+    height: 100px;
+  }
+
   .arrowdown {
-    position: absolute;
-    left: 65px;
-    top: 338px;
-    z-index: 50;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(240, 248, 255, 0.559);
-    background-image: url("/src/components/images/arrowdown.png");
+    // position: absolute;
+    position: relative;
+
+    // top: 338px;
+    // z-index: 50;
+    width: 80px;
+    height: 80px;
+    // background-color: rgba(240, 248, 255, 0.559);
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -425,8 +473,8 @@
     &:after {
       content: "see more";
       position: absolute;
-      top: -20px;
-      left: -5px;
+      bottom: -27px;
+      left: 12%;
       width: 60px;
       display: block;
     }
