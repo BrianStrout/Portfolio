@@ -94,7 +94,7 @@
   width: 60%;
   > div {
     position: relative;
-    border: 5px solid black;
+    // border: 5px solid black;
     display: flex;
     align-items: center;
     padding: 2rem;
@@ -103,12 +103,12 @@
   }
 }
 .intro-grid-one {
-  border-right: none;
+  // border-right: none;
   justify-content: flex-end;
 }
 .intro-grid-two {
-  border: 5px solid black;
-  border-left: none;
+  // border: 5px solid black;
+  // border-left: none;
   > div {
     position: absolute;
     top: calc(49% - 2rem);
