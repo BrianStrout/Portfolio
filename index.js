@@ -242,7 +242,7 @@ const clearOut = () => {
 
 brianSecondPageBox.addEventListener("transitionend", function () {
   brianBlurbP.classList.remove("tucked-up");
-  console.log("transition complete, put Brian in a desk here");
+  // console.log("transition complete, put Brian in a desk here");
   brianSecondPage.src = "src/components/images/workingatdesk.png";
   brianSecondPage.style = "width: 260px; height: 260px;";
   brianSecondChair.classList.add("unseen");
@@ -266,6 +266,7 @@ balloonToClick.forEach((balloon) => {
 
 document.addEventListener("click", (e) => {
   freelanceClicker(e);
+  console.log(e.target);
 });
 
 const portLinkCode_Portfolio = document.getElementById("portgithub");
