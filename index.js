@@ -1,7 +1,7 @@
 import { tester1, Animator } from "./src/components/modules/animate.js";
 import { observeIntroToServices } from "./src/components/modules/observeIntroToServ.js";
 import { observeIntroToSkills } from "./src/components/modules/observeIntroToSkills.js";
-import { freelanceClicker } from "./src/components/modules/freelanceSwitcher.js";
+import { clicker } from "./src/components/modules/freelanceSwitcher.js";
 let dev = false;
 const f1 = "src/components/images/falling1.png";
 const f2 = "src/components/images/falling2.png";
@@ -11,7 +11,6 @@ const f6 = "src/components/images/falling6.png";
 const b1 = "src/components/images/panic1.png";
 const b2 = "src/components/images/panic4.png";
 const b3 = "src/components/images/panic3.png";
-
 let image = document.getElementById("image");
 let currentPos = 0;
 let images = [f1, f2, f1, f6, f3, f4, f3, f4, f1, f3, f4, f3, f6, f1, f2];
@@ -88,7 +87,6 @@ const strout = document.getElementById("strout");
 const stroutBox = document.getElementById("stroutBox");
 const title = document.getElementById("title");
 const titleBox = document.getElementById("titleBox");
-
 const firstNameLetters = document.querySelectorAll(".first-letters");
 const firstN = document.getElementById("first-n");
 const fallingShell = document.getElementById("fallingShell");
@@ -260,12 +258,12 @@ brianSecondPageBox.addEventListener("transitionend", function () {
 const balloonToClick = Array.from(document.querySelectorAll(".balloon"));
 balloonToClick.forEach((balloon) => {
   balloon.addEventListener("click", (e) => {
-    freelanceClicker(e);
+    clicker(e);
   });
 });
 
 document.addEventListener("click", (e) => {
-  freelanceClicker(e);
+  clicker(e);
   console.log(e.target);
 });
 

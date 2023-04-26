@@ -1,0 +1,30 @@
+.movie--theater {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20vh;
+  gap: 10px;
+}
+
+.movie--screen {
+  width: 300px;
+  height: 200px;
+  background-color: pink;
+  background-size: cover;
+  border: 3px solid black;
+  border-radius: 3px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.theater--crowd {
+  position: absolute;
+  bottom: -16px;
+  width: 85vw;
+  height: 200px;
+  background-color: violet;
+  background-image: url("./src/components/images/seats1.png");
+  background-size: 150%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}

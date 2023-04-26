@@ -1,37 +1,210 @@
 @use "root";
+@use "video";
 
 .homeWrap {
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 85% 15%;
   //   background-color: brown;
+  display: none;
   > div {
     border: 1px dashed black;
   }
-
-  display: none;
 }
 
 .homeMonitor {
-  //   background-color: cadetblue;
+  position: relative;
+  display: grid;
+  grid-template-rows: 6rem auto;
 }
-.homeNavShell {
-  //   background-color: darkgreen;
+
+.hm--title {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 2rem;
+}
+.hm--display {
+  position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1rem 15%;
+
+  ol {
+    list-style: none;
+    h2 {
+      font-family: var(--header-font);
+    }
+    li {
+      list-style: none;
+      margin-left: 4rem;
+      font-family: var(--letter-font);
+      font-size: 1.5rem;
+      line-height: 1.95rem;
+    }
+  }
+}
+
+.cta {
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
+
+  width: 150px;
+  height: 60px;
+
+  background-color: aliceblue;
+  border: 4px solid black;
+  border-radius: 5px;
+
+  font-family: var(--letter-font);
+  font-size: 1.7rem;
+  &:hover {
+    scale: 1.1;
+  }
 }
+
+#m--balloon {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.back {
+  &:hover::after {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+
+    position: absolute;
+    left: 38%;
+    top: 40%;
+    content: "back";
+  }
+}
+
+.homeNavShell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 3rem;
+  margin-top: 8rem;
+  //   padding-top: 2rem;
+  background-color: darkgoldenrod;
+}
+
+#web--ex-list {
+  .grid2 {
+    grid-template-columns: 200px 1fr;
+    margin-bottom: 10px;
+  }
+}
+.linkOutTo:hover {
+  scale: 1.1;
+}
+.handy {
+  //   line-height: 1.6rem;
+}
+
 #nav--menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 2.5rem;
+  padding-right: 2rem;
 }
 .nav--link {
   font-family: var(--header-font);
   font-size: 1.8rem;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    scale: 1.1;
+    transform: translateX(-20px);
+  }
 }
+
+.castleShell {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  aspect-ratio: 1/1;
+  //   background-color: red;
+  //   border: 1px solid black;
+  .castleWalls {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    height: 150px;
+    // background-color: pink;
+    background-image: url("./src/components/images/stroutCoCastlewalls.png");
+    // background-image: url("./src/components/images/c3.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    // border: 10px solid pink;
+  }
+
+  .castleCloud {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    z-index: 10;
+    aspect-ratio: 6/1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    animation: cloudbob 6s ease-in-out 0s infinite alternate none;
+
+    &:nth-child(1) {
+      animation-delay: 1500ms;
+    }
+    &:nth-child(2) {
+      animation-delay: 2600ms;
+    }
+  }
+
+  .castleCloudLeft {
+    left: -40%;
+    background-image: url("./src/components/images/cloudTop1.png");
+  }
+  .castleCloudCenter {
+    background-image: url("./src/components/images/cloudTop3.png");
+    z-index: 8;
+  }
+
+  .castleCloudRight {
+    right: -40%;
+    background-image: url("./src/components/images/cloudTop2.png");
+  }
+}
+
+@keyframes cloudbob {
+  0% {
+    transform: translateY(5px);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(4px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+// <div class="castleShell">
+// <div class="cloud1"></div>
+// <div class="cloud2"></div>
+// <div class="castlewalls"></div>
+// <div class="brianInCastle"></div>

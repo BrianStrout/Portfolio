@@ -9,6 +9,7 @@ const string3 = balloon3.querySelector(".balloon-string");
 const words = document.getElementById("pitcherWords");
 const wordHeader = document.getElementById("words-header");
 const wordPara = document.getElementById("words-para");
+const homeMonitor = document.getElementById("homeMonitor");
 
 const mob_fl_arrow = document.getElementById("mob_fl_arrow");
 
@@ -16,10 +17,165 @@ const mob_fl_arrow = document.getElementById("mob_fl_arrow");
 //   emailjs.init("oYymItkIoREaVvBlM");
 // };
 
-const freelanceClicker = (e) => {
+const mobileMenuActive = false;
+
+const clicker = (e) => {
   console.log(e.target.id);
   // console.log(string1);
   switch (e.target.id) {
+    case "m--mobile":
+      if (mobileMenuActive) {
+        console.log("mobile menu");
+      }
+
+      break;
+    case "m--hi":
+      homeMonitor.innerHTML = `
+      <div class="hm--title">
+      <h1 class="words-header">Time To Up Your Web Presence?</h1>
+    </div>
+    <div class="hm--display">
+      <h3 class="handy under">
+        <i>
+          Unsure of how to make your mark on the internet? Let's talk
+          about...
+        </i>
+      </h3>
+
+      <ol style="margin-top: 10px; margin-left: 52px; list-style: circle">
+        <h2>Websites!</h2>
+        <li>
+          Designing and building for your unique and engaging space on the
+          internet
+        </li>
+        <li>
+          Managing your website content keeping your online presence
+          current and crisp.
+        </li>
+
+        <li>Consulting on improvements including SEO and bounce rate</li>
+
+        <li>
+          Wix, SquareSpace, and WordPress customization & content
+          management
+        </li>
+        <h2>Multimedia</h2>
+        <li>Video Editing</li>
+        <li>Motion Graphics</li>
+        <li>Photo Animation</li>
+        <h2>Marketing Assistance</h2>
+        <li>Email Campaigns</li>
+        <li>Asset Design</li>
+        <li>Social Media</li>
+        <!-- <li></li> -->
+      </ol>
+      <p id="words-para" class="h ind">
+        Whether you are an individual, business, or organization, I would
+        love to connect about freelance and contract work
+        <br />
+        <!-- <span class="cta"></span> -->
+      </p>
+      <div class="cta">Let's Connect!</div>
+    </div>
+      
+      `;
+      break;
+    case "m--web":
+      homeMonitor.innerHTML = `
+      <div id="m--balloon" class="balloon">
+      <!-- sad-child -->
+      <div id="m--hi" class="balloon-ball back"></div>
+      <div class="balloon-string"></div>
+    </div>
+    <div class="hm--title">
+      <h1 class="words-header">Websites!</h1>
+    </div>
+    <div class="hm--display">
+      <div class="web--ex-container">
+        <ul id="web--ex-list">
+          <li class="grid2"></li>
+
+          <li class="grid2">
+            <div class="linkOutTo" id="winter"></div>
+            <div>
+              <h2 class="words-header">
+                Winterboy - Motion Based Artist
+              </h2>
+              <p class="h">
+                Working with Winterboy Art I designed a way to use his art
+                to capture visitor's attention with a landing page that
+                has animated elements made his paintings to make a truly
+                personalized touch.
+              </p>
+            </div>
+          </li>
+
+          <li class="grid2">
+            <div class="linkOutTo" id="mookies"></div>
+            <div>
+              <h2 class="words-header">
+                Mookies - Introduce your shop playfully
+              </h2>
+              <p class="h">
+                We wanted to create a welcoming vibe for Mookies Cafe. I
+                did that by having a playful intro and tucking subtle
+                details about the site to let it keep that small town
+                vibe.
+              </p>
+            </div>
+          </li>
+          <li class="grid2">
+            <div class="linkOutTo" id="masha"></div>
+            <div>
+              <h2 class="words-header">Masha - Proper Introductions</h2>
+              <p class="h">
+                I wanted to create a site to bring heads to a stop with
+                elegant animation intros to a this model's portfolio site.
+              </p>
+            </div>
+          </li>
+          <li class="grid2">
+            <div class="linkOutTo" id="fugi"></div>
+            <div>
+              <h2 class="words-header">
+                Restaurant - Spreed Sheet Mobile Menu
+              </h2>
+              <p class="h">
+                Does your restaurant, cafe, or bar want a web based menu
+                system you can update on a google spreadsheet from your
+                phone? This is what it could look like.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      `;
+      break;
+    case "m--video":
+      homeMonitor.innerHTML = "video";
+      break;
+    case "m--marketing":
+      homeMonitor.innerHTML = "marketing";
+      break;
+    case "m--nerd":
+      homeMonitor.innerHTML = "nerd";
+      break;
+    case "m--ref":
+      homeMonitor.innerHTML = "reference";
+      break;
+    case "m--contact":
+      homeMonitor.innerHTML = "contact";
+      break;
+
     case "ball1":
       words.innerHTML = `
       <div class="freelance-container">
@@ -274,7 +430,7 @@ const freelanceClicker = (e) => {
   }
 };
 
-export { freelanceClicker };
+export { clicker };
 
 {
   /* <script type="text/javascript">
