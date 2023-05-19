@@ -207,6 +207,7 @@ const clearOut = () => {
     links.forEach((link) => {
       link.classList.add("introd");
     });
+    document.getElementById("mobileToggle").classList.remove("offset--right");
 
     clicker("intro");
   }, 6500);
