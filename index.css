@@ -818,6 +818,9 @@ ul {
   }
 }
 @media only screen and (max-width: 768px) {
+  .back--drop {
+    width: 100vw;
+  }
   .hm--display {
     overflow-y: scroll;
     width: 100vw;
@@ -1109,7 +1112,7 @@ ul {
 }
 .footerCloud:nth-child(2) {
   left: 160px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(3) {
   left: 340px;
@@ -1121,7 +1124,7 @@ ul {
 }
 .footerCloud:nth-child(5) {
   left: 700px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(6) {
   left: 880px;
