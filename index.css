@@ -818,6 +818,10 @@ ul {
   }
 }
 @media only screen and (max-width: 768px) {
+  .hm--display {
+    overflow-y: scroll;
+    width: 100vw;
+  }
   .movie--theater {
     width: 100%;
     flex-direction: column;
@@ -842,8 +846,6 @@ ul {
     transition: all 0.5s cubic-bezier(0.21, 1.05, 0.07, 1.1) 0s;
     margin-left: 0;
   }
-}
-@media only screen and (max-width: 768px) and (max-width: 650px) {
   #chets:after,
   #rotary:after,
   #ghost:after {
@@ -863,7 +865,7 @@ ul {
     background-size: cover;
   }
 }
-@media only screen and (max-width: 768px) and (orientation: landscape) {
+@media (orientation: landscape) {
   .theater--crowd {
     bottom: 8px;
     background-size: 15%;
@@ -1103,7 +1105,7 @@ ul {
 }
 .footerCloud:nth-child(1) {
   left: -20px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(2) {
   left: 160px;
@@ -1115,15 +1117,15 @@ ul {
 }
 .footerCloud:nth-child(4) {
   left: 520px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(5) {
   left: 700px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(6) {
   left: 880px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(7) {
   left: 1060px;
@@ -1131,15 +1133,15 @@ ul {
 }
 .footerCloud:nth-child(8) {
   left: 1240px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(9) {
   left: 1420px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(10) {
   left: 1600px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
 @keyframes cloudbob {
@@ -1223,6 +1225,13 @@ ul {
     margin-right: 25vw;
     font-size: 1.25rem;
   }
+  .homeMonitor .hm--display {
+    overflow-y: scroll;
+    width: 100vw;
+    margin: 0;
+    padding-bottom: 20vh;
+    padding-top: 5vh;
+  }
   #nav--menu {
     padding-left: 10px;
   }
@@ -1235,13 +1244,6 @@ ul {
   }
   .homeNavShell.toggle {
     right: -100%;
-  }
-  .hm--display {
-    overflow-y: scroll;
-    width: 100vw;
-    margin: 0;
-    padding-bottom: 20vh;
-    padding-top: 5vh;
   }
   .newFooter .footer--name {
     position: absolute;

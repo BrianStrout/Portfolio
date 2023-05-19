@@ -353,6 +353,15 @@ $randomNumber: random(5);
         font-size: 1.25rem;
       }
     }
+    .hm--display {
+      overflow-y: scroll;
+      width: 100vw;
+      margin: 0;
+      padding-bottom: 20vh;
+      padding-top: 5vh;
+      ol {
+      }
+    }
   }
 
   #nav--menu {
@@ -367,16 +376,6 @@ $randomNumber: random(5);
     border: 3px solid white;
     &.toggle {
       right: -100%;
-    }
-  }
-
-  .hm--display {
-    overflow-y: scroll;
-    width: 100vw;
-    margin: 0;
-    padding-bottom: 20vh;
-    padding-top: 5vh;
-    ol {
     }
   }
 

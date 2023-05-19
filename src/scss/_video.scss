@@ -148,6 +148,11 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .hm--display {
+    overflow-y: scroll;
+    width: 100vw;
+  }
+
   .movie--theater {
     width: 100%;
     flex-direction: column;
@@ -173,34 +178,32 @@
     margin-left: 0;
   }
 
-  @media only screen and (max-width: 650px) {
-    #chets,
-    #rotary,
-    #ghost {
-      &:after {
-        display: block;
-        bottom: -20px;
-      }
-    }
-
-    .movie--theater {
-      padding: 6px;
-    }
-    .movie--screen {
-      width: 70vw;
-      max-width: 450px;
-      height: 60vw;
-      max-height: 300px;
-      scale: 1;
-      margin: 1rem;
-      background-size: cover;
+  #chets,
+  #rotary,
+  #ghost {
+    &:after {
+      display: block;
+      bottom: -20px;
     }
   }
 
-  @media (orientation: landscape) {
-    .theater--crowd {
-      bottom: 8px;
-      background-size: 15%;
-    }
+  .movie--theater {
+    padding: 6px;
+  }
+  .movie--screen {
+    width: 70vw;
+    max-width: 450px;
+    height: 60vw;
+    max-height: 300px;
+    scale: 1;
+    margin: 1rem;
+    background-size: cover;
+  }
+}
+
+@media (orientation: landscape) {
+  .theater--crowd {
+    bottom: 8px;
+    background-size: 15%;
   }
 }
