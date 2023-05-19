@@ -1,30 +1,206 @@
+.back--drop {
+  position: absolute;
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("src/components/images/curtain.png");
+  background-size: cover;
+  background-position: center;
+  transition: all 1.2s cubic-bezier(0.01, 1.09, 0.63, 0.89) 0.75s;
+}
 .movie--theater {
   display: flex;
+  align-items: flex-start;
+  height: 80%;
+  padding: 15px;
+  transition: all 1s cubic-bezier(0.21, 1.05, 0.07, 1.4) 1.2s;
+}
+
+.movie--theater-screen {
+  display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 20vh;
+  align-items: flex-start;
+  height: 95%;
   gap: 10px;
+  padding-top: 100px;
+  transition: all 1s cubic-bezier(0.01, 1.09, 0.63, 0.89) 2.5s;
 }
 
 .movie--screen {
   width: 300px;
   height: 200px;
-  background-color: pink;
+  background-color: lightsteelblue;
   background-size: cover;
-  border: 3px solid black;
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 3px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
+  opacity: 0.4;
+  scale: 0.8;
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i}) {
+      transition: transform
+        0.4s
+        cubic-bezier(0.21, 1.05, 0.07, 1.17)
+        (3.5s + (0.2 * $i));
+    }
+  }
+
+  font-family: var(--header-font);
+  &:hover {
+    background-size: cover;
+    opacity: 1;
+    scale: 1;
+  }
+}
+.theater--crowd {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 .theater--crowd {
   position: absolute;
   bottom: -16px;
-  width: 85vw;
-  height: 200px;
-  background-color: violet;
-  background-image: url("./src/components/images/seats1.png");
-  background-size: 150%;
+  width: 100vw;
+  height: 150px;
+  background-image: url("./src/components/images/2seats.png");
+  background-size: 12%;
   background-position: bottom;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
+  transition: all 0.5s cubic-bezier(0.21, 1.05, 0.07, 1.1) 0s;
+  margin-left: -1rem;
+}
+
+.tuckedDown {
+  transform: translateY(100%);
+}
+.glow {
+  box-shadow: inset 0 0 10px #ffffff52, 0 0 10px #ffffff52,
+    -5px 0 10px rgba(180, 251, 250, 0.3), 5px 0 10px rgba(161, 251, 251, 0.3);
+  background-color: #383736;
+  transition: all 1.5s ease-out 2.2s;
+}
+
+#chets {
+  background-image: url("src/components/images/chetslogo.webp");
+  &:after {
+    content: "2018-";
+    position: absolute;
+    bottom: -60px;
+    color: aliceblue;
+    display: none;
+  }
+  &:hover {
+    &:after {
+      display: block;
+    }
+  }
+}
+#rotary {
+  background-image: url("src/components/images/RotarySiteScreenShot.jpeg");
+  &:after {
+    content: "2019-";
+    position: absolute;
+    bottom: -60px;
+    color: aliceblue;
+    display: none;
+  }
+  &:hover {
+    &:after {
+      display: block;
+    }
+  }
+}
+#ghost {
+  background-image: url("src/components/images/GitmSiteScreenShot.jpeg");
+  &:after {
+    content: "2020-";
+    position: absolute;
+    bottom: -60px;
+    color: aliceblue;
+    display: none;
+  }
+  &:hover {
+    &:after {
+      display: block;
+    }
+  }
+}
+
+@media all and (max-width: 1023px) and (orientation: portrait) {
+  .back--drop {
+    width: 83vw;
+  }
+  .movie--theater {
+    height: 60%;
+
+    .movie--theater-screen {
+      max-width: 80vw;
+    }
+  }
+  .theater--crowd {
+    background-size: 23%;
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .movie--theater {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+    .movie--theater-screen {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 5px;
+      gap: 10px;
+    }
+  }
+  .theater--crowd {
+    position: absolute;
+    bottom: 18px;
+    width: 100vw;
+    height: 150px;
+    background-image: url(./src/components/images/2seats.png);
+    background-size: 45%;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    transition: all 0.5s cubic-bezier(0.21, 1.05, 0.07, 1.1) 0s;
+    margin-left: 0;
+  }
+
+  @media only screen and (max-width: 650px) {
+    #chets,
+    #rotary,
+    #ghost {
+      &:after {
+        display: block;
+        bottom: -20px;
+      }
+    }
+
+    .movie--theater {
+      padding: 6px;
+    }
+    .movie--screen {
+      width: 70vw;
+      max-width: 450px;
+      height: 60vw;
+      max-height: 300px;
+      scale: 1;
+      margin: 1rem;
+      background-size: cover;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .theater--crowd {
+      bottom: 8px;
+      background-size: 15%;
+    }
+  }
 }

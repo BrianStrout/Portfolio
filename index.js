@@ -1,7 +1,9 @@
 import { tester1, Animator } from "./src/components/modules/animate.js";
 import { observeIntroToServices } from "./src/components/modules/observeIntroToServ.js";
 import { observeIntroToSkills } from "./src/components/modules/observeIntroToSkills.js";
+import { observeIntroToMarketing } from "./src/components/modules/observeMarketingPopUp.js";
 import { clicker } from "./src/components/modules/freelanceSwitcher.js";
+
 let dev = false;
 const f1 = "src/components/images/falling1.png";
 const f2 = "src/components/images/falling2.png";
@@ -27,23 +29,7 @@ const switchProfessional = document.getElementById("switchPort");
 const freelancePresenter = document.getElementById("freelancePresenter");
 const backCloud = document.getElementById("backCloud");
 const switchWrap = document.querySelector(".switchwrap");
-switchProfessional.addEventListener("click", () => {
-  enableScroll();
-  target.scrollIntoView({ behavior: "smooth" });
-});
-
-switchFree.addEventListener("click", (e) => {
-  //scroll to and lock
-  // disableScroll();
-  switchWrap.scrollIntoView({ behavior: "smooth" });
-
-  freelancePresenter.classList.remove("unpresented");
-});
-backCloud.addEventListener("click", () => {
-  freelancePresenter.classList.add("unpresented");
-  enableScroll();
-});
-
+const homeWrap = document.querySelector(".homeWrap");
 const skillSetPage = document.querySelectorAll("#target");
 skillSetPage.forEach((page) => {
   observeIntroToSkills.observe(page);
@@ -54,22 +40,6 @@ const introsOnScreen = document.querySelectorAll("#introToServices");
 introsOnScreen.forEach((intro) => {
   observeIntroToServices.observe(intro);
 });
-
-switchProfessional.addEventListener("click", (e) => {
-  let displayables = Array.from(document.querySelectorAll(".notdisplayed"));
-  displayables.forEach((div) => {
-    div.classList.remove("notdisplayed");
-  });
-  setTimeout(() => {
-    if (dev) {
-      target.scrollIntoView({ behavior: "smooth" });
-    } else {
-      target.scrollIntoView({ behavior: "smooth" });
-    }
-  }, 2800);
-});
-
-brianSecondPage.src = b1;
 
 setInterval(volgendefoto, 200);
 const body = document.body;
@@ -125,6 +95,16 @@ const linkToGmail = document.getElementById("copy-gmail");
 const linkToLinkedIn = document.getElementById("brianlinkedin");
 const linkToGitHub = document.getElementById("briangithub");
 const resumeLink = document.getElementById("resume-link");
+
+const frames = document.querySelectorAll("iframe");
+
+const secondBrian = document.getElementById("fallingSecond");
+const castle = document.getElementById("castle");
+
+const links = Array.from(document.querySelectorAll(".nav--link"));
+
+observeIntroToMarketing;
+
 moodRing.addEventListener("click", () => {
   wrapper.classList.toggle("dark");
   sun.classList.toggle("sunset");
@@ -214,53 +194,23 @@ const clearOut = () => {
   }, 6000);
 
   setTimeout(() => {
-    switchWrap.scrollIntoView({ behavior: "smooth" });
-    disableScroll();
+    homeWrap.scrollIntoView({ behavior: "smooth" });
+    // disableScroll();
   }, 2800);
-};
 
-// brianSecondPageBox.addEventListener("transitionend", function () {
-//   brianBlurbP.classList.remove("tucked-up");
-//   console.log("transition complete, put Brian in a desk here");
-//   brianSecondPage.src = "src/components/images/workingatdesk.png";
-//   brianSecondPage.style = "width: 260px; height: 260px;";
-//   brianSecondChair.classList.add("unseen");
+  setTimeout(() => {
+    fallingSecond.classList.add("toEarth");
+  }, 4500);
+  setTimeout(() => {
+    castle.classList.add("grow");
 
-//   ULTitleArray.forEach((title) => {
-//     title.classList.remove("shrunk");
-//   });
-// });
-
-// lastTitle.addEventListener("transitionend", function () {
-//   liTagList.forEach((list) => {
-//     list.classList.remove("list-fixer");
-//   });
-//   absoluteCloud.classList.remove("pulled-down");
-// });
-
-brianSecondPageBox.addEventListener("transitionend", function () {
-  brianBlurbP.classList.remove("tucked-up");
-  // console.log("transition complete, put Brian in a desk here");
-  brianSecondPage.src = "src/components/images/workingatdesk.png";
-  brianSecondPage.style = "width: 260px; height: 260px;";
-  brianSecondChair.classList.add("unseen");
-  ULTitleArray.forEach((title) => {
-    title.classList.remove("shrunk");
-  });
-  lastTitle.addEventListener("transitionend", function () {
-    liTagList.forEach((list) => {
-      list.classList.remove("list-fixer");
+    links.forEach((link) => {
+      link.classList.add("introd");
     });
-    absoluteCloud.classList.remove("pulled-down");
-  });
-});
 
-const balloonToClick = Array.from(document.querySelectorAll(".balloon"));
-balloonToClick.forEach((balloon) => {
-  balloon.addEventListener("click", (e) => {
-    clicker(e);
-  });
-});
+    clicker("intro");
+  }, 6500);
+};
 
 document.addEventListener("click", (e) => {
   clicker(e);
@@ -309,26 +259,8 @@ wrapper.addEventListener("click", (event) => {
 
 const followingLink = (dest) => {
   window.open(`https://${dest}`, "_blank");
-  // window.location.href = ;
 };
-linkToGitHub.addEventListener("click", () => {
-  window.location.href = `https://github.com/brianstrout`;
-});
-linkToLinkedIn.addEventListener("click", () => {
-  window.location.href = `https://www.linkedin.com/in/brian-strout-a11a8bb9/`;
-});
-resumeLink.addEventListener("click", () => {
-  window.location.href = `https://drive.google.com/file/d/10sLczM7zkozE4p8tbZ-IWBFh-6IGBYE6/view?usp=share_link`;
-});
 
-// const copy = document.getElementById("copy-gmail");
-
-linkToGmail.onclick = function () {
-  navigator.clipboard.writeText("strout.co@gmail.com");
-};
-//code for disabling scroll//
-// left: 37, up: 38, right: 39, down: 40,
-// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
 var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
 function preventDefault(e) {
   e.preventDefault();

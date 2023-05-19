@@ -213,7 +213,7 @@
 }
 .balloon-string {
   position: absolute;
-  z-index: 9;
+  z-index: 0;
   height: 200px;
   width: 100px;
   background-image: url("./src/components/images/balloonstring.png");
@@ -254,27 +254,6 @@
   }
 }
 
-.payboxes {
-  width: 80%;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-evenly;
-  .paybox {
-    border: 3px solid black;
-    width: 100px;
-    height: 100px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .paypal {
-    background-image: url("/src/components/images/paypal_icon.png");
-  }
-  .venmo {
-    background-image: url("/src/components/images/venmo_icon.png");
-  }
-}
-
 .unpresented {
   transform: translateX(100vw);
 }
@@ -290,9 +269,7 @@
 #fugi {
   background-image: url("src/components/images/FugativaSiteScreenShot.png");
 }
-#rotary {
-  background-image: url("src/components/images/RotarySiteScreenShot.jpeg");
-}
+
 #winter {
   background-image: url("src/components/images/winterboyss.png");
 }
@@ -300,9 +277,7 @@
 #mookies {
   background-image: url("src/components/images/mookiesss.png");
 }
-#ghost {
-  background-image: url("src/components/images/GitmSiteScreenShot.jpeg");
-}
+
 #masha {
   background-image: url("src/components/images/MashaSiteScreenShot.png");
 }
@@ -310,34 +285,14 @@
 .grid2 {
   display: grid;
   grid-template-columns: 250px 1fr;
-}
 
-#myForm {
-  position: relative;
-  // background-color: pink;
-  border: 3px solid black;
-  width: 80%;
-  padding: 1rem;
-  margin-top: 8px;
-
-  > .form-group {
-    // border: 3px solid black;
-    display: flex;
-    align-content: flex-start;
-    margin: 1rem;
-    > label {
-      width: 90px;
-      text-transform: uppercase;
-      display: inline-block;
-      font-family: var(--header-font);
+  @for $i from 1 through 20 {
+    &:nth-child(#{$i}) {
+      transition: all 0.5s ease-out (0.375s * ($i - 1));
     }
   }
-  #submit {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-  }
 }
+
 .circle {
   position: absolute;
   right: calc(50vw - 25px);
@@ -376,7 +331,10 @@
   }
 }
 
-@media only screen and (max-width: 950px) {
+@media all and (max-width: 1023px) and (orientation: portrait) {
+}
+
+@media only screen and (max-width: 768px) {
   .intro-grid-box {
     width: 100%;
     > div {
@@ -405,17 +363,6 @@
     background-size: cover;
     width: 80px;
     height: 160px;
-  }
-  .payboxes {
-    padding: 0;
-    width: 100%;
-    margin-top: 10px;
-
-    .paybox {
-      padding: 0;
-      width: 80px;
-      height: 80px;
-    }
   }
 
   .pitcher-box {

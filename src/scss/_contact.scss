@@ -1,0 +1,339 @@
+#contactForm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 1rem;
+  margin-top: 8px;
+  margin-left: 10%;
+  animation: popInFromLeft 0.5s ease-in;
+
+  > .form-group {
+    // border: 3px solid black;
+    display: flex;
+    align-content: flex-start;
+    margin: 1rem;
+    > label {
+      width: 90px;
+      text-transform: uppercase;
+      display: inline-block;
+      font-family: var(--header-font);
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      max-width: 520px;
+      line-height: 1.5rem;
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: "content time";
+      }
+    }
+  }
+  #submit {
+    position: absolute;
+    bottom: -60px;
+    left: calc(50% - 10px);
+    width: 100px;
+    height: 50px;
+    font-size: 1.2rem;
+    font-family: var(--header-font);
+    background-color: none;
+    background-image: url("./src/components/images/c3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    &:hover {
+      scale: 1.05;
+    }
+
+    &:hover::after {
+      content: "Submit";
+    }
+  }
+}
+
+.ref--linkbox {
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  margin-left: 0%;
+  height: 20vh;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.business--card {
+  position: absolute;
+  bottom: -250%;
+  left: 10%;
+  width: 20%;
+  min-width: 140px;
+  margin-left: 5%;
+  max-width: 400px;
+  height: 200%;
+  border-radius: 5px 50px 5px 5px;
+  border: 3px solid rgb(94, 64, 0);
+  background-image: url("src/components/images/headShotCard.png");
+  background-size: cover;
+  background-position: top center;
+  transform-origin: top center;
+  animation: upAndIn 0.5s ease-out 0.5s forwards;
+  .card--deets {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background-color: rgb(255, 232, 201);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 8px;
+    font-size: 1rem;
+    font-family: var(--business-font);
+  }
+}
+
+@keyframes upAndIn {
+  0% {
+    // transform: translateY(0);
+    rotate: (0deg);
+  }
+  70% {
+    rotate: (0deg);
+  }
+  80% {
+    transform: translateY(-14 5%);
+    rotate: (-7deg);
+  }
+  100% {
+    transform: translateY(-145%);
+    rotate: (-10deg);
+  }
+}
+
+.linksInRow {
+  width: 70%;
+  height: 100%;
+  // background-color: rebeccapurple;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0px 10px;
+  gap: 10px;
+  > .licon {
+    width: 100px;
+    height: 100px;
+    border: 5px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    &:hover {
+      animation: chipper 1.25s ease-in-out 0s 1 forwards;
+    }
+
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        transition: transform
+          0.4s
+          cubic-bezier(0.21, 1.05, 0.07, 1.17)
+          (0.5s + (0.2 * $i));
+      }
+    }
+
+    > svg {
+      // opacity: 0.1;
+      fill: rgb(255, 232, 201);
+      pointer-events: none;
+    }
+  }
+}
+@keyframes chipper {
+  0% {
+    transform: translateY(0px) rotatey(0deg) scaleY(100%);
+  }
+  10% {
+    transform: translateY(10px) rotatey(0deg) scaleY(90%);
+  }
+  20% {
+    transform: translateY(0px) rotatey(0deg) scaleY(100%);
+  }
+  30% {
+    transform: translateY(-30px) rotatey(0deg) scaleY(100%);
+  }
+  50% {
+    transform: translateY(-30px) rotatey(360deg) scaleY(100%) scaleX(100%);
+  }
+  68% {
+    transform: translateY(10px) rotatey(360deg) scaleY(90%) scaleX(105%);
+  }
+  80% {
+    transform: translateY(15px) rotatey(360deg) scaleY(85%) scaleX(108%);
+  }
+  90% {
+    transform: translateY(15px) rotatey(360deg) scaleY(85%) scaleX(108%);
+  }
+  100% {
+    transform: translateY(0px) rotatey(360deg) scaleX(100%);
+  }
+}
+@keyframes popInFromLeft {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(0vh);
+  }
+}
+
+@keyframes popInSayHi1 {
+  0% {
+    rotate: (0deg);
+    translate: 0px 100px;
+  }
+
+  70% {
+    rotate: (900deg);
+    translate: -10px -190px;
+    scale: 0.9;
+  }
+  80% {
+    rotate: (915deg);
+    translate: -20px -195px;
+    scale: 0.85;
+  }
+  90% {
+    rotate: (720deg);
+    translate: 0px 0px;
+    scale: 1;
+  }
+}
+
+@keyframes popInSayHi2 {
+  0% {
+    rotate: (0deg);
+    translate: 0px 100px;
+  }
+  25% {
+    //   rotate: (900deg);
+    translate: 180px -70px;
+    scale: 0.7;
+  }
+  50% {
+    translate: 0px -250px;
+    scale: 0.65;
+    rotate: (0deg);
+  }
+  100% {
+    scale: 1;
+    rotate: (1800deg);
+  }
+}
+
+@keyframes popInSayHi3 {
+  0% {
+    rotate: (0deg);
+    translate: 0px 300px;
+  }
+  15% {
+    rotate: (0deg);
+    translate: 0px -300px;
+  }
+  30% {
+    rotate: (0deg);
+    translate: 0px 0px;
+  }
+  45% {
+    rotate: (0deg);
+    translate: 0px -110px;
+  }
+  60% {
+    rotate: (0deg);
+    translate: 0px 0px;
+  }
+  70% {
+    rotate: (0deg);
+    translate: 0px -50px;
+  }
+
+  80% {
+    rotate: (0deg);
+    translate: 0px 0px;
+  }
+
+  90% {
+    rotate: (0deg);
+    translate: 0px -10px;
+  }
+
+  100% {
+    rotate: (0deg);
+    translate: 0px 0px;
+  }
+}
+@media all and (max-width: 1023px) and (orientation: portrait) {
+  .business--card {
+    width: 38%;
+    height: 173%;
+    z-index: 0;
+    margin: 0;
+  }
+
+  .linksInRow {
+    position: absolute;
+    bottom: 0;
+    z-index: 60;
+    height: 170px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ref--container {
+    width: 100%;
+    margin: 0;
+  }
+  .ref--linkbox {
+    width: 100%;
+  }
+
+  #contactForm {
+    width: 100%;
+    margin-left: 0;
+    .form-group {
+      margin-bottom: 0;
+    }
+    textarea {
+      height: 35vh;
+    }
+  }
+
+  .business--card {
+    bottom: -210%;
+    left: 5%;
+    border-radius: 10px;
+    z-index: 1;
+  }
+
+  .linksInRow {
+    position: absolute;
+    bottom: 0;
+    z-index: 60;
+    width: 100%;
+    height: 70%;
+    padding: 0px;
+    background-color: rgb(0 0 0 / 72%);
+
+    justify-content: center;
+    align-items: center;
+    border-top: 5px solid black;
+    gap: 10px;
+    .licon {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}

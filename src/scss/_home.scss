@@ -2,14 +2,32 @@
 @use "video";
 
 .homeWrap {
+  position: relative;
   width: 100%;
   height: 100vh;
   display: grid;
   grid-template-columns: 85% 15%;
-  //   background-color: brown;
-  display: none;
-  > div {
-    border: 1px dashed black;
+  overflow: hidden;
+
+  .fallingSecond {
+    position: absolute;
+    top: -50vh;
+    right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    transition: all 1.2s linear;
+    background-size: cover;
+    transform: rotate(45deg);
+    background-image: url("src/components/images/panic1.png");
+    // opacity: 0.1;
+    &.toEarth {
+      top: 120vh;
+
+      // color: pink;
+    }
   }
 }
 
@@ -17,6 +35,7 @@
   position: relative;
   display: grid;
   grid-template-rows: 6rem auto;
+  overflow: hidden;
 }
 
 .hm--title {
@@ -24,6 +43,12 @@
   justify-content: center;
   align-items: flex-end;
   font-size: 2rem;
+  transition: opacity 0.75s ease-out;
+  // background-color: pink;
+  .long--title {
+    display: inline;
+    width: 70vw;
+  }
 }
 .hm--display {
   position: relative;
@@ -31,9 +56,19 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: 1rem 15%;
+  width: 80vw;
+
+  margin: 1rem;
+  transition: opacity 0.75s ease-out 0.5s;
+
+  h3 {
+    display: inline;
+    max-width: 70vw;
+  }
 
   ol {
+    margin-top: 10px;
+    margin-left: 52px;
     list-style: none;
     h2 {
       font-family: var(--header-font);
@@ -44,8 +79,15 @@
       font-family: var(--letter-font);
       font-size: 1.5rem;
       line-height: 1.95rem;
+      .skill-div {
+        width: 16rem;
+      }
     }
   }
+}
+
+.op0 {
+  opacity: 0;
 }
 
 .cta {
@@ -74,14 +116,12 @@
   position: absolute;
   top: 10px;
   left: 20px;
+  font-family: var(--letter-font);
+  animation: sadkid 3s ease-out 0s 1 forwards;
 }
 
 .back {
   &:hover::after {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-
     position: absolute;
     left: 38%;
     top: 40%;
@@ -97,22 +137,11 @@
   align-items: flex-end;
   gap: 3rem;
   margin-top: 8rem;
-  //   padding-top: 2rem;
-  background-color: darkgoldenrod;
+  transition: all 0.75s ease-in-out;
 }
 
-#web--ex-list {
-  .grid2 {
-    grid-template-columns: 200px 1fr;
-    margin-bottom: 10px;
-  }
-}
-.linkOutTo:hover {
-  scale: 1.1;
-}
-.handy {
-  //   line-height: 1.6rem;
-}
+// .handy {
+// }
 
 #nav--menu {
   display: flex;
@@ -126,8 +155,29 @@
   font-family: var(--header-font);
   font-size: 1.8rem;
   transition: all 0.2s ease-out;
+  translate: 400px;
 
+  &:nth-child(2) {
+    transition-delay: 0.3s;
+  }
+  &:nth-child(3) {
+    transition-delay: 0.6s;
+  }
+  &:nth-child(4) {
+    transition-delay: 0.9s;
+  }
+  &:nth-child(5) {
+    transition-delay: 1.2s;
+  }
+  &:nth-child(6) {
+    transition-delay: 1.5s;
+  }
+
+  &.introd {
+    translate: 0px;
+  }
   &:hover {
+    transition-delay: 0s;
     scale: 1.1;
     transform: translateX(-20px);
   }
@@ -136,13 +186,14 @@
 .castleShell {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  right: -15px;
+  width: 20%;
+  min-width: 200px;
   aspect-ratio: 1/1;
-  //   background-color: red;
-  //   border: 1px solid black;
+  pointer-events: none;
   .castleWalls {
     position: absolute;
-    bottom: 10px;
+    bottom: -100%;
     width: 100%;
     height: 150px;
     // background-color: pink;
@@ -151,7 +202,12 @@
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
-    // border: 10px solid pink;
+    overflow: hidden;
+    transition: bottom 0.5s cubic-bezier(1, -0.01, 0.25, 1.34);
+
+    &.grow {
+      bottom: 0;
+    }
   }
 
   .castleCloud {
@@ -187,6 +243,27 @@
     background-image: url("./src/components/images/cloudTop2.png");
   }
 }
+$randomNumber: random(5);
+
+.footerCloud {
+  position: absolute;
+  top: 20%;
+  width: 200px;
+  height: 50px;
+  z-index: 10;
+  background-image: url("./src/components/images/cloudTop2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  animation: cloudbob 6s ease-in-out infinite alternate none;
+
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      left: -200 + (180px * $i);
+      animation-delay: (random(2) + 0s);
+    }
+  }
+}
 
 @keyframes cloudbob {
   0% {
@@ -202,9 +279,175 @@
     transform: translateY(20px);
   }
 }
+@keyframes sadkid {
+  0% {
+    transform: translateY(100vh);
+  }
+  66% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: translateY(0vh);
+  }
+}
 
-// <div class="castleShell">
-// <div class="cloud1"></div>
-// <div class="cloud2"></div>
-// <div class="castlewalls"></div>
-// <div class="brianInCastle"></div>
+.newFooter {
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 55px;
+  .footer--name {
+    position: absolute;
+    top: -10px;
+    left: 2rem;
+    color: white;
+    font-size: 1.5rem;
+    font-family: var(--header-font);
+    text-transform: uppercase;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+}
+
+@media all and (max-width: 1023px) and (orientation: portrait) {
+  #nav--menu {
+    padding: 0.5rem;
+    background-color: rgba(240, 248, 255, 0.325);
+  }
+
+  .homeMonitor {
+    grid-template-rows: 12rem auto;
+    .hm--title {
+      font-size: 1.75rem;
+    }
+    .hm--display {
+      width: 90%;
+      h3 {
+        font-size: 1.75rem;
+      }
+      ol {
+        li {
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .homeWrap {
+    grid-template-columns: 100vw auto;
+  }
+  .homeMonitor {
+    grid-template-rows: 3rem auto;
+
+    .hm--title {
+      .long--title {
+        display: inline;
+        width: 70vw;
+        margin-left: 5vw;
+        margin-right: 25vw;
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  #nav--menu {
+    padding-left: 10px;
+  }
+
+  .homeNavShell {
+    position: absolute;
+    right: 0px;
+    z-index: 80;
+    background-color: var(--ghost-color);
+    border: 3px solid white;
+    &.toggle {
+      right: -100%;
+    }
+  }
+
+  .hm--display {
+    overflow-y: scroll;
+    width: 100vw;
+    margin: 0;
+    padding-bottom: 20vh;
+    padding-top: 5vh;
+    ol {
+    }
+  }
+
+  .newFooter .footer--name {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: 40;
+    font-size: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobileBreak {
+    display: block;
+    > svg {
+      fill: black;
+      margin: 10px 20px 0px 20px;
+      scale: 200%;
+      > path,
+      rect,
+      line {
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .cta {
+    position: fixed;
+    bottom: 30%;
+  }
+
+  .homeWrap {
+    .fallingSecond {
+      // top: 30vh;
+      scale: 0.4;
+      right: -90px;
+    }
+  }
+
+  .mobileHide {
+    display: none;
+  }
+  .mobileBreak {
+    position: absolute;
+    z-index: 50;
+    left: 10%;
+  }
+  .hm--display {
+    ol {
+      margin-top: 10px;
+      margin-left: 16px;
+
+      h2 {
+        font-family: var(--header-font);
+      }
+      li {
+        list-style: none;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-family: var(--letter-font);
+        font-size: 1.5rem;
+        line-height: 1.95rem;
+        .skill-div {
+          width: 16rem;
+        }
+      }
+    }
+  }
+}

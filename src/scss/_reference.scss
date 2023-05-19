@@ -1,0 +1,50 @@
+.ref--container {
+  width: 80%;
+  margin: 0 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: center;
+  // background-color: cadetblue;
+}
+
+.payboxes {
+  width: 80%;
+  // padding: 1rem 2rem;
+  display: flex;
+  gap: 1rem;
+  // justify-content: space-evenly;
+  .paybox {
+    border: 3px solid black;
+    width: 80px;
+    height: 80px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .paypal {
+    background-image: url("/src/components/images/paypal_icon.png");
+  }
+  .venmo {
+    background-image: url("/src/components/images/venmo_icon.png");
+  }
+}
+
+@media all and (max-width: 1023px) and (orientation: portrait) {
+}
+
+@media only screen and (max-width: 768px) {
+  .payboxes {
+    padding: 0;
+    width: 100%;
+    margin-top: 15%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .paybox {
+      padding: 0;
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
