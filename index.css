@@ -1006,7 +1006,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 2.5rem;
+  gap: 1.5rem;
   padding-right: 2rem;
 }
 
@@ -1108,19 +1108,19 @@ ul {
 }
 .footerCloud:nth-child(1) {
   left: -20px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(2) {
   left: 160px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(3) {
   left: 340px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(4) {
   left: 520px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(5) {
   left: 700px;
@@ -1136,15 +1136,15 @@ ul {
 }
 .footerCloud:nth-child(8) {
   left: 1240px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(9) {
   left: 1420px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(10) {
   left: 1600px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
 @keyframes cloudbob {
