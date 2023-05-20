@@ -48,19 +48,19 @@ const clicker = (e) => {
       <ol>
         <h2>Websites!</h2>
         <li>
-          Designing and building for your unique and engaging space on the
-          internet
+          Designing and building your unique and engaging space on the
+          internet!
         </li>
         <li>
           Managing your website content keeping your online presence
-          current and crisp.
+          current and crisp!
         </li>
 
-        <li>Consulting on improvements including SEO and bounce rate</li>
+        <li>Consulting on improvements including SEO and bounce rate!</li>
 
         <li>
           Wix, SquareSpace, and WordPress customization & content
-          management
+          management!
         </li>
         <h2>Multimedia</h2>
         <li>Video Editing</li>
