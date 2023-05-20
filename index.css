@@ -1108,7 +1108,7 @@ ul {
 }
 .footerCloud:nth-child(1) {
   left: -20px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(2) {
   left: 160px;
@@ -1128,19 +1128,19 @@ ul {
 }
 .footerCloud:nth-child(6) {
   left: 880px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(7) {
   left: 1060px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(8) {
   left: 1240px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(9) {
   left: 1420px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(10) {
   left: 1600px;
@@ -1163,10 +1163,10 @@ ul {
 }
 @keyframes sadkid {
   0% {
-    transform: translateY(100vh);
+    transform: translateY(200vh);
   }
   66% {
-    transform: translateY(100vh);
+    transform: translateY(200vh);
   }
   100% {
     transform: translateY(0vh);
