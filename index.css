@@ -980,7 +980,7 @@ ul {
   top: -50vh;
   left: 20px;
   font-family: var(--letter-font);
-  animation: sadkid 3s ease-out 0s 1 forwards;
+  animation: sadkid 5s ease-out 0s 1 forwards;
 }
 
 .back:hover::after {
@@ -1108,11 +1108,11 @@ ul {
 }
 .footerCloud:nth-child(1) {
   left: -20px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(2) {
   left: 160px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(3) {
   left: 340px;
@@ -1124,11 +1124,11 @@ ul {
 }
 .footerCloud:nth-child(5) {
   left: 700px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(6) {
   left: 880px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(7) {
   left: 1060px;
@@ -1140,11 +1140,11 @@ ul {
 }
 .footerCloud:nth-child(9) {
   left: 1420px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(10) {
   left: 1600px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
 @keyframes cloudbob {

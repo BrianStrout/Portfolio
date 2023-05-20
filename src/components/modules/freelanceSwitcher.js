@@ -21,6 +21,10 @@ const clicker = (e) => {
       console.log("!");
 
       break;
+    case "m--ball":
+      let mainBalloon = document.getElementById("m--ball");
+      mainBalloon.classList.add("popped");
+      break;
     case "m--hi":
       // let mainBalloon = document.getElementById("m--hi");
       // mainBalloon.classList.add("popped");
@@ -89,7 +93,7 @@ const clicker = (e) => {
       homeMonitor.innerHTML = `
       <div id="m--balloon" class="balloon">
       <!-- sad-child -->
-      <div id="m--hi" class="balloon-ball back"></div>
+      <div id="m--ball" class="balloon-ball back"></div>
       <div class="balloon-string"></div>
     </div>
     <div class="hm--title">
@@ -177,7 +181,7 @@ const clicker = (e) => {
       <div class="back--drop offset--up trans-target transition--cover">   </div>
       <div id="m--balloon" class="balloon">
       <!-- sad-child -->
-      <div id="m--hi" class="balloon-ball back"></div>
+      <div id="m--ball" class="balloon-ball back"></div>
       <div class="balloon-string"></div>
     </div>
     <div class="hm--title">
@@ -252,7 +256,7 @@ const clicker = (e) => {
           </div>
           <div id="m--balloon" class="balloon">
             <!-- sad-child -->
-            <div id="m--hi" class="balloon-ball back"></div>
+            <div id="m--ball" class="balloon-ball back"></div>
             <div class="balloon-string"></div>
           </div>
       `;
@@ -652,7 +656,7 @@ const clicker = (e) => {
           </div>
           <div id="m--balloon" class="balloon">
             <!-- sad-child -->
-            <div id="m--hi" class="balloon-ball back"></div>
+            <div id="m--ball" class="balloon-ball back"></div>
             <div class="balloon-string"></div>
           </div>
       `;
@@ -835,7 +839,7 @@ const clicker = (e) => {
 
           <div id="m--balloon" class="balloon">
             <!-- sad-child -->
-            <div id="m--hi" class="balloon-ball back"></div>
+            <div id="m--ball" class="balloon-ball back"></div>
             <div class="balloon-string"></div>
        
         </div>`;
@@ -984,7 +988,7 @@ const clicker = (e) => {
 
           <div id="m--balloon" class="balloon">
             <!-- sad-child -->
-            <div id="m--hi" class="balloon-ball back"></div>
+            <div id="m--ball" class="balloon-ball back"></div>
             <div class="balloon-string"></div>
        
         </div>`;
