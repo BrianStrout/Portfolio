@@ -80,6 +80,10 @@ const clicker = (e) => {
       `;
       }, 500);
 
+      document.getElementById("mobileToggle").classList.toggle("toggle");
+      document.querySelector(".homeNavShell").classList.toggle("toggle");
+      document.querySelector(".sky").classList.toggle("toggle");
+
       break;
     case "m--web":
       homeMonitor.innerHTML = `
