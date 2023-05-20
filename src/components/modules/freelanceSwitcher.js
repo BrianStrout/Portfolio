@@ -22,10 +22,10 @@ const clicker = (e) => {
 
       break;
     case "m--hi":
-      let mainBalloon = document.getElementById("m--hi");
-      mainBalloon.classList.add("popped");
-      console.log("balloon");
-      console.log(mainBalloon.parentElement.lastChild);
+      // let mainBalloon = document.getElementById("m--hi");
+      // mainBalloon.classList.add("popped");
+      // console.log("balloon");
+      // console.log(mainBalloon.parentElement.lastChild);
 
       // string1.classList.add("air");
       setTimeout(() => {
