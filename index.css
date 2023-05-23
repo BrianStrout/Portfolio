@@ -1106,13 +1106,19 @@ ul {
   background-position: bottom;
   animation: cloudbob 6s ease-in-out infinite alternate none;
 }
+.footerCloud:nth-child(2n) {
+  background-image: url("./src/components/images/cloudTop1.png");
+}
+.footerCloud:nth-child(3n) {
+  background-image: url("./src/components/images/cloudTop3.png");
+}
 .footerCloud:nth-child(1) {
   left: -20px;
   animation-delay: 1s;
 }
 .footerCloud:nth-child(2) {
   left: 160px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(3) {
   left: 340px;
@@ -1120,19 +1126,19 @@ ul {
 }
 .footerCloud:nth-child(4) {
   left: 520px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(5) {
   left: 700px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(6) {
   left: 880px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(7) {
   left: 1060px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(8) {
   left: 1240px;
@@ -1144,7 +1150,7 @@ ul {
 }
 .footerCloud:nth-child(10) {
   left: 1600px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
 @keyframes cloudbob {
@@ -1192,8 +1198,17 @@ ul {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }
+.newFooter .back--footer {
+  position: absolute;
+  left: -100px;
+  z-index: 5;
+  bottom: 90%;
+}
 
 @media all and (max-width: 1023px) and (orientation: portrait) {
+  .back--footer {
+    display: none;
+  }
   #nav--menu {
     padding: 0.5rem;
     background-color: rgba(240, 248, 255, 0.325);
@@ -3606,6 +3621,9 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 *******MM*******MM*****0000****BBBBBB*****II***LLLLLL******EEEEE*******************************
  */
 @media all and (max-width: 1023px) and (orientation: portrait) {
+  .back--footer {
+    display: none;
+  }
   .skill-div {
     width: 15rem;
   }
@@ -3620,7 +3638,8 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 }
 @media only screen and (max-width: 768px) {
   .mobile--toggle {
-    position: fixed;
+    position: absolute;
+    top: 0;
     right: 0;
     z-index: 50;
     width: 25%;

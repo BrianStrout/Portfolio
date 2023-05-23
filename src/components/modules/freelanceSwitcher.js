@@ -15,10 +15,12 @@ const clicker = (e) => {
 
   switch (e.target.id) {
     case "mobileToggle":
+      homeWrap.scrollIntoView({ behavior: "smooth" });
+
       document.getElementById("mobileToggle").classList.toggle("toggle");
       document.querySelector(".homeNavShell").classList.toggle("toggle");
       document.querySelector(".sky").classList.toggle("toggle");
-      console.log("!");
+      // console.log("!");
 
       break;
     case "m--ball":
