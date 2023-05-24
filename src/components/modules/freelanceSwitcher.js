@@ -232,7 +232,7 @@ const clicker = (e) => {
                   <p>
                     Having a great product and killer website is just the start
                     of your journey. I can help you tackle the next steps
-                    towards solidifying your brand's presence and pushing it
+                    toward solidifying your presence, and pushing it
                     forward.
                   </p>
                 </div>
