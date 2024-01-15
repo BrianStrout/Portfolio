@@ -59,6 +59,12 @@ ul {
 .under {
   text-decoration: underline;
 }
+h2 {
+  font-family: var(--header-font);
+}
+p {
+  font-family: var((--letter-font));
+}
 
 .transition--cover {
   .offset--down {

@@ -157,6 +157,14 @@ ul {
   text-decoration: underline;
 }
 
+h2 {
+  font-family: var(--header-font);
+}
+
+p {
+  font-family: var(--letter-font);
+}
+
 .transition--cover .offset--down {
   transition: none;
   transform: translateY(100vh);
@@ -905,6 +913,7 @@ ul {
   display: grid;
   grid-template-rows: 6rem auto;
   overflow: hidden;
+  height: 100%;
 }
 
 .hm--title {
@@ -926,7 +935,10 @@ ul {
   justify-content: flex-start;
   align-items: center;
   width: 80vw;
+  height: 100%;
   margin: 1rem;
+  padding-bottom: 10vh;
+  overflow-y: scroll;
   transition: opacity 0.75s ease-out 0.5s;
 }
 .hm--display h3 {
@@ -1114,11 +1126,11 @@ ul {
 }
 .footerCloud:nth-child(1) {
   left: -20px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(2) {
   left: 160px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(3) {
   left: 340px;
@@ -1130,7 +1142,7 @@ ul {
 }
 .footerCloud:nth-child(5) {
   left: 700px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(6) {
   left: 880px;
@@ -1138,19 +1150,19 @@ ul {
 }
 .footerCloud:nth-child(7) {
   left: 1060px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(8) {
   left: 1240px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(9) {
   left: 1420px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(10) {
   left: 1600px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
 @keyframes cloudbob {
@@ -1203,6 +1215,43 @@ ul {
   left: -100px;
   z-index: 5;
   bottom: 90%;
+}
+
+.header {
+  margin-top: 5vh;
+  /* margin-right: auto; */
+  width: 100%;
+  max-width: 800px;
+}
+
+.most--recent-work {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+}
+.most--recent-work .webshell,
+.most--recent-work .videoshell {
+  display: flex;
+  flex-direction: column;
+}
+.most--recent-work .webshell .header,
+.most--recent-work .videoshell .header {
+  margin-top: 2rem;
+  font-family: var(--header-font);
+  text-decoration: underline;
+}
+.most--recent-work .webshell .description,
+.most--recent-work .videoshell .description {
+  font-family: var(--letter-font);
+  font-size: 1.5rem;
+}
+.most--recent-work .webshell .description a,
+.most--recent-work .videoshell .description a {
+  margin-left: auto;
+  color: black;
 }
 
 @media all and (max-width: 1023px) and (orientation: portrait) {
@@ -1323,6 +1372,17 @@ ul {
   }
   .hm--display ol li .skill-div {
     width: 16rem;
+  }
+  .most--recent-work {
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-column: 1fr 1fr;
+  }
+  .most--recent-work .webshell,
+  .most--recent-work .videoshell {
+    display: flex;
+    flex-direction: column;
   }
 }
 .flex {
