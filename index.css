@@ -1130,11 +1130,11 @@ p {
 }
 .footerCloud:nth-child(2) {
   left: 160px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(3) {
   left: 340px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(4) {
   left: 520px;
@@ -1142,7 +1142,7 @@ p {
 }
 .footerCloud:nth-child(5) {
   left: 700px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(6) {
   left: 880px;
@@ -1150,7 +1150,7 @@ p {
 }
 .footerCloud:nth-child(7) {
   left: 1060px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(8) {
   left: 1240px;
@@ -1374,10 +1374,13 @@ p {
     width: 16rem;
   }
   .most--recent-work {
-    width: 100%;
+    width: 92%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 24vh;
     max-width: 800px;
     display: grid;
-    grid-column: 1fr 1fr;
+    grid-template-columns: 100%;
   }
   .most--recent-work .webshell,
   .most--recent-work .videoshell {

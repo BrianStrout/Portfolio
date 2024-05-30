@@ -508,7 +508,7 @@ $randomNumber: random(5);
     margin-bottom: 24vh;
     max-width: 800px;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
 
     .webshell,
     .videoshell {
