@@ -80,6 +80,40 @@ const clicker = (e) => {
         <br />
         <!-- <span class="cta"></span> -->
       </p>
+
+
+      <h2 class="header">
+      Little behind in updating this site but check back soon
+    </h2>
+    <p>In the meantime, some recent works</p>
+    <div class="most--recent-work">
+      <div class="webshell">
+        <div class="header"><h2>Most Recent Website</h2></div>
+        <div class="description">
+          I had the pleasure of working with Big Fish Initiative helping
+          them with playful motion graphic informative videos, setting
+          up a custom CMS, and building there website. This site has a
+          couple finishing tweeks being worked out, but you can see it
+          live here <br /><br />
+          <a href="https://www.bigfishinitiate.com"
+            >Big Fish Initiative</a
+          >
+        </div>
+      </div>
+      <div class="videoshell">
+        <div class="header"><h2>Most Recent Video</h2></div>
+        <div class="description">
+          I do a lot of work with consulting companies and public
+          serving programs. This video was provided to reach the
+          client's specific goals using appropriate stock footage and
+          subtle animations to keep viewers engaged while still
+          maintaining a professional informative message inside of
+          program specific brand imagery. You can see it here<br /><br />
+          <a href="https://youtu.be/pmd0TpZkMr4">PCG EIHub Project</a>
+        </div>
+      </div>
+    </div>
+
       <div id="cta" class="cta">Let's Connect!</div>
     </div>
       
