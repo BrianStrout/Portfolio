@@ -502,10 +502,14 @@ $randomNumber: random(5);
   }
 
   .most--recent-work {
-    width: 100%;
+    width: 92%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 24vh;
     max-width: 800px;
     display: grid;
-    grid-column: 1fr 1fr;
+    grid-template-columns: 1fr;
+
     .webshell,
     .videoshell {
       display: flex;
