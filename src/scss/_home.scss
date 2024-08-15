@@ -333,30 +333,25 @@ $randomNumber: random(5);
   max-width: 800px;
 }
 .most--recent-work {
+  margin: auto;
   margin-top: 2rem;
   width: 100%;
   max-width: 800px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10%;
-  .webshell,
-  .videoshell {
-    display: flex;
-    flex-direction: column;
-    .header {
-      margin-top: 2rem;
-      font-family: var(--header-font);
-      text-decoration: underline;
-    }
-    .description {
-      font-family: var(--letter-font);
-      font-size: 1.5rem;
-      a {
-        margin-left: auto;
-        color: black;
-      }
+  aspect-ratio: 16/9;
+
+  .video__shell {
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+    iframe {
+      // width: 100%;
+      // max-width: 800px;
+      aspect-ratio: 16/9;
     }
   }
+  // display: grid;
+  // grid-template-columns: 1fr 1fr;
+  // gap: 10%;
 }
 
 @media all and (max-width: 1023px) and (orientation: portrait) {
@@ -502,22 +497,10 @@ $randomNumber: random(5);
   }
 
   .most--recent-work {
-    width: 92%;
+    width: 98%;
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 24vh;
     max-width: 800px;
-    display: grid;
-    grid-template-columns: 100%;
-
-    .webshell,
-    .videoshell {
-      display: flex;
-      flex-direction: column;
-      .header {
-      }
-      .description {
-      }
-    }
   }
 }

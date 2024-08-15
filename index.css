@@ -1126,7 +1126,7 @@ p {
 }
 .footerCloud:nth-child(1) {
   left: -20px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(2) {
   left: 160px;
@@ -1134,7 +1134,7 @@ p {
 }
 .footerCloud:nth-child(3) {
   left: 340px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(4) {
   left: 520px;
@@ -1162,7 +1162,7 @@ p {
 }
 .footerCloud:nth-child(10) {
   left: 1600px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 
 @keyframes cloudbob {
@@ -1225,33 +1225,19 @@ p {
 }
 
 .most--recent-work {
+  margin: auto;
   margin-top: 2rem;
   width: 100%;
   max-width: 800px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10%;
+  aspect-ratio: 16/9;
 }
-.most--recent-work .webshell,
-.most--recent-work .videoshell {
-  display: flex;
-  flex-direction: column;
+.most--recent-work .video__shell {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16/9;
 }
-.most--recent-work .webshell .header,
-.most--recent-work .videoshell .header {
-  margin-top: 2rem;
-  font-family: var(--header-font);
-  text-decoration: underline;
-}
-.most--recent-work .webshell .description,
-.most--recent-work .videoshell .description {
-  font-family: var(--letter-font);
-  font-size: 1.5rem;
-}
-.most--recent-work .webshell .description a,
-.most--recent-work .videoshell .description a {
-  margin-left: auto;
-  color: black;
+.most--recent-work .video__shell iframe {
+  aspect-ratio: 16/9;
 }
 
 @media all and (max-width: 1023px) and (orientation: portrait) {
@@ -1374,18 +1360,11 @@ p {
     width: 16rem;
   }
   .most--recent-work {
-    width: 92%;
+    width: 98%;
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 24vh;
     max-width: 800px;
-    display: grid;
-    grid-template-columns: 100%;
-  }
-  .most--recent-work .webshell,
-  .most--recent-work .videoshell {
-    display: flex;
-    flex-direction: column;
   }
 }
 .flex {
