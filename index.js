@@ -125,7 +125,7 @@ const cueBrian = () => {
 
   setTimeout(() => {
     launched = true;
-    console.log("launched is: " + launched);
+    console.log("2024 Launched is: " + launched);
   }, 3500);
 };
 
