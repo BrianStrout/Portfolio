@@ -1368,11 +1368,11 @@ p {
 }
 .footerCloud:nth-child(1) {
   left: -20px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(2) {
   left: 160px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(3) {
   left: 340px;
@@ -1388,7 +1388,7 @@ p {
 }
 .footerCloud:nth-child(6) {
   left: 880px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(7) {
   left: 1060px;
@@ -1766,6 +1766,7 @@ p {
   }
 }
 #homeMonitor {
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 
