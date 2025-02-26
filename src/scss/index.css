@@ -286,6 +286,14 @@ p {
   .ind {
     margin-left: 2rem;
   }
+  .guidance {
+    position: fixed;
+    z-index: 90;
+    top: 0;
+    width: 100vw;
+    height: 120px;
+    background-color: red;
+  }
 }
 .linebreak {
   margin: 3vh 0px;
@@ -1368,11 +1376,11 @@ p {
 }
 .footerCloud:nth-child(1) {
   left: -20px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(2) {
   left: 160px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(3) {
   left: 340px;
@@ -1392,7 +1400,7 @@ p {
 }
 .footerCloud:nth-child(7) {
   left: 1060px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(8) {
   left: 1240px;
@@ -1400,7 +1408,7 @@ p {
 }
 .footerCloud:nth-child(9) {
   left: 1420px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(10) {
   left: 1600px;
