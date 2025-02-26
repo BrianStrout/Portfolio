@@ -680,7 +680,7 @@ $randomNumber: random(5);
     // background-color: dimgray;
 
     .screen__card {
-      top: 0;
+      top: 120px;
       height: inherit;
       max-height: 100%;
       padding: 8px;
@@ -734,5 +734,6 @@ $randomNumber: random(5);
 }
 
 #homeMonitor {
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
