@@ -72,7 +72,8 @@ body {
   z-index: 50;
   top: calc(50vh - 100px);
   left: calc(50vw - 100px);
-  background-image: url("src/components/images/c3.png");
+  background-image: url("./src/components/images/c3.png");
+
   background-size: cover;
   background-position: center;
   width: 200px;
@@ -210,10 +211,10 @@ body {
 
 .sky {
   position: fixed;
-  z-index: 15;
+  z-index: 85;
   top: 25px;
-  right: 50px;
-  width: 200px;
+  right: 25px;
+  width: 100px;
   height: 100px;
   display: flex;
   flex-direction: column;
@@ -916,13 +917,13 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 50;
+    z-index: 90;
     width: 25%;
     aspect-ratio: 1/1;
     // border: 1px solid black;
 
     display: inline;
-    background-image: url("src/components/images/post sign.png");
+    background-image: url("/src/components/images/post sign.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -931,6 +932,12 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     &.toggle {
       right: -100%;
     }
+  }
+
+  .nav--link {
+    width: 80vw;
+    aspect-ratio: 4/1;
+    // border: 1px solid pink;
   }
 
   .wrapper {
@@ -1169,3 +1176,5 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     background-repeat: no-repeat;
   }
 }
+
+// TRASH

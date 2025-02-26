@@ -7,7 +7,7 @@ const mobileMenuActive = false;
 const frames = document.querySelectorAll("iframe");
 const clicker = (e) => {
   if (e === "intro") {
-    document.querySelector(".hm--title").classList.remove("op0");
+    // document.querySelector(".hm--title").classList.remove("op0");
     document.querySelector(".hm--display").classList.remove("op0");
     return;
   }

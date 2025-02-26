@@ -3,10 +3,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Italiana&family=Lilita+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.lilita-one-regular {
+  font-family: "Lilita One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 :root {
   --header-text: "";
@@ -28,6 +38,7 @@
   --header-font: "Oswald", sans-serif;
   --business-font: "Oswald", sans-serif;
   --letter-font: "Sue Ellen Francisco", cursive;
+  --announcement-font: "lilita-one-regular", serif;
 
   --bad-input-text: "Hi! Please fill all sections out";
 
@@ -51,6 +62,19 @@ ul {
   font-size: 1.5rem;
   line-height: 1rem;
 }
+
+.newHeader {
+  font-size: clamp(2.75rem, 0.5181rem + 5.763vw, 7.5rem);
+  line-height: clamp(2.75rem, 0.5181rem + 7.763vw, 7.5rem);
+  letter-spacing: clamp(-0.09625rem, -0.0181rem + -0.2717vw, -0.2625rem);
+}
+
+.newSubHeader {
+  font-size: clamp(1.75rem, 0.5181rem + 6.763vw, 5.5rem);
+  line-height: clamp(1.75rem, 0.5181rem + 6.763vw, 5.5rem);
+  letter-spacing: clamp(-0.09625rem, -0.0181rem + -0.2717vw, -0.2625rem);
+}
+
 .handy {
   font-family: var(--letter-font);
   font-size: 2.5rem;
@@ -63,7 +87,8 @@ h2 {
   font-family: var(--header-font);
 }
 p {
-  font-family: var((--letter-font));
+  // font-family: var((--letter-font));
+  font-size: clamp(1.5rem, 2.5vw, 4rem);
 }
 
 .transition--cover {
@@ -98,6 +123,62 @@ p {
   }
 }
 
+.grid213 {
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+.gridx {
+  grid-column: 1/-1;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  background-color: pink;
+  > div {
+    border: 1px solid black;
+  }
+}
+
+.flexed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.h60 {
+  height: 60vh;
+}
+.mb5 {
+  margin-bottom: 5vh;
+}
+.linebreak {
+  margin: 12vh 0;
+  border: 1px solid black;
+}
+.popout {
+  color: #fff700;
+  -webkit-text-stroke: 2px black;
+  font-family: var(--announcement-font);
+  font-size: 4rem;
+}
+
+.fademe {
+  transition: all 1.2s cubic-bezier(0.08, 0.46, 0, 1.01);
+  transform: none;
+  opacity: 100;
+}
+
+.fadeup {
+  transform: translateY(150px);
+  opacity: 0;
+}
+
+.lag {
+  transition-delay: 0.35s;
+}
+
 //CSS
 @media all and (max-width: 1023px) and (orientation: portrait) {
 }
@@ -106,6 +187,9 @@ p {
   // .offset--upS {
   //   transform: translateY(-300vh);
   // }
+  .newHeader {
+    margin-bottom: 5vh;
+  }
 
   .h {
     font-family: var(--letter-font);
@@ -116,4 +200,30 @@ p {
   .ind {
     margin-left: 2rem;
   }
+}
+
+.linebreak {
+  margin: 3vh 0px;
+}
+
+.page1,
+.page2,
+.page3 {
+  margin: 0 10vw;
+  width: 80vw;
+  height: 100vh;
+  border: 1px solid black;
+}
+.moveme {
+  background-color: forestgreen;
+  height: 20vh;
+  width: 300vw;
+  margin-left: -30%;
+  margin-top: 10vh;
+}
+
+.g66 {
+  position: relative;
+  width: 66%;
+  // min-height: 40vw;
 }

@@ -33,6 +33,7 @@ function verName(str) {
     return false;
   }
 }
+
 function verEmail(str) {
   regexp = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
   if (regexp.test(str)) {
@@ -45,6 +46,7 @@ function verEmail(str) {
     return false;
   }
 }
+
 //   message
 function verMessage(str) {
   regexp = /.{8}/;

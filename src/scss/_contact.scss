@@ -51,6 +51,8 @@
     }
 
     &:hover::after {
+      position: absolute;
+      right: 0;
       content: "Submit";
     }
   }
@@ -77,7 +79,7 @@
   height: 200%;
   border-radius: 5px 50px 5px 5px;
   border: 3px solid rgb(94, 64, 0);
-  background-image: url("src/components/images/headShotCard.png");
+  background-image: url("/src/components/images/headShotCard.png");
   background-size: cover;
   background-position: top center;
   transform-origin: top center;
@@ -298,16 +300,22 @@
   }
   .ref--linkbox {
     width: 100%;
+    left: 0;
   }
 
   #contactForm {
     width: 100%;
     margin-left: 0;
     .form-group {
+      margin: 0.5rem;
       margin-bottom: 0;
     }
     textarea {
       height: 35vh;
+    }
+
+    #submit {
+      background-color: unset;
     }
   }
 
@@ -323,7 +331,7 @@
     bottom: 0;
     z-index: 60;
     width: 100%;
-    height: 70%;
+    height: 60%;
     padding: 0px;
     background-color: rgb(0 0 0 / 72%);
 
@@ -332,8 +340,8 @@
     border-top: 5px solid black;
     gap: 10px;
     .licon {
-      width: 80px;
-      height: 80px;
+      width: 70px;
+      height: 70px;
     }
   }
 }

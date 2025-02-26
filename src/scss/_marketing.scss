@@ -377,6 +377,201 @@
   }
 }
 
+.leaning__right {
+  text-align: right;
+  padding-right: 10vw;
+}
+
+#marketingChurch {
+  aspect-ratio: 1/1;
+  width: 33%;
+  // height: 50vh;
+  max-height: 900px;
+  // background-color: darkgreen;
+  background-image: url("/src/components/images/marketing\ stained\ glass.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  flex-direction: column;
+  // justify-content: space-evenly;
+}
+#msParagraph {
+  padding: 0 7%;
+}
+
+.services__description {
+  width: 100%;
+  // max-width: 500px;
+  aspect-ratio: 1/1;
+  // background-color: rgba(240, 255, 255, 0.54);
+  padding: 20px;
+  .arrowLeft,
+  .arrowRight {
+    width: 75px;
+    height: 75px;
+    // border: 1px solid black;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    background-image: url("/src/components/images/marketingicons/implement.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .arrowRight {
+    left: unset;
+    right: 0;
+    background-image: url("/src/components/images/marketingicons/strategy.png");
+  }
+}
+
+.absocrown {
+  position: absolute;
+  bottom: 0;
+}
+
+#marketingSkillUL {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  transform: translateX(-50px);
+  // background-color: cornflowerblue;
+
+  li {
+    position: absolute;
+    left: -100vw;
+    top: 0;
+    width: 100px;
+    transform-origin: center;
+    animation: skillCrown 15s linear 0s infinite forwards;
+    aspect-ratio: 1/1;
+    z-index: 50;
+    background-size: contain;
+    background-position: center;
+
+    &:nth-of-type(2) {
+      animation-delay: 3s;
+    }
+    &:nth-of-type(3) {
+      animation-delay: 6s;
+    }
+    &:nth-of-type(4) {
+      animation-delay: 9s;
+    }
+    &:nth-of-type(5) {
+      animation-delay: 12s;
+    }
+  }
+  .ms__icons {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    z-index: 30;
+    .icon {
+      position: absolute;
+      left: 45%;
+      bottom: 0;
+      width: 150px;
+      aspect-ratio: 1/1;
+      opacity: 0;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: all 0.5s ease-out;
+      &.in__focus {
+        bottom: 125%;
+        opacity: 1;
+      }
+      &.risen {
+        bottom: 120%;
+        opacity: 1;
+      }
+    }
+  }
+}
+.authicon {
+  background-image: url("/src/components/images/marketingicons/authorize.png");
+}
+.straticon {
+  background-image: url("/src/components/images/marketingicons/strategy.png");
+}
+.implicon {
+  background-image: url("/src/components/images/marketingicons/implement.png");
+}
+.auditicon {
+  background-image: url("/src/components/images/marketingicons/assess.png");
+}
+.optiicon {
+  background-image: url("/src/components/images/marketingicons/optimize.png");
+}
+
+@keyframes skillCrown {
+  0% {
+    transform: rotateY(-90deg) scale(0.8);
+    left: 0%;
+    opacity: 90%;
+    -webkit-perspective-origin: left;
+    perspective-origin: left;
+    z-index: 50;
+  }
+
+  8% {
+    transform: rotateY(-72deg) scale(0.84);
+    left: 10%;
+    opacity: 92%;
+    // animation-timing-function: ease-in;
+  }
+
+  // 5% {
+  //   transform: rotateY(-54deg) scale(0.88);
+  //   left: 20%;
+  //   opacity: 94%;
+  // }
+
+  // 5% {
+  //   transform: rotateY(-36deg) scale(0.92);
+  //   left: 30%;
+  //   opacity: 96%;
+  // }
+
+  25% {
+    left: 50%;
+    transform: rotateY(0deg) scale(1);
+    opacity: 100%;
+  }
+  50% {
+    left: 100%;
+    transform: rotateY(90deg) scale(0.8);
+    opacity: 90%;
+    -webkit-perspective-origin: right;
+    perspective-origin: right;
+    z-index: 50;
+  }
+  51% {
+    z-index: 10;
+  }
+  75% {
+    left: 50%;
+    transform: rotateY(180deg) scale(0.5);
+    opacity: 30%;
+  }
+  99% {
+    z-index: 10;
+  }
+  100% {
+    left: 0%;
+
+    transform: rotateY(270deg) scale(0.8);
+    opacity: 90%;
+  }
+}
+
 @media all and (max-width: 1023px) and (orientation: portrait) {
   .tuckedBack {
     display: none;
@@ -412,6 +607,11 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .arrowLeft,
+  .arrowRight {
+    top: 28%;
+  }
+
   .marketing--presenter {
     gap: 0;
     padding-top: 22.5%;
@@ -445,5 +645,38 @@
   }
   .tuckedBack {
     opacity: 0.3;
+  }
+
+  .hitsplitterflex {
+    flex-direction: column;
+    div {
+      width: 100%;
+    }
+  }
+  #marketingChurch {
+    width: 100%;
+    max-height: 280px;
+    #marketingSkillUL {
+      bottom: 0;
+    }
+  }
+
+  #msParagraph {
+    padding: 0px 16vw;
+    text-align: center;
+    p {
+      font-size: clamp(1.25rem, 2vw, 4rem);
+    }
+  }
+
+  #marketingSkillUL {
+    .ms__icons {
+      .icon {
+        &.risen {
+          bottom: -130%;
+          opacity: 40%;
+        }
+      }
+    }
   }
 }

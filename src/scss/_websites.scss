@@ -26,6 +26,89 @@
   scale: 1.1;
 }
 
+.scroll__trigger {
+  // height: 50vh;  width: 100vw;
+  width: 100vw;
+  margin: auto;
+  transform: translateX(-10vw);
+}
+
+.scrolling__container {
+  // background-color: hotpink;
+  margin-top: 5vh;
+
+  > div {
+    width: 100%;
+  }
+
+  > ul {
+    width: 250vw;
+
+    // display: flex;
+    // gap: 5vw;
+    > li {
+      display: inline-block;
+      margin: 0 4vw;
+      h3 {
+        font-size: 5.5rem;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &.sc__right {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--accent-color);
+    margin-left: -225%;
+    line-height: 1rem;
+  }
+
+  &.sc__left {
+    // color: brown;
+    color: var(--accent-color);
+    line-height: 4rem;
+    margin-left: 100vw;
+  }
+}
+
+#gridHeader {
+  grid-column: 1/-1;
+}
+
+#websiteGridPresentation {
+  position: relative;
+  .web__grid--left {
+    // background-color: darkred;
+    position: relative;
+    #websiteVideo {
+      position: sticky;
+      width: 100%;
+      top: 20vh;
+      aspect-ratio: 1/1;
+    }
+  }
+  .web__grid--right {
+    scroll-snap-type: y mandatory;
+  }
+}
+
+.web__process--presenter {
+  height: 90vh;
+  // border: 1px solid black;
+
+  scroll-snap-align: start;
+  padding-top: 8vh;
+  margin-top: 5vh;
+  padding-left: 5vw;
+}
+
+canvas {
+  position: sticky;
+  top: 10vh;
+  width: 100%;
+  height: 20vh;
+}
+
 @media all and (max-width: 1023px) and (orientation: portrait) {
   .grid2 {
     display: grid;
@@ -34,6 +117,42 @@
 }
 
 @media only screen and (max-width: 768px) {
+  #sc__websites {
+    padding-bottom: 55px;
+  }
+
+  #websiteGridPresentation {
+    // background-color: deeppink;
+    height: 320vh;
+    scroll-behavior: initial;
+    .web__grid--left {
+      position: absolute;
+      top: 0;
+      z-index: 10;
+      height: 320vh;
+      width: 100%;
+    }
+    .web__grid--right {
+      position: absolute;
+      top: 0;
+      z-index: 20;
+      height: 320vh;
+    }
+  }
+  canvas {
+    width: 100%;
+    top: 50vh;
+    height: unset;
+  }
+
+  .web__process--presenter {
+    // border: 1px solid brown;
+    margin: 0px;
+    padding: 0;
+    padding-top: 6vh;
+    height: 80vh;
+  }
+
   .grid2 {
     display: grid;
     grid-template-columns: 1fr;
@@ -52,6 +171,13 @@
   .hm--title {
     .words-header {
       font-size: 2.5rem;
+    }
+  }
+
+  .scrolling__container {
+    margin-top: 2vh;
+    ul {
+      width: 300vw;
     }
   }
 }
