@@ -1372,19 +1372,19 @@ p {
 }
 .footerCloud:nth-child(2) {
   left: 160px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(3) {
   left: 340px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(4) {
   left: 520px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(5) {
   left: 700px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(6) {
   left: 880px;
@@ -1392,11 +1392,11 @@ p {
 }
 .footerCloud:nth-child(7) {
   left: 1060px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(8) {
   left: 1240px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(9) {
   left: 1420px;
@@ -1404,7 +1404,7 @@ p {
 }
 .footerCloud:nth-child(10) {
   left: 1600px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
 @keyframes cloudbob {
@@ -1646,7 +1646,6 @@ p {
     margin: 0;
     padding-bottom: 13vh;
     padding-top: 3vh;
-    background-color: darkcyan;
   }
   #m--balloon {
     display: none;
@@ -1723,14 +1722,12 @@ p {
   }
   .screen__card-container {
     height: calc(100vh - 55px);
-    background-color: dimgray;
   }
   .screen__card-container .screen__card {
-    top: 120px;
+    top: 30px;
     height: inherit;
     max-height: 100%;
     padding: 8px;
-    background-color: coral;
   }
   .homeWrap .fallingSecond {
     scale: 0.4;

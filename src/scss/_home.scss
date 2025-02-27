@@ -595,7 +595,7 @@ $randomNumber: random(5);
       padding-bottom: 13vh;
       padding-top: 3vh;
 
-      background-color: darkcyan;
+      // background-color: darkcyan;
       // ol {
       // }
     }
@@ -681,14 +681,14 @@ $randomNumber: random(5);
   }
   .screen__card-container {
     height: calc(100vh - 55px);
-    background-color: dimgray;
+    // background-color: dimgray;
 
     .screen__card {
-      top: 120px;
+      top: 30px;
       height: inherit;
       max-height: 100%;
       padding: 8px;
-      background-color: coral;
+      // background-color: coral;
     }
   }
   .homeWrap {
