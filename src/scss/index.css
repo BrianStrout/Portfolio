@@ -1368,19 +1368,19 @@ p {
 }
 .footerCloud:nth-child(1) {
   left: -20px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(2) {
   left: 160px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(3) {
   left: 340px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(4) {
   left: 520px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(5) {
   left: 700px;
@@ -1388,11 +1388,11 @@ p {
 }
 .footerCloud:nth-child(6) {
   left: 880px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(7) {
   left: 1060px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(8) {
   left: 1240px;
@@ -1400,11 +1400,11 @@ p {
 }
 .footerCloud:nth-child(9) {
   left: 1420px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(10) {
   left: 1600px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 
 @keyframes cloudbob {
@@ -1644,8 +1644,9 @@ p {
     overflow-y: scroll;
     width: 100vw;
     margin: 0;
-    padding-bottom: 13vh;
+    padding-bottom: 8px;
     padding-top: 3vh;
+    height: 100dvh;
   }
   #m--balloon {
     display: none;
@@ -2892,6 +2893,7 @@ p {
 
 .web__process--presenter {
   height: 90vh;
+  scroll-behavior: initial;
   scroll-snap-align: start;
   padding-top: 8vh;
   margin-top: 5vh;
@@ -2923,14 +2925,16 @@ canvas {
     position: absolute;
     top: 0;
     z-index: 10;
-    height: 320vh;
+    height: 360vh;
     width: 100%;
+    padding-top: 50vh;
   }
   #websiteGridPresentation .web__grid--right {
     position: absolute;
     top: 0;
     z-index: 20;
-    height: 320vh;
+    height: 360vh;
+    scroll-behavior: initial;
   }
   canvas {
     width: 100%;
@@ -2938,10 +2942,11 @@ canvas {
     height: unset;
   }
   .web__process--presenter {
+    border-top: 1px solid brown;
     margin: 0px;
     padding: 0;
-    padding-top: 6vh;
-    height: 80vh;
+    padding-top: 7vh;
+    height: 90vh;
   }
   .grid2 {
     display: grid;
