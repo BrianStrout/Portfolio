@@ -1372,7 +1372,7 @@ p {
 }
 .footerCloud:nth-child(2) {
   left: 160px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(3) {
   left: 340px;
@@ -1380,7 +1380,7 @@ p {
 }
 .footerCloud:nth-child(4) {
   left: 520px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(5) {
   left: 700px;
@@ -1400,11 +1400,11 @@ p {
 }
 .footerCloud:nth-child(9) {
   left: 1420px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(10) {
   left: 1600px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
 @keyframes cloudbob {
@@ -1645,7 +1645,6 @@ p {
     width: 100vw;
     margin: 0;
     padding-bottom: 8px;
-    padding-top: 3vh;
     height: 100dvh;
   }
   #m--balloon {
