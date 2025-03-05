@@ -62,7 +62,7 @@ const updateContent = (click) => {
     }
   }
   sectionHeader.textContent = marketingContent[msSlide].header;
-  sectionParagraph.textContent = marketingContent[msSlide].description;
+  sectionParagraph.innerHTML = marketingContent[msSlide].description;
 
   iconRiser(marketingContent[msSlide].slug);
   arrowUpdater(msSlide);

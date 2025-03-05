@@ -1,38 +1,65 @@
 const marketingContent = [
   {
     header: "Presence Auditing",
-    description:
-      "Start your next Marketing chapter with a full audit of your website’s SEO and branding effectiveness to ensure maximum visibility and engagement. SEO & UX analysis Branding consistency review Competitor comparison Actionable improvement report",
+    description: `<p>Let's figure out where you stand today</p>
+<ul>
+<li class="fadeRight">Branding consistency review</li>
+<li class="fadeRight sec">SEO & UX audit</li>
+<li class="fadeRight thi"> Competitor analysis</li>
+</ul>
+`,
+
     slug: "auditicon",
     image: "src/components/images/marketingicons/assess.png",
   },
 
   {
     header: "Strategy",
-    description:
-      "Develop a clear, effective plan to reach your audience and grow your business. Target audience research. Multi-channel strategy Growth-focused campaigns",
+    description: `<p>reach your audience and grow your business</p>
+<ul>
+<li class="fadeRight"> Clarifying target audience</li>
+<li class="fadeRight sec">Website Builds</li>
+<li class="fadeRight thi">Social media and promotional planning</li>
+</ul>
+`,
     slug: "straticon",
     image: "src/components/images/marketingicons/strategy.png",
   },
 
   {
     header: "Optimization",
-    description:
-      "Website SEO Optimize your site to rank higher and attract more organic traffic. Keyword optimization Technical SEO fixes Page speed & mobile improvements On-page & off-page SEO",
+    description: `<p>Streamline your efforts</p>
+<ul>
+<li class="fadeRight">SEO formatting</li>
+<li class="fadeRight sec">Internal Market Linking</li>
+<li class="fadeRight thi">Analytics and Reporting</li>
+</ul>
+`,
+
     slug: "optiicon",
     image: "src/components/images/marketingicons/optimize.png",
   },
   {
     header: "Topic Authority",
-    description:
-      " Establish your brand as an industry leader with high-value content. research and content creation, backlink targeting",
+    description: `<p>Establish yourself as an industry leader </p>
+      <ul>
+      <li class="fadeRight">SEO oriented content</li>
+      <li class="fadeRight sec">Multimedia content</li>
+      <li class="fadeRight thi">Cross platform consistency </li>
+      </ul>
+      `,
     slug: "authicon",
     image: "src/components/images/marketingicons/authorize.png",
   },
   {
     header: "Implementation",
-    description:
-      "Blog & article creation, Email & automation setup and campaigns, Social media execution, Ongoing performance analysis, Backlink strategy Social media content Thought leadership pieces, Implementing Your Marketing Strategy, Turn your strategy into action with expert execution and optimization.",
+    description: `<p>Need longer term help</p>
+      <ul>
+      <li class="fadeRight">Blog & article creation</li>
+      <li class="fadeRight sec">Email & automation setup and campaigns</li>
+      <li class="fadeRight thi">Industry research and connection</li>
+      </ul>
+      `,
     slug: "implicon",
     image: "src/components/images/marketingicons/implement.png",
   },

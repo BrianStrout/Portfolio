@@ -71,18 +71,23 @@
     > div {
       border: none;
       padding: 0;
+
+      &.monopoly {
+        height: 40vh;
+        padding-left: 20vw;
+        background-position: left bottom;
+        background-size: 40%;
+
+        p {
+          text-align: right;
+          font-size: 3rem;
+        }
+      }
     }
   }
 
   .ref--container {
     padding: 0;
-  }
-
-  .monopoly {
-    p {
-      text-align: center;
-      font-size: 3rem;
-    }
   }
 
   .payboxes {
