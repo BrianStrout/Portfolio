@@ -1368,7 +1368,7 @@ p {
 }
 .footerCloud:nth-child(1) {
   left: -20px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(2) {
   left: 160px;
@@ -1376,15 +1376,15 @@ p {
 }
 .footerCloud:nth-child(3) {
   left: 340px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(4) {
   left: 520px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(5) {
   left: 700px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(6) {
   left: 880px;
@@ -1392,7 +1392,7 @@ p {
 }
 .footerCloud:nth-child(7) {
   left: 1060px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(8) {
   left: 1240px;
@@ -1400,11 +1400,11 @@ p {
 }
 .footerCloud:nth-child(9) {
   left: 1420px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(10) {
   left: 1600px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 
 @keyframes cloudbob {
@@ -2944,7 +2944,7 @@ canvas {
     border-top: 1px solid brown;
     margin: 0px;
     padding: 0;
-    padding-top: 7vh;
+    padding-top: 8dvh;
     height: 90vh;
   }
   .grid2 {
