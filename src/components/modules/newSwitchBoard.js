@@ -3,6 +3,8 @@ let pullFocusDeets;
 import { validator } from "./formValidation";
 import { marketingController } from "./marketingArrows";
 
+let waving = false;
+
 const nuClicker = (e) => {
   console.log("new");
 
@@ -69,6 +71,17 @@ const nuClicker = (e) => {
       document.getElementById("mobileToggle").classList.toggle("toggle");
       document.querySelector(".homeNavShell").classList.toggle("toggle");
       document.querySelector(".sky").classList.toggle("toggle");
+
+      waving = !waving;
+
+      if (waving) {
+        document.getElementById(
+          "mobileBack"
+        ).innerHTML = `<div class="mb1"></div><div class="mb2"></div><div class="mb3"></div><div class="mb4"></div><div class="mb5"></div><div class="mb6"></div><div class="mb7"></div><div class="mb8"></div>`;
+      } else if (!waving) {
+        document.getElementById("mobileBack").innerHTML = ``;
+      }
+
       break;
     case "submit":
       console.log("submitting in the new controller");

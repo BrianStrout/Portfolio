@@ -100,6 +100,10 @@
   padding-top: 8vh;
   margin-top: 5vh;
   padding-left: 5vw;
+  > h3,
+  p {
+    background-color: rgba(240, 248, 255, 0.3);
+  }
 }
 
 canvas {
