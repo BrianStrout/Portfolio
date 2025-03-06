@@ -5,6 +5,25 @@ import { marketingController } from "./marketingArrows";
 
 let waving = false;
 
+const waver = () => {
+  console.log(waving);
+  waving = !waving;
+  console.log(waving);
+  if (waving) {
+    document
+      .querySelector(".front__and-center")
+      .classList.remove("front__and-center");
+
+    setTimeout(() => {
+      document.getElementById(
+        "mobileBack"
+      ).innerHTML = `<div class="mb1"></div><div class="mb2"></div><div class="mb3"></div><div class="mb4"></div><div class="mb5"></div><div class="mb6"></div><div class="mb7"></div><div class="mb8"></div>`;
+    }, "750");
+  } else if (!waving) {
+    document.getElementById("mobileBack").innerHTML = ``;
+  }
+};
+
 const nuClicker = (e) => {
   console.log("new");
 
@@ -72,15 +91,7 @@ const nuClicker = (e) => {
       document.querySelector(".homeNavShell").classList.toggle("toggle");
       document.querySelector(".sky").classList.toggle("toggle");
 
-      waving = !waving;
-
-      if (waving) {
-        document.getElementById(
-          "mobileBack"
-        ).innerHTML = `<div class="mb1"></div><div class="mb2"></div><div class="mb3"></div><div class="mb4"></div><div class="mb5"></div><div class="mb6"></div><div class="mb7"></div><div class="mb8"></div>`;
-      } else if (!waving) {
-        document.getElementById("mobileBack").innerHTML = ``;
-      }
+      waver();
 
       break;
     case "submit":
@@ -462,6 +473,7 @@ const nuClicker = (e) => {
       document.getElementById("mobileToggle").classList.toggle("toggle");
       document.querySelector(".homeNavShell").classList.toggle("toggle");
       document.querySelector(".sky").classList.toggle("toggle");
+      waver();
       break;
 
     case "m--marketing":
@@ -477,6 +489,7 @@ const nuClicker = (e) => {
       document.getElementById("mobileToggle").classList.toggle("toggle");
       document.querySelector(".homeNavShell").classList.toggle("toggle");
       document.querySelector(".sky").classList.toggle("toggle");
+      waver();
       break;
 
     case "m--web":
@@ -492,6 +505,7 @@ const nuClicker = (e) => {
       document.getElementById("mobileToggle").classList.toggle("toggle");
       document.querySelector(".homeNavShell").classList.toggle("toggle");
       document.querySelector(".sky").classList.toggle("toggle");
+      waver();
       break;
 
     case "m--video":
@@ -507,6 +521,7 @@ const nuClicker = (e) => {
       document.getElementById("mobileToggle").classList.toggle("toggle");
       document.querySelector(".homeNavShell").classList.toggle("toggle");
       document.querySelector(".sky").classList.toggle("toggle");
+      waver();
       break;
     case "m--nerd":
       pullFocus = document.querySelector("#sc__nerd");
@@ -538,7 +553,7 @@ const nuClicker = (e) => {
       document.getElementById("mobileToggle").classList.toggle("toggle");
       document.querySelector(".homeNavShell").classList.toggle("toggle");
       document.querySelector(".sky").classList.toggle("toggle");
-
+      waver();
       break;
     case "m--reference":
       pullFocus = document.querySelector("#sc__reference");
@@ -553,6 +568,7 @@ const nuClicker = (e) => {
       document.getElementById("mobileToggle").classList.toggle("toggle");
       document.querySelector(".homeNavShell").classList.toggle("toggle");
       document.querySelector(".sky").classList.toggle("toggle");
+      waver();
       break;
 
     case "cta":
@@ -578,6 +594,7 @@ const nuClicker = (e) => {
       document.getElementById("mobileToggle").classList.toggle("toggle");
       document.querySelector(".homeNavShell").classList.toggle("toggle");
       document.querySelector(".sky").classList.toggle("toggle");
+      waver();
       break;
     // case "cta":
     //   pullFocus = document.querySelector("#sc__contact");

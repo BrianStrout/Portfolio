@@ -17,7 +17,7 @@
     align-items: center;
     width: 300px;
     height: 300px;
-    transition: all 1.2s linear;
+    transition: all 1.4s ease-in-out 1s linear;
     background-size: cover;
     transform: rotate(45deg);
     background-image: url("/src/components/images/panic1.png");
@@ -160,7 +160,7 @@
   position: relative;
   font-family: var(--header-font);
   font-size: 1.8rem;
-  transition: all 0.2s ease-out;
+  transition: all 0.4s ease-in-out 1s ease-out;
   translate: 0px 100vh;
   width: 12vw;
   aspect-ratio: 2/1;
@@ -181,7 +181,7 @@
     transition-delay: 0.9s;
   }
   &:nth-child(5) {
-    transition-delay: 1.2s;
+    transition-delay: 1.4s ease-in-out 1s;
   }
   &:nth-child(6) {
     transition-delay: 1.5s;
@@ -644,32 +644,39 @@ $randomNumber: random(5);
     pointer-events: all;
     > div {
       position: absolute;
-      width: 100%;
-      height: 100%;
+      width: 110%;
+      height: 110%;
       background-size: cover;
       background-position: center;
+      opacity: 0%;
+      transform: translateY(200px);
     }
     .mb1 {
       background-image: url("../components/images/nav/mb1.png");
       z-index: 10;
-      animation: cloudin 1s ease-out 1 forwards, cloudnavl 2s infinite alternate;
+      animation: cloudin 1s ease-out 1 forwards,
+        cloudnavl 4s ease-in-out 1s infinite alternate;
     }
     .mb2 {
       background-image: url("../components/images/nav/mb2.png");
       z-index: 9;
-      animation: cloudin 1s ease-out 1 forwards, cloudnavr 2s infinite alternate;
+      animation: cloudin 1s ease-out 1 forwards,
+        cloudnavr 4s ease-in-out 2s infinite alternate;
+
       animation-delay: 0.15s;
     }
     .mb3 {
       background-image: url("../components/images/nav/mb3.png");
       z-index: 8;
-      animation: cloudin 1s ease-out 1 forwards, cloudnavl 2s infinite alternate;
+      animation: cloudin 1s ease-out 1 forwards,
+        cloudnavl 4s ease-in-out 1s infinite alternate;
       animation-delay: 0.25s;
     }
     .mb4 {
       background-image: url("../components/images/nav/mb4.png");
       z-index: 7;
-      animation: cloudin 1s ease-out 1 forwards, cloudnavr 2s infinite alternate;
+      animation: cloudin 1s ease-out 1 forwards,
+        cloudnavr 4s ease-in-out 1s infinite alternate;
       animation-delay: 0.45s;
     }
     .mb5 {
@@ -683,18 +690,19 @@ $randomNumber: random(5);
     .mb6 {
       background-image: url("../components/images/nav/mb6.png");
       z-index: 5;
-      animation: cloudin 1s ease-out 1 forwards, cloudnavl 2s infinite alternate;
+      animation: cloudin 1s ease-out 1 forwards,
+        cloudnavl 4s ease-in-out 1s infinite alternate;
       animation-delay: 0.65s;
     }
     .mb7 {
       background-image: url("../components/images/nav/mb7.png");
       z-index: 4;
-      animation: cloudin 1s ease-out 1 forwards, cloudnavr 2s infinite alternate;
+      animation: cloudin 1s ease-out 1 forwards,
+        cloudnavr 4s ease-in-out 1s infinite alternate;
       animation-delay: 0.75s;
     }
   }
-
-  .newFooter .footer--name {
+  anim .newFooter .footer--name {
     position: absolute;
     top: 0px;
     left: 0;
@@ -724,7 +732,11 @@ $randomNumber: random(5);
 @keyframes cloudin {
   0% {
     opacity: 0%;
-    transform: translateY(100px);
+    transform: translateY(200px);
+  }
+
+  80% {
+    opacity: 100%;
   }
 
   100% {

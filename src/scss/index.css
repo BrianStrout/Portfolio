@@ -1112,7 +1112,7 @@ p {
   align-items: center;
   width: 300px;
   height: 300px;
-  transition: all 1.2s linear;
+  transition: all 1.4s ease-in-out 1s linear;
   background-size: cover;
   transform: rotate(45deg);
   background-image: url("/src/components/images/panic1.png");
@@ -1238,7 +1238,7 @@ p {
   position: relative;
   font-family: var(--header-font);
   font-size: 1.8rem;
-  transition: all 0.2s ease-out;
+  transition: all 0.4s ease-in-out 1s ease-out;
   translate: 0px 100vh;
   width: 12vw;
   aspect-ratio: 2/1;
@@ -1259,7 +1259,7 @@ p {
   transition-delay: 0.9s;
 }
 .nav--link:nth-child(5) {
-  transition-delay: 1.2s;
+  transition-delay: 1.4s ease-in-out 1s;
 }
 .nav--link:nth-child(6) {
   transition-delay: 1.5s;
@@ -1380,7 +1380,7 @@ p {
 }
 .footerCloud:nth-child(4) {
   left: 520px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(5) {
   left: 700px;
@@ -1388,7 +1388,7 @@ p {
 }
 .footerCloud:nth-child(6) {
   left: 880px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(7) {
   left: 1060px;
@@ -1404,7 +1404,7 @@ p {
 }
 .footerCloud:nth-child(10) {
   left: 1600px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
 @keyframes cloudbob {
@@ -1686,32 +1686,34 @@ p {
   }
   .mobile__back > div {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 110%;
+    height: 110%;
     background-size: cover;
     background-position: center;
+    opacity: 0%;
+    transform: translateY(200px);
   }
   .mobile__back .mb1 {
     background-image: url("../components/images/nav/mb1.png");
     z-index: 10;
-    animation: cloudin 1s ease-out 1 forwards, cloudnavl 2s infinite alternate;
+    animation: cloudin 1s ease-out 1 forwards, cloudnavl 4s ease-in-out 1s infinite alternate;
   }
   .mobile__back .mb2 {
     background-image: url("../components/images/nav/mb2.png");
     z-index: 9;
-    animation: cloudin 1s ease-out 1 forwards, cloudnavr 2s infinite alternate;
+    animation: cloudin 1s ease-out 1 forwards, cloudnavr 4s ease-in-out 2s infinite alternate;
     animation-delay: 0.15s;
   }
   .mobile__back .mb3 {
     background-image: url("../components/images/nav/mb3.png");
     z-index: 8;
-    animation: cloudin 1s ease-out 1 forwards, cloudnavl 2s infinite alternate;
+    animation: cloudin 1s ease-out 1 forwards, cloudnavl 4s ease-in-out 1s infinite alternate;
     animation-delay: 0.25s;
   }
   .mobile__back .mb4 {
     background-image: url("../components/images/nav/mb4.png");
     z-index: 7;
-    animation: cloudin 1s ease-out 1 forwards, cloudnavr 2s infinite alternate;
+    animation: cloudin 1s ease-out 1 forwards, cloudnavr 4s ease-in-out 1s infinite alternate;
     animation-delay: 0.45s;
   }
   .mobile__back .mb5 {
@@ -1724,16 +1726,16 @@ p {
   .mobile__back .mb6 {
     background-image: url("../components/images/nav/mb6.png");
     z-index: 5;
-    animation: cloudin 1s ease-out 1 forwards, cloudnavl 2s infinite alternate;
+    animation: cloudin 1s ease-out 1 forwards, cloudnavl 4s ease-in-out 1s infinite alternate;
     animation-delay: 0.65s;
   }
   .mobile__back .mb7 {
     background-image: url("../components/images/nav/mb7.png");
     z-index: 4;
-    animation: cloudin 1s ease-out 1 forwards, cloudnavr 2s infinite alternate;
+    animation: cloudin 1s ease-out 1 forwards, cloudnavr 4s ease-in-out 1s infinite alternate;
     animation-delay: 0.75s;
   }
-  .newFooter .footer--name {
+  anim .newFooter .footer--name {
     position: absolute;
     top: 0px;
     left: 0;
@@ -1762,7 +1764,10 @@ p {
 @keyframes cloudin {
   0% {
     opacity: 0%;
-    transform: translateY(100px);
+    transform: translateY(200px);
+  }
+  80% {
+    opacity: 100%;
   }
   100% {
     opacity: 100%;
@@ -2991,7 +2996,7 @@ p {
 
 .web__process--presenter {
   height: 90vh;
-  scroll-behavior: initial;
+  scroll-behavior: auto;
   scroll-snap-align: start;
   padding-top: 8vh;
   margin-top: 5vh;
