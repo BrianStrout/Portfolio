@@ -1026,7 +1026,6 @@ p {
     width: 100vw;
   }
   .hm--display {
-    overflow-y: scroll;
     width: 100vw;
   }
   .movie--theater {
@@ -1123,7 +1122,7 @@ p {
 
 .homeMonitor {
   position: relative;
-  height: 100%;
+  height: 100dvh;
 }
 
 .hm--title {
@@ -1147,7 +1146,6 @@ p {
   width: 100vw;
   height: 100%;
   padding: 0px;
-  overflow-y: scroll;
   transition: opacity 0.75s ease-out 0.5s;
 }
 .hm--display h3 {
@@ -1372,7 +1370,7 @@ p {
 }
 .footerCloud:nth-child(2) {
   left: 160px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(3) {
   left: 340px;
@@ -1384,15 +1382,15 @@ p {
 }
 .footerCloud:nth-child(5) {
   left: 700px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(6) {
   left: 880px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(7) {
   left: 1060px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(8) {
   left: 1240px;
@@ -1400,7 +1398,7 @@ p {
 }
 .footerCloud:nth-child(9) {
   left: 1420px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(10) {
   left: 1600px;
@@ -1501,10 +1499,9 @@ p {
   top: 10%;
   left: 100%;
   width: 100%;
-  height: 90vh;
+  height: 100dvh;
   transition: left 0.25s ease-in-out;
   overflow: hidden;
-  overflow-y: scroll;
   padding: 0vh 10vw 10vh 10vw;
   padding-bottom: unset;
 }
@@ -1526,6 +1523,7 @@ p {
 }
 .screen__card-container .screen__card.front__and-center {
   left: 0%;
+  overflow-y: scroll;
 }
 .screen__card-container .screen__card.front__and-center .hit {
   transition: all 0.25s ease-in-out 0.5s;
@@ -1621,6 +1619,7 @@ p {
   position: absolute;
   top: 20px;
   left: 10%;
+  z-index: 50;
   transform: rotate(-28deg);
   -webkit-text-stroke: 1px yellow;
 }
@@ -1630,9 +1629,6 @@ p {
     grid-template-columns: 100vw auto;
     height: 100dvh;
   }
-  .homeMonitor {
-    grid-template-rows: 3rem auto;
-  }
   .homeMonitor .hm--title .long--title {
     display: inline;
     width: 70vw;
@@ -1641,10 +1637,8 @@ p {
     font-size: 1.25rem;
   }
   .homeMonitor .hm--display {
-    overflow-y: scroll;
     width: 100vw;
     margin: 0;
-    padding-bottom: 8px;
     height: 100dvh;
   }
   #m--balloon {
@@ -1819,10 +1813,10 @@ p {
     top: 0;
   }
   .screen__card-container {
-    height: calc(100vh - 55px);
+    max-height: 100dvh;
   }
   .screen__card-container .screen__card {
-    top: 30px;
+    top: 0px;
     height: inherit;
     max-height: 100%;
     padding: 8px;
@@ -1866,8 +1860,7 @@ p {
   }
 }
 #homeMonitor {
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: hidden;
 }
 
 .flex {
@@ -3589,10 +3582,6 @@ canvas {
   }
 }
 @media only screen and (max-width: 768px) {
-  .arrowLeft,
-  .arrowRight {
-    top: 28%;
-  }
   .marketing--presenter {
     gap: 0;
     padding-top: 22.5%;
@@ -3636,39 +3625,54 @@ canvas {
     left: 0;
   }
   .hitsplitterflex #marketingChurch {
+    top: 0;
     width: 100%;
-    max-height: 280px;
+    height: 100dvh;
+    background-size: 100%;
     z-index: 40;
     opacity: 0.2;
   }
   .hitsplitterflex #marketingChurch #marketingSkillUL {
-    bottom: 0;
+    bottom: unset;
+    top: 10dvh;
   }
   .hitsplitterflex .right {
     z-index: 45;
   }
+  .hitsplitterflex .right .arrowLeft,
+  .hitsplitterflex .right .arrowRight {
+    top: 8dvh;
+    background-color: white;
+    background-size: 80%;
+    border-radius: 50%;
+    border: 3px dotted black;
+  }
   #msHeader {
-    width: 100%;
+    width: -moz-fit-content;
+    width: fit-content;
     display: flex;
+    justify-content: center;
     background-color: var(--accent-color);
     padding: 4px;
+    margin: auto;
+    margin-bottom: 9dvh;
   }
   #msParagraph {
-    padding: 0px 3vw;
+    padding: 0px 10vw;
     text-align: left;
   }
   #msParagraph p {
     font-weight: 500;
   }
   #marketingSkillUL .ms__icons .icon.risen {
-    bottom: -90%;
+    bottom: -80dvh;
     opacity: 100%;
   }
   .fadeRight {
     opacity: 0;
     animation: faderight 0.4s ease-out forwards;
-    background-color: rgba(240, 248, 255, 0.49);
-    margin: 0 12vw;
+    background-color: rgba(240, 248, 255, 0.8);
+    margin: 0;
     margin-bottom: 8px;
   }
   .fadeRight.sec {
@@ -3714,7 +3718,6 @@ body {
   align-items: center;
   background-color: var(--background-color);
   color: var(--textcolor);
-  overflow: scroll;
 }
 
 .wrapper > div {
@@ -4386,7 +4389,6 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   padding-top: 0.5rem;
   padding-right: 1rem;
   margin-bottom: 2rem;
-  overflow-y: scroll;
   line-height: 2rem;
 }
 

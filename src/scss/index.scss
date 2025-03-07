@@ -37,7 +37,7 @@ body {
   align-items: center;
   background-color: var(--background-color);
   color: var(--textcolor);
-  overflow: scroll;
+  // overflow: scroll;
 }
 
 .wrapper > div {
@@ -715,7 +715,7 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
   padding-top: 0.5rem;
   padding-right: 1rem;
   margin-bottom: 2rem;
-  overflow-y: scroll;
+  // overflow-y: scroll;
   line-height: 2rem;
 }
 .brian-blurb > p {

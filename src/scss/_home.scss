@@ -35,7 +35,7 @@
   // display: grid;
   // grid-template-rows: 7rem auto;
   // overflow: hidden;
-  height: 100%;
+  height: 100dvh;
 }
 
 .hm--title {
@@ -60,7 +60,7 @@
   height: 100%;
   // margin: 1rem;
   padding: 0px;
-  overflow-y: scroll;
+  // overflow-y: scroll;
   transition: opacity 0.75s ease-out 0.5s;
 
   h3 {
@@ -410,12 +410,12 @@ $randomNumber: random(5);
     top: 10%;
     left: 100%;
     width: 100%;
-    height: 90vh;
+    height: 100dvh;
     // aspect-ratio: 1/1;
     // border: 1px solid rgb(90, 90, 19);
     transition: left 0.25s ease-in-out;
     overflow: hidden;
-    overflow-y: scroll;
+    // overflow-y: scroll;
     padding: 0vh 10vw 10vh 10vw;
     padding-bottom: unset;
 
@@ -440,7 +440,7 @@ $randomNumber: random(5);
 
     &.front__and-center {
       left: 0%;
-
+      overflow-y: scroll;
       .hit {
         transition: all 0.25s ease-in-out 0.5s;
 
@@ -567,6 +567,7 @@ $randomNumber: random(5);
   position: absolute;
   top: 20px;
   left: 10%;
+  z-index: 50;
   transform: rotate(-28deg);
   -webkit-text-stroke: 1px yellow;
 }
@@ -577,7 +578,7 @@ $randomNumber: random(5);
     height: 100dvh;
   }
   .homeMonitor {
-    grid-template-rows: 3rem auto;
+    // grid-template-rows: 3rem auto;
 
     .hm--title {
       .long--title {
@@ -589,10 +590,10 @@ $randomNumber: random(5);
       }
     }
     .hm--display {
-      overflow-y: scroll;
+      // overflow-y: scroll;
       width: 100vw;
       margin: 0;
-      padding-bottom: 8px;
+      // padding-bottom: 8px;
       // padding-top: 3vh;
       height: 100dvh;
 
@@ -800,11 +801,11 @@ $randomNumber: random(5);
     top: 0;
   }
   .screen__card-container {
-    height: calc(100vh - 55px);
+    max-height: 100dvh;
     // background-color: dimgray;
 
     .screen__card {
-      top: 30px;
+      top: 0px;
       height: inherit;
       max-height: 100%;
       padding: 8px;
@@ -859,6 +860,10 @@ $randomNumber: random(5);
 }
 
 #homeMonitor {
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: hidden;
+  // overflow-y: scroll;
+  // background-image: url("../components/images/c1.png");
+  // background-size: 10%;
+  // background-repeat: repeat;
+  // background-position: ;
 }
