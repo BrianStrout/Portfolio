@@ -8,6 +8,7 @@ import { clicker } from "./freelanceSwitcher.js";
 import { nuClicker } from "./newSwitchBoard.js";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { lazyLoader } from "./lazyLoader.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -221,6 +222,7 @@ const webSiteLaunch = () => {
       // clicker("intro");
 
       nuClicker("andgo");
+      lazyLoader();
     }, 6500);
   };
 };

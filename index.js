@@ -1,14 +1,34 @@
 import { observeAnimation } from "./src/components/modules/observeAnimation.js";
 import { observeFadeUps } from "./src/components/modules/observeFadeUps.js";
+// import { observeMarketingAndAdjust } from "./src/components/modules/observeMarketingMobileAdaperter.js";
 import { nuClicker } from "./src/components/modules/newSwitchBoard.js";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 import { webSiteLaunch } from "./src/components/modules/introAnimation.js";
 import { skipAnimation } from "./src/components/modules/skipAnimation.js";
+import {
+  moveTouch,
+  startTouch,
+  endTouch,
+  deck,
+} from "./src/components/modules/marketingCardsSwiper.js";
 const inDEV = false;
 inDEV ? skipAnimation() : webSiteLaunch();
-document.addEventListener("click", (e) => {
+
+function initMobile() {
+  return window.innerWidth <= 768; // Adjust breakpoint as needed
+}
+let mobileView = initMobile();
+
+if (initMobile) {
+  console.log("index has registered mobile we be launching listeners");
+  deck.addEventListener("touchstart", startTouch);
+  deck.addEventListener("touchmove", moveTouch);
+  deck.addEventListener("touchend", endTouch);
+}
+
+document.addEventListener("click", (e, mobileView) => {
   nuClicker(e);
 });
 const portLinkCode_Portfolio = document.getElementById("portgithub");
@@ -103,12 +123,15 @@ const webProcesses = document.querySelectorAll(".web__process--presenter");
 webProcesses.forEach((websection) => {
   observeAnimation.observe(websection);
 });
+
 observeAnimation.observe(document.getElementById("gridHeader"));
 
 const elementsToFadeIn = document.querySelectorAll(".fademe");
 elementsToFadeIn.forEach((fader) => {
   observeFadeUps.observe(fader);
 });
+
+// marketing Cards Engageer
 
 // tl();
 
@@ -149,3 +172,10 @@ sideScroll
 //     scrub: true,
 //   },
 // });
+
+const launchDragListener = () => {
+  console.log("listening for drag");
+  deck.addEventListener("touchstart", cardSwiper(e, startTouch));
+  deck.addEventListener("touchmove", cardSwiper(e, moveTouch));
+  deck.addEventListener("touchend", cardSwiper(e, endTouch));
+};

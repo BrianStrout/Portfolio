@@ -401,9 +401,7 @@
 
 .services__description {
   width: 100%;
-  // max-width: 500px;
-  aspect-ratio: 1/1;
-  // background-color: rgba(240, 255, 255, 0.54);
+
   padding: 20px;
   .arrowLeft,
   .arrowRight {
@@ -511,6 +509,10 @@
   background-image: url("/src/components/images/marketingicons/optimize.png");
 }
 
+#mobileMarketingServices {
+  display: none;
+}
+
 @keyframes skillCrown {
   0% {
     transform: rotateY(-90deg) scale(0.8);
@@ -572,6 +574,122 @@
   }
 }
 
+.outercard {
+  width: calc(100%);
+  height: calc(100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--strco--drkblu);
+  border-radius: 8px;
+  .rim {
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--accent-color);
+  }
+}
+
+.innercard {
+  position: relative;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  display: grid;
+
+  grid-template-areas:
+    "icon title"
+    "text text";
+  grid-template-columns: 120px auto;
+
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--strco--tan);
+  border: 2px solid var(--strco--drkblu);
+  // background-image: url("../components/images/marketing\ stained\ glass.png");
+  // background-position: center;
+  // background-size: cover;
+  &.mobileAuditCard {
+    .suite {
+      background-image: url("../components/images/marketingicons/assess.png");
+    }
+  }
+  &.mobileStrategyCard {
+    .suite {
+      background-image: url("../components/images/marketingicons/strategy.png");
+    }
+  }
+  &.mobileOptimizeCard {
+    .suite {
+      background-image: url("../components/images/marketingicons/optimize.png");
+    }
+  }
+  &.mobileImplementCard {
+    .suite {
+      background-image: url("../components/images/marketingicons/implement.png");
+    }
+  }
+  &.mobileAuthorityCard {
+    .suite {
+      background-image: url("../components/images/marketingicons/authorize.png");
+    }
+  }
+
+  .suite {
+    grid-area: icon;
+    // background-color: pink;
+    width: 100%;
+    // height: 100px;
+    aspect-ratio: 1/1;
+    margin: 0 auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: rotateIn 0.75s ease-out 0s 1 forwards;
+    transform-origin: bottom left;
+  }
+
+  .header {
+    grid-area: title;
+    // background-color: purple;
+    font-size: clamp(1.75rem, 0.5181rem + 4.763vw, 4.5rem);
+    font-weight: 600;
+    text-align: left;
+    font-style: underline;
+    border-bottom: 3px solid var(--strco--drkblu);
+    width: unset;
+    margin: none;
+    opacity: 0;
+    animation: fadeLeft 0.75s ease-out 0.25s 1 forwards;
+  }
+  .description {
+    grid-area: text;
+    // background-color: brown;
+    ul {
+      margin-left: 112px;
+
+      li {
+        position: relative;
+        font-size: clamp(1.5rem, 2.25vw, 4rem);
+        &:before {
+          position: absolute;
+          right: calc(100% + 6px);
+          width: 80px;
+          height: 80px;
+          // background-color: red;
+          background-image: url("../components/images/c3.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center top;
+          content: "";
+        }
+      }
+    }
+  }
+}
+
 @media all and (max-width: 1023px) and (orientation: portrait) {
   .tuckedBack {
     display: none;
@@ -612,6 +730,62 @@
   //   top: 28%;
   // }
 
+  .hitsplitterflex {
+    .right {
+      width: 100%;
+      #computerMarketingServices {
+        display: none;
+      }
+
+      #mobileMarketingServices {
+        display: block;
+        top: unset;
+        width: 100%;
+
+        #deckOfMarketingCards {
+          position: relative;
+          top: unset;
+          // display: block;
+          width: 100%;
+          height: 80vh; /* Adjust as needed */
+          // overflow: hidden;
+
+          .marketing__mobileCard {
+            position: absolute;
+            width: 94%;
+            height: 90%;
+            top: unset;
+            // background: white;
+            // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-out;
+            background-color: transparent;
+
+            &:nth-of-type(1) {
+              z-index: 55;
+            }
+            &:nth-of-type(2) {
+              z-index: 50;
+              transform: rotate(5deg);
+            }
+            &:nth-of-type(3) {
+              z-index: 45;
+            }
+            &:nth-of-type(4) {
+              z-index: 40;
+            }
+            &:nth-of-type(5) {
+              z-index: 35;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .computerMarketingServices {
+    display: none;
+  }
+
   .marketing--presenter {
     gap: 0;
     padding-top: 22.5%;
@@ -650,12 +824,6 @@
   .hitsplitterflex {
     height: 100dvh;
     flex-direction: column;
-    div {
-      width: 100%;
-      position: absolute;
-      top: 10dvh;
-      left: 0;
-    }
 
     #marketingChurch {
       top: 0;
@@ -665,6 +833,11 @@
       background-size: 100%;
       z-index: 40;
       opacity: 0.2;
+      width: 100%;
+      position: absolute;
+      top: 10dvh;
+      left: 0;
+      pointer-events: none;
       #marketingSkillUL {
         bottom: unset;
         top: 10dvh;
@@ -673,18 +846,8 @@
 
     .right {
       z-index: 45;
-
-      .arrowLeft,
-      .arrowRight {
-        top: 8dvh;
-        background-color: white;
-        background-size: 80%;
-        border-radius: 50%;
-        border: 3px dotted black;
-      }
     }
   }
-
   #msHeader {
     width: fit-content;
     display: flex;
@@ -718,7 +881,7 @@
   .fadeRight {
     opacity: 0;
     animation: faderight 0.4s ease-out forwards;
-    background-color: rgba(240, 248, 255, 0.8);
+    // background-color: rgba(240, 248, 255, 0.8);
     margin: 0;
     margin-bottom: 8px;
     &.sec {
@@ -728,12 +891,150 @@
       animation-delay: 0.5s;
     }
   }
+
+  .outercard {
+    width: calc(100%);
+    height: calc(100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--strco--drkblu);
+    border-radius: 8px;
+    .rim {
+      width: calc(100% - 8px);
+      height: calc(100% - 8px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      background-color: var(--accent-color);
+    }
+  }
+
+  .innercard {
+    position: relative;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--strco--tan);
+    border: 2px solid var(--strco--drkblu);
+    // background-image: url("../components/images/marketing\ stained\ glass.png");
+    // background-position: center;
+    // background-size: cover;
+    &.mobileAuditCard {
+      .suite {
+        background-image: url("../components/images/marketingicons/assess.png");
+      }
+    }
+    &.mobileStrategyCard {
+      .suite {
+        background-image: url("../components/images/marketingicons/strategy.png");
+      }
+    }
+    &.mobileOptimizeCard {
+      .suite {
+        background-image: url("../components/images/marketingicons/optimize.png");
+      }
+    }
+    &.mobileImplementCard {
+      .suite {
+        background-image: url("../components/images/marketingicons/implement.png");
+      }
+    }
+    &.mobileAuthorityCard {
+      .suite {
+        background-image: url("../components/images/marketingicons/authorize.png");
+      }
+    }
+
+    .suite {
+      // background-color: pink;
+      width: 35%;
+      // height: 100px;
+      aspect-ratio: 1/1;
+      margin: 0 auto;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .header {
+      // background-color: purple;
+      font-size: 1.95rem;
+      font-weight: 600;
+      text-align: center;
+      font-style: underline;
+      border-bottom: 3px solid var(--strco--drkblu);
+      width: unset;
+    }
+    .description {
+      // background-color: brown;
+      ul {
+        margin-left: 26px;
+
+        li {
+          position: relative;
+          &:before {
+            position: absolute;
+            right: calc(100% + 6px);
+            width: 20px;
+            height: 20px;
+            // background-color: red;
+            background-image: url("../components/images/c3.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            content: "";
+          }
+        }
+      }
+    }
+  }
 }
 
 @keyframes faderight {
   0% {
     opacity: 0;
     transform: translateX(-40px);
+  }
+  100% {
+    opacity: 100;
+    transform: none;
+  }
+}
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 100;
+    transform: none;
+  }
+}
+
+.fadeRight {
+  opacity: 0;
+  animation: faderight 0.4s ease-out forwards;
+  // background-color: rgba(240, 248, 255, 0.8);
+  margin: 0;
+  margin-bottom: 8px;
+  &.sec {
+    animation-delay: 0.25s;
+  }
+  &.thi {
+    animation-delay: 0.5s;
+  }
+}
+
+@keyframes rotateIn {
+  0% {
+    opacity: 0;
+    transform: rotate(-40deg);
   }
   100% {
     opacity: 100;

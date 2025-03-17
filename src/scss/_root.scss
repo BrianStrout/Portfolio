@@ -26,6 +26,9 @@
   --background-color: rgb(5, 255, 255);
   --ghost-color: rgb(230, 232, 223);
   --moody-background-color: rgb(100, 173, 173);
+  --strco--drkblu: #086788;
+  --strco--tan: #fff1d0;
+
   --textcolor: black;
   --button-text-color: var(var(--background-color));
   --d-accent-color: #ffff8a;
@@ -209,6 +212,10 @@ p {
   //   height: 120px;
   //   background-color: red;
   // }
+
+  .mobHide {
+    display: none;
+  }
 }
 
 .linebreak {

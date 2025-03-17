@@ -1,12 +1,22 @@
 import { marketingContent } from "./marketingContent";
 
-const sectionHeader = document.getElementById("msHeader");
+// const sectionHeader = document.getElementById("msHeader");
 const sectionParagraph = document.getElementById("msParagraph");
 const iconsToSort = document.querySelector(".ms__icons");
 let msSlide = 0;
 let left;
 let right;
 let risen;
+
+function isMobile() {
+  return window.innerWidth <= 768; // Adjust breakpoint as needed
+}
+
+if (isMobile()) {
+  console.log("User is on a mobile device");
+} else {
+  console.log("User is on a desktop");
+}
 
 const iconRiser = (icon) => {
   // console.log(icon);
@@ -48,6 +58,10 @@ const arrowUpdater = (number) => {
 };
 
 const updateContent = (click) => {
+  // determine mobile or not
+
+  // computer time
+
   if (click === "left") {
     msSlide--;
     if (msSlide < 0) {
@@ -61,11 +75,21 @@ const updateContent = (click) => {
       msSlide = 0;
     }
   }
-  sectionHeader.textContent = marketingContent[msSlide].header;
+  // sectionHeader.textContent = marketingContent[msSlide].header;
   sectionParagraph.innerHTML = marketingContent[msSlide].description;
+
+  console.log("suite?", document.querySelector(".suite"));
+
+  console.log(marketingContent[msSlide].image);
+
+  document.querySelector(
+    ".suite"
+  ).style = `background-image: url(" ${marketingContent[msSlide].image}")`;
 
   iconRiser(marketingContent[msSlide].slug);
   arrowUpdater(msSlide);
+
+  // mobile time
 };
 
 const marketingController = (target) => {

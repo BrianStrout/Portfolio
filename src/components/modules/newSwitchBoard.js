@@ -2,25 +2,31 @@ let pullFocus = document.querySelector("#sc__hello");
 let pullFocusDeets;
 import { validator } from "./formValidation";
 import { marketingController } from "./marketingArrows";
+// import { cardSwiper } from "./marketingCardsSwiper";
 
 let waving = false;
 
-const waver = () => {
-  console.log(waving);
-  waving = !waving;
-  console.log(waving);
-  if (waving) {
-    document
-      .querySelector(".front__and-center")
-      .classList.remove("front__and-center");
+// const sensingDrag = false;
 
-    setTimeout(() => {
-      document.getElementById(
-        "mobileBack"
-      ).innerHTML = `<div class="mb1"></div><div class="mb2"></div><div class="mb3"></div><div class="mb4"></div><div class="mb5"></div><div class="mb6"></div><div class="mb7"></div><div class="mb8"></div>`;
-    }, "750");
-  } else if (!waving) {
-    document.getElementById("mobileBack").innerHTML = ``;
+const waver = () => {
+  if (window.innerWidth <= 768) {
+    // console.log("is mobile view");
+    waving = !waving;
+    console.log(waving);
+    if (waving) {
+      document
+        .querySelector(".front__and-center")
+        .classList.remove("front__and-center");
+
+      setTimeout(() => {
+        document.getElementById(
+          "mobileBack"
+        ).innerHTML = `<div class="mb1"></div><div class="mb2"></div><div class="mb3"></div><div class="mb4"></div><div class="mb5"></div><div class="mb6"></div><div class="mb7"></div><div class="mb8"></div>`;
+      }, "750");
+    } else if (!waving) {
+      document.getElementById("mobileBack").innerHTML = ``;
+    }
+    return;
   }
 };
 
@@ -477,6 +483,10 @@ const nuClicker = (e) => {
       break;
 
     case "m--marketing":
+      // if (!sensingDrag) {
+      //   launchDragListener();
+      // }
+      // sensingDrag = true;
       pullFocus = document.querySelector("#sc__marketing");
       pullFocus.classList.remove("blur");
       pullFocus.classList.add("front__and-center");
@@ -607,6 +617,10 @@ const nuClicker = (e) => {
     //     }
     //   });
     //   break;
+  }
+
+  if (e.target.classList.contains("marketing__mobileCard")) {
+    console.log("should pull up swiper??");
   }
 };
 

@@ -17,7 +17,7 @@
     align-items: center;
     width: 300px;
     height: 300px;
-    transition: all 1.4s ease-in-out 1s linear;
+    transition: all 1.4s ease-in-out 1s forwards;
     background-size: cover;
     transform: rotate(45deg);
     background-image: url("/src/components/images/panic1.png");
@@ -56,8 +56,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 100vw;
-  height: 100%;
+  width: 100dvw;
+  height: 100dvh;
   // margin: 1rem;
   padding: 0px;
   // overflow-y: scroll;
@@ -129,7 +129,7 @@
 }
 
 .homeNavShell {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 40;
@@ -398,7 +398,9 @@ $randomNumber: random(5);
 }
 
 .screen__card-container {
-  position: relative;
+  position: absolute;
+  top: 6vw;
+  left: 0;
   width: 100%;
   height: 100%;
   // background-color: greenyellow;
@@ -406,16 +408,13 @@ $randomNumber: random(5);
   // overflow-y: scroll;
 
   .screen__card {
-    position: absolute;
+    position: fixed;
     top: 10%;
     left: 100%;
     width: 100%;
     height: 100dvh;
-    // aspect-ratio: 1/1;
-    // border: 1px solid rgb(90, 90, 19);
     transition: left 0.25s ease-in-out;
     overflow: hidden;
-    // overflow-y: scroll;
     padding: 0vh 10vw 10vh 10vw;
     padding-bottom: unset;
 
@@ -439,6 +438,7 @@ $randomNumber: random(5);
     }
 
     &.front__and-center {
+      display: block;
       left: 0%;
       overflow-y: scroll;
       .hit {
@@ -614,7 +614,8 @@ $randomNumber: random(5);
     background-color: #1b1b1e;
     // border: 3px solid white;
     &.toggle {
-      right: -100%;
+      right: -120%;
+      pointer-events: none;
     }
   }
   #nav--menu {
@@ -780,7 +781,7 @@ $randomNumber: random(5);
 }
 
 .header__span {
-  top: 40%;
+  top: 46%;
 }
 
 @media only screen and (max-width: 750px) {
@@ -856,6 +857,12 @@ $randomNumber: random(5);
     margin-top: 2rem;
     margin-bottom: 24vh;
     max-width: 800px;
+  }
+
+  .footer--name {
+    width: 100%;
+    height: 100px;
+    left: 0;
   }
 }
 

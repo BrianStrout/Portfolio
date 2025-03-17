@@ -116,6 +116,8 @@
   --background-color: rgb(5, 255, 255);
   --ghost-color: rgb(230, 232, 223);
   --moody-background-color: rgb(100, 173, 173);
+  --strco--drkblu: #086788;
+  --strco--tan: #fff1d0;
   --textcolor: black;
   --button-text-color: var(var(--background-color));
   --d-accent-color: #ffff8a;
@@ -285,6 +287,9 @@ p {
   }
   .ind {
     margin-left: 2rem;
+  }
+  .mobHide {
+    display: none;
   }
 }
 .linebreak {
@@ -1111,7 +1116,7 @@ p {
   align-items: center;
   width: 300px;
   height: 300px;
-  transition: all 1.4s ease-in-out 1s linear;
+  transition: all 1.4s ease-in-out 1s forwards;
   background-size: cover;
   transform: rotate(45deg);
   background-image: url("/src/components/images/panic1.png");
@@ -1143,8 +1148,8 @@ p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 100vw;
-  height: 100%;
+  width: 100dvw;
+  height: 100dvh;
   padding: 0px;
   transition: opacity 0.75s ease-out 0.5s;
 }
@@ -1210,7 +1215,7 @@ p {
 }
 
 .homeNavShell {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 40;
@@ -1370,7 +1375,7 @@ p {
 }
 .footerCloud:nth-child(2) {
   left: 160px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(3) {
   left: 340px;
@@ -1386,7 +1391,7 @@ p {
 }
 .footerCloud:nth-child(6) {
   left: 880px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(7) {
   left: 1060px;
@@ -1394,7 +1399,7 @@ p {
 }
 .footerCloud:nth-child(8) {
   left: 1240px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(9) {
   left: 1420px;
@@ -1489,13 +1494,15 @@ p {
 }
 
 .screen__card-container {
-  position: relative;
+  position: absolute;
+  top: 6vw;
+  left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 .screen__card-container .screen__card {
-  position: absolute;
+  position: fixed;
   top: 10%;
   left: 100%;
   width: 100%;
@@ -1522,6 +1529,7 @@ p {
   transition: all 0.5s ease-in-out 0.25s;
 }
 .screen__card-container .screen__card.front__and-center {
+  display: block;
   left: 0%;
   overflow-y: scroll;
 }
@@ -1651,7 +1659,8 @@ p {
     background-color: #1b1b1e;
   }
   .homeNavShell.toggle {
-    right: -100%;
+    right: -120%;
+    pointer-events: none;
   }
   #nav--menu {
     padding-left: 10px;
@@ -1793,7 +1802,7 @@ p {
   }
 }
 .header__span {
-  top: 40%;
+  top: 46%;
 }
 
 @media only screen and (max-width: 750px) {
@@ -1857,6 +1866,11 @@ p {
     margin-top: 2rem;
     margin-bottom: 24vh;
     max-width: 800px;
+  }
+  .footer--name {
+    width: 100%;
+    height: 100px;
+    left: 0;
   }
 }
 #homeMonitor {
@@ -2967,6 +2981,10 @@ p {
   margin-left: 100vw;
 }
 
+#sc__websites {
+  scroll-snap-type: y proximity;
+}
+
 #gridHeader {
   grid-column: 1/-1;
 }
@@ -2989,14 +3007,15 @@ p {
 
 .web__process--presenter {
   height: 90vh;
-  scroll-behavior: auto;
-  scroll-snap-align: start;
   padding-top: 8vh;
   margin-top: 5vh;
   padding-left: 5vw;
 }
-.web__process--presenter > h3,
+.web__process--presenter h3 {
+  border-bottom: 3px solid black;
+}
 .web__process--presenter p {
+  margin-top: 12px;
   background-color: rgba(240, 248, 255, 0.3);
 }
 
@@ -3401,7 +3420,6 @@ canvas {
 
 .services__description {
   width: 100%;
-  aspect-ratio: 1/1;
   padding: 20px;
 }
 .services__description .arrowLeft,
@@ -3510,6 +3528,10 @@ canvas {
   background-image: url("/src/components/images/marketingicons/optimize.png");
 }
 
+#mobileMarketingServices {
+  display: none;
+}
+
 @keyframes skillCrown {
   0% {
     transform: rotateY(-90deg) scale(0.8);
@@ -3552,6 +3574,97 @@ canvas {
     opacity: 90%;
   }
 }
+.outercard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--strco--drkblu);
+  border-radius: 8px;
+}
+.outercard .rim {
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: var(--accent-color);
+}
+
+.innercard {
+  position: relative;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  display: grid;
+  grid-template-areas: "icon title" "text text";
+  grid-template-columns: 120px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--strco--tan);
+  border: 2px solid var(--strco--drkblu);
+}
+.innercard.mobileAuditCard .suite {
+  background-image: url("../components/images/marketingicons/assess.png");
+}
+.innercard.mobileStrategyCard .suite {
+  background-image: url("../components/images/marketingicons/strategy.png");
+}
+.innercard.mobileOptimizeCard .suite {
+  background-image: url("../components/images/marketingicons/optimize.png");
+}
+.innercard.mobileImplementCard .suite {
+  background-image: url("../components/images/marketingicons/implement.png");
+}
+.innercard.mobileAuthorityCard .suite {
+  background-image: url("../components/images/marketingicons/authorize.png");
+}
+.innercard .suite {
+  grid-area: icon;
+  width: 100%;
+  aspect-ratio: 1/1;
+  margin: 0 auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: rotateIn 0.75s ease-out 0s 1 forwards;
+  transform-origin: bottom left;
+}
+.innercard .header {
+  grid-area: title;
+  font-size: clamp(1.75rem, 0.5181rem + 4.763vw, 4.5rem);
+  font-weight: 600;
+  text-align: left;
+  font-style: underline;
+  border-bottom: 3px solid var(--strco--drkblu);
+  width: unset;
+  margin: none;
+  opacity: 0;
+  animation: fadeLeft 0.75s ease-out 0.25s 1 forwards;
+}
+.innercard .description {
+  grid-area: text;
+}
+.innercard .description ul {
+  margin-left: 112px;
+}
+.innercard .description ul li {
+  position: relative;
+  font-size: clamp(1.5rem, 2.25vw, 4rem);
+}
+.innercard .description ul li:before {
+  position: absolute;
+  right: calc(100% + 6px);
+  width: 80px;
+  height: 80px;
+  background-image: url("../components/images/c3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  content: "";
+}
+
 @media all and (max-width: 1023px) and (orientation: portrait) {
   .tuckedBack {
     display: none;
@@ -3582,6 +3695,50 @@ canvas {
   }
 }
 @media only screen and (max-width: 768px) {
+  .hitsplitterflex .right {
+    width: 100%;
+  }
+  .hitsplitterflex .right #computerMarketingServices {
+    display: none;
+  }
+  .hitsplitterflex .right #mobileMarketingServices {
+    display: block;
+    top: unset;
+    width: 100%;
+  }
+  .hitsplitterflex .right #mobileMarketingServices #deckOfMarketingCards {
+    position: relative;
+    top: unset;
+    width: 100%;
+    height: 80vh; /* Adjust as needed */
+  }
+  .hitsplitterflex .right #mobileMarketingServices #deckOfMarketingCards .marketing__mobileCard {
+    position: absolute;
+    width: 94%;
+    height: 90%;
+    top: unset;
+    transition: transform 0.2s ease-out;
+    background-color: transparent;
+  }
+  .hitsplitterflex .right #mobileMarketingServices #deckOfMarketingCards .marketing__mobileCard:nth-of-type(1) {
+    z-index: 55;
+  }
+  .hitsplitterflex .right #mobileMarketingServices #deckOfMarketingCards .marketing__mobileCard:nth-of-type(2) {
+    z-index: 50;
+    transform: rotate(5deg);
+  }
+  .hitsplitterflex .right #mobileMarketingServices #deckOfMarketingCards .marketing__mobileCard:nth-of-type(3) {
+    z-index: 45;
+  }
+  .hitsplitterflex .right #mobileMarketingServices #deckOfMarketingCards .marketing__mobileCard:nth-of-type(4) {
+    z-index: 40;
+  }
+  .hitsplitterflex .right #mobileMarketingServices #deckOfMarketingCards .marketing__mobileCard:nth-of-type(5) {
+    z-index: 35;
+  }
+  .computerMarketingServices {
+    display: none;
+  }
   .marketing--presenter {
     gap: 0;
     padding-top: 22.5%;
@@ -3618,12 +3775,6 @@ canvas {
     height: 100dvh;
     flex-direction: column;
   }
-  .hitsplitterflex div {
-    width: 100%;
-    position: absolute;
-    top: 10dvh;
-    left: 0;
-  }
   .hitsplitterflex #marketingChurch {
     top: 0;
     width: 100%;
@@ -3631,6 +3782,11 @@ canvas {
     background-size: 100%;
     z-index: 40;
     opacity: 0.2;
+    width: 100%;
+    position: absolute;
+    top: 10dvh;
+    left: 0;
+    pointer-events: none;
   }
   .hitsplitterflex #marketingChurch #marketingSkillUL {
     bottom: unset;
@@ -3638,14 +3794,6 @@ canvas {
   }
   .hitsplitterflex .right {
     z-index: 45;
-  }
-  .hitsplitterflex .right .arrowLeft,
-  .hitsplitterflex .right .arrowRight {
-    top: 8dvh;
-    background-color: white;
-    background-size: 80%;
-    border-radius: 50%;
-    border: 3px dotted black;
   }
   #msHeader {
     width: -moz-fit-content;
@@ -3671,7 +3819,6 @@ canvas {
   .fadeRight {
     opacity: 0;
     animation: faderight 0.4s ease-out forwards;
-    background-color: rgba(240, 248, 255, 0.8);
     margin: 0;
     margin-bottom: 8px;
   }
@@ -3681,11 +3828,122 @@ canvas {
   .fadeRight.thi {
     animation-delay: 0.5s;
   }
+  .outercard {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--strco--drkblu);
+    border-radius: 8px;
+  }
+  .outercard .rim {
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--accent-color);
+  }
+  .innercard {
+    position: relative;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--strco--tan);
+    border: 2px solid var(--strco--drkblu);
+  }
+  .innercard.mobileAuditCard .suite {
+    background-image: url("../components/images/marketingicons/assess.png");
+  }
+  .innercard.mobileStrategyCard .suite {
+    background-image: url("../components/images/marketingicons/strategy.png");
+  }
+  .innercard.mobileOptimizeCard .suite {
+    background-image: url("../components/images/marketingicons/optimize.png");
+  }
+  .innercard.mobileImplementCard .suite {
+    background-image: url("../components/images/marketingicons/implement.png");
+  }
+  .innercard.mobileAuthorityCard .suite {
+    background-image: url("../components/images/marketingicons/authorize.png");
+  }
+  .innercard .suite {
+    width: 35%;
+    aspect-ratio: 1/1;
+    margin: 0 auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .innercard .header {
+    font-size: 1.95rem;
+    font-weight: 600;
+    text-align: center;
+    font-style: underline;
+    border-bottom: 3px solid var(--strco--drkblu);
+    width: unset;
+  }
+  .innercard .description ul {
+    margin-left: 26px;
+  }
+  .innercard .description ul li {
+    position: relative;
+  }
+  .innercard .description ul li:before {
+    position: absolute;
+    right: calc(100% + 6px);
+    width: 20px;
+    height: 20px;
+    background-image: url("../components/images/c3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+  }
 }
 @keyframes faderight {
   0% {
     opacity: 0;
     transform: translateX(-40px);
+  }
+  100% {
+    opacity: 100;
+    transform: none;
+  }
+}
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 100;
+    transform: none;
+  }
+}
+.fadeRight {
+  opacity: 0;
+  animation: faderight 0.4s ease-out forwards;
+  margin: 0;
+  margin-bottom: 8px;
+}
+.fadeRight.sec {
+  animation-delay: 0.25s;
+}
+.fadeRight.thi {
+  animation-delay: 0.5s;
+}
+
+@keyframes rotateIn {
+  0% {
+    opacity: 0;
+    transform: rotate(-40deg);
   }
   100% {
     opacity: 100;
