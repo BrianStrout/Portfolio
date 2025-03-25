@@ -51,7 +51,7 @@ const marketingContent = [
     header: "Topic Authority",
     description: `<div class="outercard"><div class="rim"><div class="innercard mobileAuditCard"><div class="suite"></div><div class="header newSubHeader">Authority Building</div><div class="description"> <p>
                                     People work with those they trust. Let's establish your presence as someone worth working with..
-                                
+                                       <br />       <br />
                                   <ul>
                                     <li class="fadeRight">
                                       SEO oriented content

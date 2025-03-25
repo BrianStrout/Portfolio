@@ -17,30 +17,12 @@ const populateAnimationSlidesforWebPresentation = () => {
     aniimg.src = currentFrame(i);
     aniimages.push(aniimg);
   }
-  //   aniimages[0].onload = renderWSAnimation;
-  console.log("loaded image gallery");
-  console.log(aniimages);
 };
 
 const renderWSAnimation = (result) => {
-  console.log("rendering function flying");
-  // console.log(inViewFrame.frame, " is inViewFrame frame");
-  // console.log(aniimages[inViewFrame.frame]);
-
   context.clearRect(0, 0, canvas.width, canvas.height);
   context.drawImage(aniimages[result], 0, 0, canvas.width, canvas.height);
 };
-
-// const drawUp = (perc) => {
-//   console.log("drawing up to", perc);
-//   inViewFrame.frame = perc;
-//   console.log("drawing reseeting frame to: ", inViewFrame.frame);
-// };
-
-// const drawDown = (perc) => {
-//   console.log("drawing down to", perc);
-//   inViewFrame.frame = perc;
-// };
 
 function countBetween(start, end) {
   let current = start;
@@ -59,7 +41,7 @@ function countBetween(start, end) {
     current = Math.round(start + progress * steps);
     if (current !== result) {
       result = current;
-      console.log(result);
+      // console.log(result);
       renderWSAnimation(result);
     }
 
@@ -72,74 +54,17 @@ function countBetween(start, end) {
 }
 
 const updateAnimationFrame = (perc) => {
-  console.log("UAF called on", perc);
-  if (perc === "load" && unloaded) {
+  console.log("updateAnimationFrame", perc);
+
+  if (unloaded) {
     populateAnimationSlidesforWebPresentation();
     unloaded = false;
   }
 
   if (typeof perc === "number") {
-    console.log("number time!");
-
-    //check where you are scrolling from inviewframe
-    console.log(inViewFrame);
-
     countBetween(inViewFrame.frame, perc);
     inViewFrame.frame = perc;
-    // if (inViewFrame.frame < perc) {
-    //   drawUp(perc);
-    // } else if (inViewFrame.frame > perc) {
-    //   drawDown(perc);
-    // }
-
-    // let frameRoll =   countFromTo(inViewFrame, perc)
-    //       console.log(frameRoll)
-
-    // set number to draw to
-
-    // if number is
   }
-
-  //
-
-  //   const canvasAnimator = () => {
-  //     console.log("frame count is ", frameCount);
-
-  //     for (let i = 0; i < frameCount; i++) {
-  //       const aniimg = new Image();
-  //       aniimg.src = currentFrame(i);
-  //       aniimages.push(aniimg);
-  //     }
-  //     aniimages[0].onload = renderWSAnimation;
-  //   };
-
-  //   const renderWSAnimation = () => {
-  //     console.log("rendering function flying");
-  //     console.log(inViewFrame.frame, " is inViewFrame frame");
-  //     console.log(aniimages[inViewFrame.frame]);
-
-  //     context.clearRect(0, 0, canvas.width, canvas.height);
-  //     context.drawImage(aniimages[inViewFrame.frame], 0, 0, canvas.width, canvas.height);
-  //   };
-
-  //   gsap.to(inViewFrame, {
-  //     frame: frameCount,
-  //     snap: "frame",
-  //     ease: "none",
-
-  //     scrollTrigger: {
-  //       trigger: "#websiteGridPresentation",
-  //       target: "canvas",
-  //       scrub: 0.5,
-  //       end: "150%",
-  //       markers: "true",
-  //     },
-  //     onUpdate: renderWSAnimation,
-  //   });
-
-  //   canvasAnimator();
-
-  //   document.querySelector(".newFooter").style = "display: none";
 };
 
 export { updateAnimationFrame };
