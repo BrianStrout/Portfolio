@@ -13,7 +13,7 @@ import {
   endTouch,
   deck,
 } from "./src/components/modules/marketingCardsSwiper.js";
-const inDEV = true;
+const inDEV = false;
 inDEV ? skipAnimation() : webSiteLaunch();
 
 function initMobile() {
