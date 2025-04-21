@@ -12,7 +12,7 @@ import {
   endTouch,
   deck,
 } from "./src/components/modules/marketingCardsSwiper.js";
-const inDEV = true;
+const inDEV = false;
 // console.log("is running with dumb erros for node");
 inDEV ? skipAnimation() : webSiteLaunch();
 

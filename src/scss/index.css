@@ -1408,7 +1408,7 @@ p {
 }
 .footerCloud:nth-child(4) {
   left: 520px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(5) {
   left: 700px;
@@ -1416,15 +1416,15 @@ p {
 }
 .footerCloud:nth-child(6) {
   left: 880px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(7) {
   left: 1060px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(8) {
   left: 1240px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(9) {
   left: 1420px;
@@ -1432,7 +1432,7 @@ p {
 }
 .footerCloud:nth-child(10) {
   left: 1600px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
 @keyframes cloudbob {
@@ -1684,6 +1684,9 @@ p {
     right: 0px;
     z-index: 80;
     background-color: white;
+    background-image: url("../components/images/mobbacker.png");
+    background-size: cover;
+    background-position: center;
   }
   .homeNavShell.toggle {
     right: -120%;
