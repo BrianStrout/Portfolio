@@ -1396,15 +1396,15 @@ p {
 }
 .footerCloud:nth-child(1) {
   left: -20px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(2) {
   left: 160px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(3) {
   left: 340px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(4) {
   left: 520px;
@@ -1412,11 +1412,11 @@ p {
 }
 .footerCloud:nth-child(5) {
   left: 700px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(6) {
   left: 880px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(7) {
   left: 1060px;
@@ -1424,7 +1424,7 @@ p {
 }
 .footerCloud:nth-child(8) {
   left: 1240px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(9) {
   left: 1420px;
@@ -1703,7 +1703,7 @@ p {
     translate: 400px;
   }
   .nav--link .nav--cloud {
-    width: 70%;
+    width: 50%;
     top: unset;
     pointer-events: none;
   }
