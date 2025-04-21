@@ -275,6 +275,10 @@ p {
   transition-delay: 0.35s;
 }
 
+.pt40 {
+  padding-top: 40px;
+}
+
 @media only screen and (max-width: 768px) {
   .newHeader {
     margin-bottom: 5vh;
@@ -315,7 +319,6 @@ p {
 
 .g66 {
   position: relative;
-  width: 66%;
 }
 
 .freelance-presenter {
@@ -349,7 +352,7 @@ p {
 .hanging-cloud {
   width: 100%;
   height: 100%;
-  background-image: url("./src/components/images/c3.png");
+  background-image: url("./src/components/images/c3.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -516,7 +519,7 @@ p {
 .balloon-ball {
   position: absolute;
   z-index: 10;
-  background-image: url("./src/components/images/balloonknot.png");
+  background-image: url("./src/components/images/balloonknot.webp");
   width: 100px;
   height: 100px;
 }
@@ -532,7 +535,7 @@ p {
   z-index: 0;
   height: 200px;
   width: 100px;
-  background-image: url("./src/components/images/balloonstring.png");
+  background-image: url("./src/components/images/balloonstring.webp");
 }
 
 .sad-child {
@@ -540,7 +543,7 @@ p {
 }
 
 .popped {
-  background-image: url("/src/components/images/balloonpop.png");
+  background-image: url("/src/components/images/balloonpop.webp");
   opacity: 50%;
   pointer-events: none;
 }
@@ -576,19 +579,19 @@ p {
 }
 
 #fugi {
-  background-image: url("src/components/images/FugativaSiteScreenShot.png");
+  background-image: url("src/components/images/FugativaSiteScreenShot.webp");
 }
 
 #winter {
-  background-image: url("src/components/images/winterboyss.png");
+  background-image: url("src/components/images/winterboyss.webp");
 }
 
 #mookies {
-  background-image: url("src/components/images/mookiesss.png");
+  background-image: url("src/components/images/mookiesss.webp");
 }
 
 #masha {
-  background-image: url("src/components/images/MashaSiteScreenShot.png");
+  background-image: url("src/components/images/MashaSiteScreenShot.webp");
 }
 
 .grid2 {
@@ -675,7 +678,7 @@ p {
   width: 50px;
   height: 50px;
   background-color: rgba(240, 248, 255, 0.9);
-  background-image: url("/src/components/images/arrowdown.png");
+  background-image: url("/src/components/images/arrowdown.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -799,7 +802,7 @@ p {
   z-index: 0;
   height: 100vh;
   width: 100vw;
-  background-image: url("src/components/images/curtain.png");
+  background-image: url("src/components/images/curtain.webp");
   background-size: cover;
   background-position: center;
   transition: all 1.2s cubic-bezier(0.01, 1.09, 0.63, 0.89) 0.75s;
@@ -865,7 +868,7 @@ p {
   bottom: -16px;
   width: 100vw;
   height: 150px;
-  background-image: url("./src/components/images/2seats.png");
+  background-image: url("./src/components/images/2seats.webp");
   background-size: 12%;
   background-position: bottom;
   background-repeat: repeat-x;
@@ -881,6 +884,10 @@ p {
   box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3215686275), 0 0 10px rgba(255, 255, 255, 0.3215686275), -5px 0 10px rgba(180, 251, 250, 0.3), 5px 0 10px rgba(161, 251, 251, 0.3);
   background-color: #383736;
   transition: all 1.5s ease-out 2.2s;
+}
+
+#sc__video {
+  padding-bottom: 20vh;
 }
 
 #chets {
@@ -926,7 +933,7 @@ p {
 }
 
 #thisisbrian {
-  background-image: url("/src/components/images/thisisbrianscreenshot.png");
+  background-image: url("/src/components/images/thisisbrianscreenshot.webp");
 }
 #thisisbrian:after {
   content: "2024-";
@@ -1050,7 +1057,7 @@ p {
     bottom: 18px;
     width: 100vw;
     height: 150px;
-    background-image: url(./src/components/images/2seats.png);
+    background-image: url(./src/components/images/2seats.webp);
     background-size: 45%;
     background-position: bottom;
     background-repeat: repeat-x;
@@ -1116,10 +1123,10 @@ p {
   align-items: center;
   width: 300px;
   height: 300px;
-  transition: all 1.4s ease-in-out 1s forwards;
+  transition: all 1.4s ease-in-out 1s;
   background-size: cover;
   transform: rotate(45deg);
-  background-image: url("/src/components/images/panic1.png");
+  background-image: url("/src/components/images/panic1.webp");
 }
 .homeWrap .fallingSecond.toEarth {
   top: 120vh;
@@ -1234,13 +1241,20 @@ p {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  width: 100%;
   padding-right: 2rem;
+  background-image: url("../components/images/clouds/cloudbanner.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
 }
 
 .nav--link {
   position: relative;
   font-family: var(--header-font);
   font-size: 1.8rem;
+  -webkit-text-stroke: 0.25px white;
+  text-stroke: 0.25px white;
   transition: all 0.4s ease-in-out 1s ease-out;
   translate: 0px 100vh;
   width: 12vw;
@@ -1273,25 +1287,36 @@ p {
 .nav--link .nav--cloud {
   position: absolute;
   width: 100%;
-  top: -40%;
+  bottom: -10%;
   z-index: -1;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   transition: all 0.25s ease-out;
+}
+.nav--link .nav--clouddrops {
+  position: absolute;
+  width: 60%;
+  top: 40%;
+  left: 20%;
+  z-index: -1;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: all 0.25s ease-out;
+  opacity: 0;
 }
 .nav--link .shy__balloon {
   position: absolute;
   width: 20%;
   aspect-ratio: 1/1;
-  background-image: url("/src/components/images/balloonknot.png");
+  background-image: url("/src/components/images/balloonknot.webp");
   background-size: cover;
-  top: 40%;
+  bottom: 20%;
   right: 40%;
   z-index: -2;
   transition: all 1s ease-out;
 }
-.nav--link:hover .nav--cloud {
-  transform: scale(0.8);
+.nav--link:hover .nav--clouddrops {
+  opacity: 1;
 }
 .nav--link:hover .shy__balloon {
   transform: translateY(-150%);
@@ -1311,7 +1336,7 @@ p {
   bottom: -100%;
   width: 100%;
   height: 150px;
-  background-image: url("/src/components/images/stroutCoCastlewalls.png");
+  background-image: url("/src/components/images/stroutCoCastlewalls.webp");
   background-size: contain;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -1340,15 +1365,15 @@ p {
 }
 .castleShell .castleCloudLeft {
   left: -40%;
-  background-image: url("/src/components/images/cloudTop1.png");
+  background-image: url("/src/components/images/cloudTop1.webp");
 }
 .castleShell .castleCloudCenter {
-  background-image: url("/src/components/images/cloudTop3.png");
+  background-image: url("/src/components/images/cloudTop3.webp");
   z-index: 8;
 }
 .castleShell .castleCloudRight {
   right: -40%;
-  background-image: url("/src/components/images/cloudTop2.png");
+  background-image: url("/src/components/images/cloudTop2.webp");
 }
 
 .footerCloud {
@@ -1357,25 +1382,25 @@ p {
   width: 200px;
   height: 50px;
   z-index: 10;
-  background-image: url("/src/components/images/cloudTop2.png");
+  background-image: url("/src/components/images/cloudTop2.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
   animation: cloudbob 6s ease-in-out infinite alternate none;
 }
 .footerCloud:nth-child(2n) {
-  background-image: url("/src/components/images/cloudTop1.png");
+  background-image: url("/src/components/images/cloudTop1.webp");
 }
 .footerCloud:nth-child(3n) {
-  background-image: url("/src/components/images/cloudTop3.png");
+  background-image: url("/src/components/images/cloudTop3.webp");
 }
 .footerCloud:nth-child(1) {
   left: -20px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(2) {
   left: 160px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(3) {
   left: 340px;
@@ -1387,27 +1412,27 @@ p {
 }
 .footerCloud:nth-child(5) {
   left: 700px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(6) {
   left: 880px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(7) {
   left: 1060px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(8) {
   left: 1240px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(9) {
   left: 1420px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(10) {
   left: 1600px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 
 @keyframes cloudbob {
@@ -1509,7 +1534,7 @@ p {
   height: 100dvh;
   transition: left 0.25s ease-in-out;
   overflow: hidden;
-  padding: 0vh 10vw 10vh 10vw;
+  padding: 40px 10vw 10vh 10vw;
   padding-bottom: unset;
 }
 .screen__card-container .screen__card .up {
@@ -1560,7 +1585,9 @@ p {
   transform: translateX(0vw);
 }
 .screen__card-container .screen__card.front__and-center .hitsplitterflex.hit .right {
+  width: 100%;
   transform: translateX(0vw);
+  height: 90vh;
 }
 .screen__card-container .screen__card.front__and-center .hitsplitterflex.hit .down {
   transform: translateY(0vh);
@@ -1656,7 +1683,7 @@ p {
     position: absolute;
     right: 0px;
     z-index: 80;
-    background-color: #1b1b1e;
+    background-color: white;
   }
   .homeNavShell.toggle {
     right: -120%;
@@ -1697,43 +1724,43 @@ p {
     transform: translateY(200px);
   }
   .mobile__back .mb1 {
-    background-image: url("../components/images/nav/mb1.png");
+    background-image: url("../components/images/nav/mb1.webp");
     z-index: 10;
     animation: cloudin 1s ease-out 1 forwards, cloudnavl 4s ease-in-out 1s infinite alternate;
   }
   .mobile__back .mb2 {
-    background-image: url("../components/images/nav/mb2.png");
+    background-image: url("../components/images/nav/mb2.webp");
     z-index: 9;
     animation: cloudin 1s ease-out 1 forwards, cloudnavr 4s ease-in-out 2s infinite alternate;
     animation-delay: 0.15s;
   }
   .mobile__back .mb3 {
-    background-image: url("../components/images/nav/mb3.png");
+    background-image: url("../components/images/nav/mb3.webp");
     z-index: 8;
     animation: cloudin 1s ease-out 1 forwards, cloudnavl 4s ease-in-out 1s infinite alternate;
     animation-delay: 0.25s;
   }
   .mobile__back .mb4 {
-    background-image: url("../components/images/nav/mb4.png");
+    background-image: url("../components/images/nav/mb4.webp");
     z-index: 7;
     animation: cloudin 1s ease-out 1 forwards, cloudnavr 4s ease-in-out 1s infinite alternate;
     animation-delay: 0.45s;
   }
   .mobile__back .mb5 {
     top: 10%;
-    background-image: url("../components/images/nav/mb5.png");
+    background-image: url("../components/images/nav/mb5.webp");
     z-index: 6;
     animation: cloudin 1s ease-out 1 forwards, crotate 8s linear infinite forwards;
     animation-delay: 0.55s;
   }
   .mobile__back .mb6 {
-    background-image: url("../components/images/nav/mb6.png");
+    background-image: url("../components/images/nav/mb6.webp");
     z-index: 5;
     animation: cloudin 1s ease-out 1 forwards, cloudnavl 4s ease-in-out 1s infinite alternate;
     animation-delay: 0.65s;
   }
   .mobile__back .mb7 {
-    background-image: url("../components/images/nav/mb7.png");
+    background-image: url("../components/images/nav/mb7.webp");
     z-index: 4;
     animation: cloudin 1s ease-out 1 forwards, cloudnavr 4s ease-in-out 1s infinite alternate;
     animation-delay: 0.75s;
@@ -2205,11 +2232,11 @@ p {
 }
 
 #port-port {
-  background-image: url("/src/components/images/PortfolioSiteScreenShot.png");
+  background-image: url("/src/components/images/PortfolioSiteScreenShot.webp");
 }
 
 #port-masha {
-  background-image: url("/src/components/images/MashaSiteScreenShot.png");
+  background-image: url("/src/components/images/MashaSiteScreenShot.webp");
 }
 
 #port-rotary {
@@ -2217,7 +2244,7 @@ p {
 }
 
 #port-fugativa {
-  background-image: url("/src/components/images/FugativaSiteScreenShot.png");
+  background-image: url("/src/components/images/FugativaSiteScreenShot.webp");
 }
 
 #port-gitm {
@@ -2430,7 +2457,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-left: 20vw;
+  padding-left: 0vw;
 }
 
 .gridodds {
@@ -2446,7 +2473,7 @@ p {
 }
 
 .monopoly {
-  background-image: url("/src/components/images/playmoney.png");
+  background-image: url("/src/components/images/playmoney.webp");
   background-position: center;
   background-size: contain;
   display: flex;
@@ -2472,10 +2499,10 @@ p {
   background-repeat: no-repeat;
 }
 .payboxes .paypal {
-  background-image: url("/src/components/images/paypal_icon.png");
+  background-image: url("/src/components/images/paypal_icon.webp");
 }
 .payboxes .venmo {
-  background-image: url("/src/components/images/venmo_icon.png");
+  background-image: url("/src/components/images/venmo_icon.webp");
 }
 
 @media only screen and (max-width: 768px) {
@@ -2558,7 +2585,7 @@ p {
   font-size: 1.2rem;
   font-family: var(--header-font);
   background-color: none;
-  background-image: url("./src/components/images/c3.png");
+  background-image: url("./src/components/images/c3.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -2593,7 +2620,7 @@ p {
   height: 200%;
   border-radius: 5px 50px 5px 5px;
   border: 3px solid rgb(94, 64, 0);
-  background-image: url("/src/components/images/headShotCard.png");
+  background-image: url("/src/components/images/headShotCard.webp");
   background-size: cover;
   background-position: top center;
   transform-origin: top center;
@@ -2983,7 +3010,6 @@ p {
 
 #sc__websites {
   scroll-snap-type: y proximity;
-  padding: 0;
 }
 
 #gridHeader {
@@ -2994,7 +3020,8 @@ p {
   position: relative;
   width: 100vw;
   height: 500vh;
-  background-size: 10%;
+  background: linear-gradient(to bottom, rgb(5, 255, 255) 0%, rgb(5, 255, 255) 35%, rgba(25, 70, 91, 0.2) 100%);
+  transform: translateX(-10vw);
 }
 #websiteGridPresentation .web__grid--left {
   position: sticky;
@@ -3027,6 +3054,7 @@ p {
 }
 .web__process--presenter h3 {
   border-bottom: 3px solid black;
+  background-image: url("../components/images/c4.webp");
 }
 .web__process--presenter p {
   margin-top: 12px;
@@ -3129,6 +3157,10 @@ canvas {
   top: 45%;
   left: 27%;
   font-size: 3vw;
+}
+
+#sc__marketing {
+  padding-top: 0px;
 }
 
 .marketing--presenter {
@@ -3426,40 +3458,67 @@ canvas {
 }
 
 #marketingChurch {
+  pointer-events: none;
+  position: absolute;
+  z-index: 10;
   aspect-ratio: 1/1;
-  width: 33%;
-  max-height: 900px;
-  background-image: url("/src/components/images/marketing stained glass.png");
-  background-size: contain;
+  width: 80%;
+  height: 90vh;
+  background-size: 50%;
   background-repeat: no-repeat;
   background-position: center top;
-  flex-direction: column;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#marketingChurch h2 {
+  width: 40%;
+  text-align: left;
+  display: inline-block;
+}
+
+.marketing__quick {
+  width: 30%;
+  margin-left: auto;
+  display: inline-block;
+  text-align: right;
+}
+
+#computerMarketingServices {
+  display: none;
+}
+
+.marketing__mobileCard {
+  width: 40%;
 }
 
 #msParagraph {
   padding: 0 7%;
 }
 
-.services__description {
-  width: 100%;
-  padding: 20px;
-}
-.services__description .arrowLeft,
-.services__description .arrowRight {
-  width: 75px;
-  height: 75px;
+.arrowLeft,
+.arrowRight {
+  width: 100px;
+  height: 100px;
   position: absolute;
   top: 40%;
-  left: 0;
-  background-image: url("/src/components/images/marketingicons/implement.png");
+  left: 15%;
+  z-index: 90;
+  background-image: url("/src/components/images/marketingicons/implement.webp");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
-.services__description .arrowRight {
+
+.arrowRight {
   left: unset;
-  right: 0;
-  background-image: url("/src/components/images/marketingicons/strategy.png");
+  right: 15%;
+  background-image: url("/src/components/images/marketingicons/strategy.webp");
+}
+
+.services__description {
+  width: 100%;
+  padding: 20px;
 }
 
 .absocrown {
@@ -3469,9 +3528,9 @@ canvas {
 
 #marketingSkillUL {
   position: absolute;
-  bottom: 10%;
-  left: 0;
-  width: 100%;
+  bottom: 4%;
+  left: 25%;
+  width: 50%;
   height: 100px;
   margin: auto;
   display: flex;
@@ -3503,6 +3562,7 @@ canvas {
   animation-delay: 12s;
 }
 #marketingSkillUL .ms__icons {
+  display: none;
   position: absolute;
   left: 0;
   width: 100%;
@@ -3516,7 +3576,7 @@ canvas {
   width: 150px;
   aspect-ratio: 1/1;
   opacity: 0;
-  background-size: contain;
+  background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
   transition: all 0.5s ease-out;
@@ -3528,30 +3588,53 @@ canvas {
 #marketingSkillUL .ms__icons .icon.risen {
   bottom: 120%;
   opacity: 1;
+  background-color: rgba(255, 255, 255, 0.7411764706);
+  border-radius: 50%;
+  background-size: 80%;
 }
 
 .authicon {
-  background-image: url("/src/components/images/marketingicons/authorize.png");
+  background-image: url("/src/components/images/marketingicons/authorize.webp");
 }
 
 .straticon {
-  background-image: url("/src/components/images/marketingicons/strategy.png");
+  background-image: url("/src/components/images/marketingicons/strategy.webp");
 }
 
 .implicon {
-  background-image: url("/src/components/images/marketingicons/implement.png");
+  background-image: url("/src/components/images/marketingicons/implement.webp");
 }
 
 .auditicon {
-  background-image: url("/src/components/images/marketingicons/assess.png");
+  background-image: url("/src/components/images/marketingicons/assess.webp");
 }
 
 .optiicon {
-  background-image: url("/src/components/images/marketingicons/optimize.png");
+  background-image: url("/src/components/images/marketingicons/optimize.webp");
+}
+
+#deckOfMarketingCards {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 #mobileMarketingServices {
-  display: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.marketing__mobileCard {
+  position: absolute;
+  top: 12vh;
+  left: 35%;
+  width: 30vw;
+  aspect-ratio: 3/4.5;
+  max-height: 62vh;
+  max-width: 42vh;
+  transition: all 0.6s ease-in-out;
 }
 
 @keyframes skillCrown {
@@ -3622,25 +3705,26 @@ canvas {
   display: grid;
   grid-template-areas: "icon title" "text text";
   grid-template-columns: 120px auto;
+  grid-template-rows: 130px auto;
   padding: 20px;
   border-radius: 8px;
   background-color: var(--strco--tan);
   border: 2px solid var(--strco--drkblu);
 }
 .innercard.mobileAuditCard .suite {
-  background-image: url("../components/images/marketingicons/assess.png");
+  background-image: url("../components/images/marketingicons/assess.webp");
 }
 .innercard.mobileStrategyCard .suite {
-  background-image: url("../components/images/marketingicons/strategy.png");
+  background-image: url("../components/images/marketingicons/strategy.webp");
 }
 .innercard.mobileOptimizeCard .suite {
-  background-image: url("../components/images/marketingicons/optimize.png");
+  background-image: url("../components/images/marketingicons/optimize.webp");
 }
 .innercard.mobileImplementCard .suite {
-  background-image: url("../components/images/marketingicons/implement.png");
+  background-image: url("../components/images/marketingicons/implement.webp");
 }
 .innercard.mobileAuthorityCard .suite {
-  background-image: url("../components/images/marketingicons/authorize.png");
+  background-image: url("../components/images/marketingicons/authorize.webp");
 }
 .innercard .suite {
   grid-area: icon;
@@ -3655,36 +3739,44 @@ canvas {
 }
 .innercard .header {
   grid-area: title;
-  font-size: clamp(1.75rem, 0.5181rem + 4.763vw, 4.5rem);
+  font-size: clamp(1.75rem, 0.5181rem + 2.363vw, 4.5rem);
   font-weight: 600;
   text-align: left;
   font-style: underline;
   border-bottom: 3px solid var(--strco--drkblu);
   width: unset;
-  margin: none;
+  margin: 0;
   opacity: 0;
   animation: fadeLeft 0.75s ease-out 0.25s 1 forwards;
 }
 .innercard .description {
   grid-area: text;
 }
+.innercard .description p {
+  font-size: clamp(1.5rem, 1.75vw, 4rem);
+}
 .innercard .description ul {
   margin-left: 112px;
 }
 .innercard .description ul li {
   position: relative;
-  font-size: clamp(1.5rem, 2.25vw, 4rem);
+  font-size: clamp(1.5rem, 1.65vw, 4rem);
 }
 .innercard .description ul li:before {
   position: absolute;
   right: calc(100% + 6px);
   width: 80px;
   height: 80px;
-  background-image: url("../components/images/c3.png");
+  background-image: url("../components/images/c3.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center top;
   content: "";
+}
+
+.hitsplitterflex {
+  background-position: center;
+  background-size: contain;
 }
 
 @media all and (max-width: 1023px) and (orientation: portrait) {
@@ -3881,19 +3973,19 @@ canvas {
     border: 2px solid var(--strco--drkblu);
   }
   .innercard.mobileAuditCard .suite {
-    background-image: url("../components/images/marketingicons/assess.png");
+    background-image: url("../components/images/marketingicons/assess.webp");
   }
   .innercard.mobileStrategyCard .suite {
-    background-image: url("../components/images/marketingicons/strategy.png");
+    background-image: url("../components/images/marketingicons/strategy.webp");
   }
   .innercard.mobileOptimizeCard .suite {
-    background-image: url("../components/images/marketingicons/optimize.png");
+    background-image: url("../components/images/marketingicons/optimize.webp");
   }
   .innercard.mobileImplementCard .suite {
-    background-image: url("../components/images/marketingicons/implement.png");
+    background-image: url("../components/images/marketingicons/implement.webp");
   }
   .innercard.mobileAuthorityCard .suite {
-    background-image: url("../components/images/marketingicons/authorize.png");
+    background-image: url("../components/images/marketingicons/authorize.webp");
   }
   .innercard .suite {
     width: 35%;
@@ -3922,7 +4014,7 @@ canvas {
     right: calc(100% + 6px);
     width: 20px;
     height: 20px;
-    background-image: url("../components/images/c3.png");
+    background-image: url("../components/images/c3.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -4033,7 +4125,7 @@ body {
   z-index: 50;
   top: calc(50vh - 100px);
   left: calc(50vw - 100px);
-  background-image: url("./src/components/images/c3.png");
+  background-image: url("./src/components/images/c3.webp");
   background-size: cover;
   background-position: center;
   width: 200px;
@@ -4879,7 +4971,7 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
     width: 25%;
     aspect-ratio: 1/1;
     display: inline;
-    background-image: url("/src/components/images/post sign.png");
+    background-image: url("/src/components/images/post sign.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

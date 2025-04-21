@@ -19,11 +19,9 @@
   "homepage": "https://github.com/BrianStrout/squarespacetrial#readme",
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
+    "esbuild": "^0.19.12",
     "gsap": "^3.12.7",
     "intersection-observer": "^0.12.2",
     "sass": "^1.58.0"
-  },
-  "devDependencies": {
-    "esbuild": "0.24.2"
   }
 }

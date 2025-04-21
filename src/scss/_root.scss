@@ -181,6 +181,9 @@ p {
 .lag {
   transition-delay: 0.35s;
 }
+.pt40 {
+  padding-top: 40px;
+}
 
 //CSS
 @media all and (max-width: 1023px) and (orientation: portrait) {
@@ -240,6 +243,6 @@ p {
 
 .g66 {
   position: relative;
-  width: 66%;
+  // width: 66%;
   // min-height: 40vw;
 }

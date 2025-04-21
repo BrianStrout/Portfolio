@@ -5,9 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-left: 20vw;
-  // align-items: center;
-  // background-color: cadetblue;
+  padding-left: 0vw;
 }
 
 .gridodds {
@@ -24,7 +22,7 @@
 }
 
 .monopoly {
-  background-image: url("/src/components/images/playmoney.png");
+  background-image: url("/src/components/images/playmoney.webp");
   background-position: center;
   background-size: contain;
   display: flex;
@@ -42,7 +40,7 @@
   justify-content: space-around;
   align-items: center;
   gap: 1rem;
-  // justify-content: space-evenly;
+
   .paybox {
     border: 3px solid black;
     width: 80px;
@@ -52,10 +50,10 @@
     background-repeat: no-repeat;
   }
   .paypal {
-    background-image: url("/src/components/images/paypal_icon.png");
+    background-image: url("/src/components/images/paypal_icon.webp");
   }
   .venmo {
-    background-image: url("/src/components/images/venmo_icon.png");
+    background-image: url("/src/components/images/venmo_icon.webp");
   }
 }
 

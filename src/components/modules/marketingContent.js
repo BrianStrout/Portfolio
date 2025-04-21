@@ -4,7 +4,7 @@ const marketingContent = [
     description: `<div class="outercard"><div class="rim"><div class="innercard mobileAuditCard"><div class="suite"></div><div class="header newSubHeader">Presence Auditing</div><div class="description"><p>Determining and reviewing where you are is a great first step in growing your online presences<br /><br /> we can get started by:</p> <ul><li class="fadeRight"> Branding consistency review</li><li class="fadeRight sec">SEO & UX audit</li><li class="fadeRight thi">Competitor analysis</li></ul></div></div></div></div>`,
 
     slug: "auditicon",
-    image: "src/components/images/marketingicons/assess.png",
+    image: "src/components/images/marketingicons/assess.webp",
   },
 
   {
@@ -25,7 +25,7 @@ const marketingContent = [
                                   </ul></div></div></div></div>`,
 
     slug: "straticon",
-    image: "src/components/images/marketingicons/strategy.png",
+    image: "src/components/images/marketingicons/strategy.webp",
   },
 
   {
@@ -45,7 +45,7 @@ const marketingContent = [
                                   </ul></div></div></div></div>`,
 
     slug: "optiicon",
-    image: "src/components/images/marketingicons/optimize.png",
+    image: "src/components/images/marketingicons/optimize.webp",
   },
   {
     header: "Topic Authority",
@@ -64,7 +64,7 @@ const marketingContent = [
                                     </li>
                                   </ul>  </p></div></div></div></div>`,
     slug: "authicon",
-    image: "src/components/images/marketingicons/authorize.png",
+    image: "src/components/images/marketingicons/authorize.webp",
   },
   {
     header: "Implementation",
@@ -81,7 +81,7 @@ const marketingContent = [
                                     </li>
                                   </div></div></div></div>`,
     slug: "implicon",
-    image: "src/components/images/marketingicons/implement.png",
+    image: "src/components/images/marketingicons/implement.webp",
   },
 ];
 

@@ -29,7 +29,7 @@
 .hanging-cloud {
   width: 100%;
   height: 100%;
-  background-image: url("./src/components/images/c3.png");
+  background-image: url("./src/components/images/c3.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -200,7 +200,7 @@
 .balloon-ball {
   position: absolute;
   z-index: 10;
-  background-image: url("./src/components/images/balloonknot.png");
+  background-image: url("./src/components/images/balloonknot.webp");
   width: 100px;
   height: 100px;
 
@@ -216,7 +216,7 @@
   z-index: 0;
   height: 200px;
   width: 100px;
-  background-image: url("./src/components/images/balloonstring.png");
+  background-image: url("./src/components/images/balloonstring.webp");
 }
 
 .sad-child {
@@ -224,7 +224,7 @@
 }
 
 .popped {
-  background-image: url("/src/components/images/balloonpop.png");
+  background-image: url("/src/components/images/balloonpop.webp");
   opacity: 50%;
   pointer-events: none;
 }
@@ -267,19 +267,19 @@
 }
 
 #fugi {
-  background-image: url("src/components/images/FugativaSiteScreenShot.png");
+  background-image: url("src/components/images/FugativaSiteScreenShot.webp");
 }
 
 #winter {
-  background-image: url("src/components/images/winterboyss.png");
+  background-image: url("src/components/images/winterboyss.webp");
 }
 
 #mookies {
-  background-image: url("src/components/images/mookiesss.png");
+  background-image: url("src/components/images/mookiesss.webp");
 }
 
 #masha {
-  background-image: url("src/components/images/MashaSiteScreenShot.png");
+  background-image: url("src/components/images/MashaSiteScreenShot.webp");
 }
 
 .grid2 {
@@ -312,7 +312,7 @@
   width: 50px;
   height: 50px;
   background-color: rgba(240, 248, 255, 0.9);
-  background-image: url("/src/components/images/arrowdown.png");
+  background-image: url("/src/components/images/arrowdown.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -3,7 +3,7 @@
   z-index: 0;
   height: 100vh;
   width: 100vw;
-  background-image: url("src/components/images/curtain.png");
+  background-image: url("src/components/images/curtain.webp");
   background-size: cover;
   background-position: center;
   transition: all 1.2s cubic-bezier(0.01, 1.09, 0.63, 0.89) 0.75s;
@@ -66,7 +66,7 @@
   bottom: -16px;
   width: 100vw;
   height: 150px;
-  background-image: url("./src/components/images/2seats.png");
+  background-image: url("./src/components/images/2seats.webp");
   background-size: 12%;
   background-position: bottom;
   background-repeat: repeat-x;
@@ -82,6 +82,10 @@
     -5px 0 10px rgba(180, 251, 250, 0.3), 5px 0 10px rgba(161, 251, 251, 0.3);
   background-color: #383736;
   transition: all 1.5s ease-out 2.2s;
+}
+
+#sc__video {
+  padding-bottom: 20vh;
 }
 
 #chets {
@@ -131,7 +135,7 @@
 }
 
 #thisisbrian {
-  background-image: url("/src/components/images/thisisbrianscreenshot.png");
+  background-image: url("/src/components/images/thisisbrianscreenshot.webp");
   &:after {
     content: "2024-";
     position: absolute;
@@ -157,7 +161,7 @@
   .workWith {
     aspect-ratio: 1/1;
     border: 2px solid black;
-    // background-image: url("/src/components/images/video/c1.png");
+    // background-image: url("/src/components/images/video/c1.webp");
     background-color: black;
     color: var(--background-color);
     display: flex;
@@ -284,7 +288,7 @@
     bottom: 18px;
     width: 100vw;
     height: 150px;
-    background-image: url(./src/components/images/2seats.png);
+    background-image: url(./src/components/images/2seats.webp);
     background-size: 45%;
     background-position: bottom;
     background-repeat: repeat-x;

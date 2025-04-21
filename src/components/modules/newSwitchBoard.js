@@ -6,8 +6,6 @@ import { marketingController } from "./marketingArrows";
 
 let waving = false;
 
-// const sensingDrag = false;
-
 const waver = () => {
   if (window.innerWidth <= 768) {
     // console.log("is mobile view");
@@ -31,7 +29,12 @@ const waver = () => {
 };
 
 const nuClicker = (e) => {
-  console.log("new");
+  console.log("new", e.target);
+
+  if (e === "cta") {
+    nuClicker("m--contact");
+    return;
+  }
 
   if (e === "intro") {
     // document.querySelector(".hm--title").classList.remove("op0");
@@ -579,10 +582,6 @@ const nuClicker = (e) => {
       document.querySelector(".homeNavShell").classList.toggle("toggle");
       document.querySelector(".sky").classList.toggle("toggle");
       waver();
-      break;
-
-    case "cta":
-      nuClicker("m--contact");
       break;
 
     case "m--contact":

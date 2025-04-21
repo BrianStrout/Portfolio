@@ -1,6 +1,36 @@
 import { marketingContent } from "./marketingContent";
 
-// const sectionHeader = document.getElementById("msHeader");
+const cardPhysics = [
+  `left: 35%;
+transform: scale(1);
+filter: blur(0px);
+z-index: 80;
+`,
+  `left: calc(100% - 24vw);
+transform: scale(.6);
+filter: blur(4px);
+z-index: 70;
+`,
+  `left: 55.5%;
+transform: scale(.3);
+filter: blur(6px);
+z-index: 50;
+`,
+  `left: 10%;
+transform: scale(.3);
+filter: blur(6px);
+z-index: 50;
+`,
+  `
+left: 0%;
+transform: scale(.6);
+filter: blur(4px);
+z-index: 70;
+`,
+];
+
+const cardsId = ["mc1", "mc2", "mc3", "mc4", "mc5"];
+
 const sectionParagraph = document.getElementById("msParagraph");
 const iconsToSort = document.querySelector(".ms__icons");
 let msSlide = 0;
@@ -19,15 +49,12 @@ if (isMobile()) {
 }
 
 const iconRiser = (icon) => {
-  // console.log(icon);
-  // console.log(iconsToSort);
   if (iconsToSort.querySelector(".risen")) {
-    // console.log("Something should be u[");
     risen = iconsToSort.querySelector(".risen");
     console.log(risen, "should be risen var");
     risen.classList.remove("risen");
   }
-  // console.log("yreasting on", document.querySelector(`#${icon}`));
+
   document.querySelector(`#${icon}`).classList.add("risen");
 };
 
@@ -57,16 +84,25 @@ const arrowUpdater = (number) => {
   rightA.style.backgroundImage = `url(/${marketingContent[rightNumber].image})`;
 };
 
+const moveCards = (cards) => {
+  console.log("moving", cards);
+
+  cards.forEach((card, index) => {
+    console.log(card, index);
+    console.log(`${cardPhysics[index]}`);
+
+    document.getElementById(`${card}`).style = `${cardPhysics[index]}`;
+  });
+};
+
 const updateContent = (click) => {
-  // determine mobile or not
-
-  // computer time
-
   if (click === "left") {
     msSlide--;
     if (msSlide < 0) {
       msSlide = marketingContent.length - 1;
     }
+    let last = cardsId.pop();
+    cardsId.unshift(last);
   }
 
   if (click === "right") {
@@ -74,22 +110,13 @@ const updateContent = (click) => {
     if (msSlide === marketingContent.length) {
       msSlide = 0;
     }
+    let first = cardsId.shift();
+    cardsId.push(first);
   }
-  // sectionHeader.textContent = marketingContent[msSlide].header;
-  sectionParagraph.innerHTML = marketingContent[msSlide].description;
-
-  console.log("suite?", document.querySelector(".suite"));
-
-  console.log(marketingContent[msSlide].image);
-
-  document.querySelector(
-    ".suite"
-  ).style = `background-image: url(" ${marketingContent[msSlide].image}")`;
 
   iconRiser(marketingContent[msSlide].slug);
   arrowUpdater(msSlide);
-
-  // mobile time
+  moveCards(cardsId);
 };
 
 const marketingController = (target) => {

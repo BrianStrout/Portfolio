@@ -73,7 +73,7 @@
 
 #sc__websites {
   scroll-snap-type: y proximity;
-  padding: 0;
+  // padding: 0;
 }
 
 #gridHeader {
@@ -82,12 +82,15 @@
 
 #websiteGridPresentation {
   position: relative;
-
   width: 100vw;
   height: 500vh;
-  // background-image: url("../components/images/c4.webp");
-  background-size: 10%;
-  // background-repeat: ;
+  background: linear-gradient(
+    to bottom,
+    rgb(5, 255, 255) 0%,
+    rgb(5, 255, 255) 35%,
+    #19465b33 100%
+  );
+  transform: translateX(-10vw);
 
   .web__grid--left {
     // background-color: darkred;
@@ -133,6 +136,7 @@
   h3 {
     border-bottom: 3px solid black;
     // margin-bottom: 16px;
+    background-image: url("../components/images/c4.webp");
   }
   p {
     margin-top: 12px;

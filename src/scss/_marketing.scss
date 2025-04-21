@@ -17,6 +17,10 @@
   }
 }
 
+#sc__marketing {
+  padding-top: 0px;
+}
+
 .marketing--presenter {
   position: relative;
   width: 85%;
@@ -189,40 +193,6 @@
     text-decoration: underline;
     font-size: 1.5rem;
   }
-  //   Ul {
-  //     margin-top: 1rem;
-  //     padding: 0.5rem;
-  //     width: 560px;
-  //     li {
-  //       //   background-color: black;
-  //       color: white;
-  //     //   text-decoration-color: pink;
-  //       font-family: "Poppins", sans-serif;
-
-  //       position: relative;
-  //       margin: 10px;
-  //       background-color: rgba(0, 0, 0, 0.619);
-  //       .hi {
-  //         // &::before {
-  //         //   /* Highlight color */
-  //         //   //   background-color: #46b96c;
-
-  //         //   content: "";
-  //         //   position: absolute;
-  //         //   width: calc(100% + 4px);
-  //         //   height: 60%;
-  //         //   left: -2px;
-  //         //   bottom: 0;
-  //         //   z-index: 0;
-  //         //   transform: rotate(-2deg);
-  //         //   border: 3px solid black;
-  //         // }
-  //       }
-  //     }
-  //     background-image: url("src/components/images/mark/marketing3.jpeg");
-  //     background-size: cover;
-  //     // aspect-ratio: 1/1;
-  //   }
 
   .marketing--show-box {
     position: relative;
@@ -383,44 +353,67 @@
 }
 
 #marketingChurch {
+  pointer-events: none;
+  // background-color: purple;
+  position: absolute;
+  z-index: 10;
   aspect-ratio: 1/1;
-  width: 33%;
-  // height: 50vh;
-  max-height: 900px;
-  // background-color: darkgreen;
-  background-image: url("/src/components/images/marketing\ stained\ glass.png");
-  background-size: contain;
+  width: 80%;
+  height: 90vh;
+  background-size: 50%;
   background-repeat: no-repeat;
   background-position: center top;
-  flex-direction: column;
-  // justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  h2 {
+    width: 40%;
+    text-align: left;
+    // background-color: firebrick;
+    display: inline-block;
+  }
 }
+.marketing__quick {
+  width: 30%;
+
+  // margin: 2.5vh 10vw;
+  margin-left: auto;
+  // background-color: blue;
+  display: inline-block;
+  text-align: right;
+}
+#computerMarketingServices {
+  display: none;
+}
+.marketing__mobileCard {
+  width: 40%;
+}
+
 #msParagraph {
   padding: 0 7%;
 }
-
+.arrowLeft,
+.arrowRight {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  z-index: 90;
+  background-image: url("/src/components/images/marketingicons/implement.webp");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.arrowRight {
+  left: unset;
+  right: 15%;
+  background-image: url("/src/components/images/marketingicons/strategy.webp");
+}
 .services__description {
   width: 100%;
 
   padding: 20px;
-  .arrowLeft,
-  .arrowRight {
-    width: 75px;
-    height: 75px;
-    // border: 1px solid black;
-    position: absolute;
-    top: 40%;
-    left: 0;
-    background-image: url("/src/components/images/marketingicons/implement.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  .arrowRight {
-    left: unset;
-    right: 0;
-    background-image: url("/src/components/images/marketingicons/strategy.png");
-  }
 }
 
 .absocrown {
@@ -430,15 +423,14 @@
 
 #marketingSkillUL {
   position: absolute;
-  bottom: 10%;
-  left: 0;
-  width: 100%;
+  bottom: 4%;
+  left: 25%;
+  width: 50%;
   height: 100px;
   margin: auto;
   display: flex;
   justify-content: space-evenly;
   transform: translateX(-50px);
-  // background-color: cornflowerblue;
 
   li {
     position: absolute;
@@ -466,6 +458,7 @@
     }
   }
   .ms__icons {
+    display: none;
     position: absolute;
     left: 0;
     width: 100%;
@@ -478,7 +471,7 @@
       width: 150px;
       aspect-ratio: 1/1;
       opacity: 0;
-      background-size: contain;
+      background-size: 80%;
       background-position: center;
       background-repeat: no-repeat;
       transition: all 0.5s ease-out;
@@ -489,28 +482,51 @@
       &.risen {
         bottom: 120%;
         opacity: 1;
+        background-color: #ffffffbd;
+        border-radius: 50%;
+        background-size: 80%;
       }
     }
   }
 }
 .authicon {
-  background-image: url("/src/components/images/marketingicons/authorize.png");
+  background-image: url("/src/components/images/marketingicons/authorize.webp");
 }
 .straticon {
-  background-image: url("/src/components/images/marketingicons/strategy.png");
+  background-image: url("/src/components/images/marketingicons/strategy.webp");
 }
 .implicon {
-  background-image: url("/src/components/images/marketingicons/implement.png");
+  background-image: url("/src/components/images/marketingicons/implement.webp");
 }
 .auditicon {
-  background-image: url("/src/components/images/marketingicons/assess.png");
+  background-image: url("/src/components/images/marketingicons/assess.webp");
 }
 .optiicon {
-  background-image: url("/src/components/images/marketingicons/optimize.png");
+  background-image: url("/src/components/images/marketingicons/optimize.webp");
+}
+
+#deckOfMarketingCards {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 #mobileMarketingServices {
-  display: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.marketing__mobileCard {
+  position: absolute;
+  top: 12vh;
+  left: 35%;
+  width: 30vw;
+  aspect-ratio: 3/ 4.5;
+  max-height: 62vh;
+  max-width: 42vh;
+  transition: all 0.6s ease-in-out;
 }
 
 @keyframes skillCrown {
@@ -527,20 +543,7 @@
     transform: rotateY(-72deg) scale(0.84);
     left: 10%;
     opacity: 92%;
-    // animation-timing-function: ease-in;
   }
-
-  // 5% {
-  //   transform: rotateY(-54deg) scale(0.88);
-  //   left: 20%;
-  //   opacity: 94%;
-  // }
-
-  // 5% {
-  //   transform: rotateY(-36deg) scale(0.92);
-  //   left: 30%;
-  //   opacity: 96%;
-  // }
 
   25% {
     left: 50%;
@@ -568,7 +571,6 @@
   }
   100% {
     left: 0%;
-
     transform: rotateY(270deg) scale(0.8);
     opacity: 90%;
   }
@@ -598,50 +600,44 @@
   width: calc(100% - 8px);
   height: calc(100% - 8px);
   display: grid;
-
   grid-template-areas:
     "icon title"
     "text text";
   grid-template-columns: 120px auto;
-
+  grid-template-rows: 130px auto;
   padding: 20px;
   border-radius: 8px;
   background-color: var(--strco--tan);
   border: 2px solid var(--strco--drkblu);
-  // background-image: url("../components/images/marketing\ stained\ glass.png");
-  // background-position: center;
-  // background-size: cover;
   &.mobileAuditCard {
     .suite {
-      background-image: url("../components/images/marketingicons/assess.png");
+      background-image: url("../components/images/marketingicons/assess.webp");
     }
   }
   &.mobileStrategyCard {
     .suite {
-      background-image: url("../components/images/marketingicons/strategy.png");
+      background-image: url("../components/images/marketingicons/strategy.webp");
     }
   }
   &.mobileOptimizeCard {
     .suite {
-      background-image: url("../components/images/marketingicons/optimize.png");
+      background-image: url("../components/images/marketingicons/optimize.webp");
     }
   }
   &.mobileImplementCard {
     .suite {
-      background-image: url("../components/images/marketingicons/implement.png");
+      background-image: url("../components/images/marketingicons/implement.webp");
     }
   }
   &.mobileAuthorityCard {
     .suite {
-      background-image: url("../components/images/marketingicons/authorize.png");
+      background-image: url("../components/images/marketingicons/authorize.webp");
     }
   }
 
   .suite {
     grid-area: icon;
-    // background-color: pink;
     width: 100%;
-    // height: 100px;
     aspect-ratio: 1/1;
     margin: 0 auto;
     background-position: center;
@@ -653,33 +649,33 @@
 
   .header {
     grid-area: title;
-    // background-color: purple;
-    font-size: clamp(1.75rem, 0.5181rem + 4.763vw, 4.5rem);
+    font-size: clamp(1.75rem, 0.5181rem + 2.363vw, 4.5rem);
     font-weight: 600;
     text-align: left;
     font-style: underline;
     border-bottom: 3px solid var(--strco--drkblu);
     width: unset;
-    margin: none;
+    margin: 0;
     opacity: 0;
     animation: fadeLeft 0.75s ease-out 0.25s 1 forwards;
   }
   .description {
     grid-area: text;
-    // background-color: brown;
+    p {
+      font-size: clamp(1.5rem, 1.75vw, 4rem);
+    }
     ul {
       margin-left: 112px;
 
       li {
         position: relative;
-        font-size: clamp(1.5rem, 2.25vw, 4rem);
+        font-size: clamp(1.5rem, 1.65vw, 4rem);
         &:before {
           position: absolute;
           right: calc(100% + 6px);
           width: 80px;
           height: 80px;
-          // background-color: red;
-          background-image: url("../components/images/c3.png");
+          background-image: url("../components/images/c3.webp");
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center top;
@@ -688,6 +684,12 @@
       }
     }
   }
+}
+
+.hitsplitterflex {
+  // background-image: url("../components/images/marketing\ stained\ glass.webp");
+  background-position: center;
+  background-size: contain;
 }
 
 @media all and (max-width: 1023px) and (orientation: portrait) {
@@ -725,11 +727,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-  // .arrowLeft,
-  // .arrowRight {
-  //   top: 28%;
-  // }
-
   .hitsplitterflex {
     .right {
       width: 100%;
@@ -755,8 +752,6 @@
             width: 94%;
             height: 90%;
             top: unset;
-            // background: white;
-            // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
             transition: transform 0.2s ease-out;
             background-color: transparent;
 
@@ -922,32 +917,32 @@
     border-radius: 8px;
     background-color: var(--strco--tan);
     border: 2px solid var(--strco--drkblu);
-    // background-image: url("../components/images/marketing\ stained\ glass.png");
+    // background-image: url("../components/images/marketing\ stained\ glass.webp");
     // background-position: center;
     // background-size: cover;
     &.mobileAuditCard {
       .suite {
-        background-image: url("../components/images/marketingicons/assess.png");
+        background-image: url("../components/images/marketingicons/assess.webp");
       }
     }
     &.mobileStrategyCard {
       .suite {
-        background-image: url("../components/images/marketingicons/strategy.png");
+        background-image: url("../components/images/marketingicons/strategy.webp");
       }
     }
     &.mobileOptimizeCard {
       .suite {
-        background-image: url("../components/images/marketingicons/optimize.png");
+        background-image: url("../components/images/marketingicons/optimize.webp");
       }
     }
     &.mobileImplementCard {
       .suite {
-        background-image: url("../components/images/marketingicons/implement.png");
+        background-image: url("../components/images/marketingicons/implement.webp");
       }
     }
     &.mobileAuthorityCard {
       .suite {
-        background-image: url("../components/images/marketingicons/authorize.png");
+        background-image: url("../components/images/marketingicons/authorize.webp");
       }
     }
 
@@ -984,7 +979,7 @@
             width: 20px;
             height: 20px;
             // background-color: red;
-            background-image: url("../components/images/c3.png");
+            background-image: url("../components/images/c3.webp");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;

@@ -1,4 +1,3 @@
-// import { observeAnimation } from "./src/components/modules/observeAnimation.js";
 import { observeFadeUps } from "./src/components/modules/observeFadeUps.js";
 import { setupWebsiteGridScroll } from "./src/components/modules/websiteSidescroller.js";
 import { nuClicker } from "./src/components/modules/newSwitchBoard.js";
@@ -13,7 +12,8 @@ import {
   endTouch,
   deck,
 } from "./src/components/modules/marketingCardsSwiper.js";
-const inDEV = false;
+const inDEV = true;
+// console.log("is running with dumb erros for node");
 inDEV ? skipAnimation() : webSiteLaunch();
 
 function initMobile() {
@@ -30,6 +30,7 @@ if (initMobile) {
 
 document.addEventListener("click", (e, mobileView) => {
   nuClicker(e);
+  console.log("click");
 });
 const portLinkCode_Portfolio = document.getElementById("portgithub");
 const portLinkCode_Mash = document.getElementById("mashagithub");
@@ -118,14 +119,6 @@ function enableScroll() {
   window.removeEventListener("keydown", preventDefaultForScrollKeys, false);
 }
 
-// webprocesssmapping
-// const webProcesses = document.querySelectorAll(".web__process--presenter");
-// webProcesses.forEach((websection) => {
-//   observeAnimation.observe(websection);
-// });
-
-// observeAnimation.observe(document.getElementById("gridHeader"));
-
 const elementsToFadeIn = document.querySelectorAll(".fademe");
 elementsToFadeIn.forEach((fader) => {
   observeFadeUps.observe(fader);
@@ -133,28 +126,8 @@ elementsToFadeIn.forEach((fader) => {
 
 setupWebsiteGridScroll({
   elementId: "websiteGridPresentation",
-  onProgress: (progress) => {
-    // console.log("IMPOORTED Scroll progress:", progress);
-    // Trigger your own UI logic here based on scroll
-  },
+  onProgress: (progress) => {},
 });
-
-// marketing Cards Engageer
-
-// tl();
-
-// document.getElementById("sc__websites").addEventListener("scroll", (event) => {
-//   console.log("die");
-// });
-// document
-//   .getElementById("websiteGridPresentation")
-//   .addEventListener("scroll", (event) => {
-//     console.log("live");
-//   });
-
-// document.getElementById("wpp_concept").addEventListener("scroll", () => {
-//   console.log("die");
-// });
 
 const sideScroll = gsap.timeline({
   scrollTrigger: {
@@ -182,17 +155,6 @@ sideScroll
     },
     "a"
   );
-
-// const drawingProcess = gsap.timeline({
-//   scrollTrigger: {
-//     scroller: "#websiteGridPresentation",
-//     trigger: "#websiteVideo",
-//     markers: true,
-//     start: "10",
-//     end: "20",
-//     scrub: true,
-//   },
-// });
 
 const launchDragListener = () => {
   console.log("listening for drag");

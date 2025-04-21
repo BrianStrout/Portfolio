@@ -100,7 +100,7 @@ const links = Array.from(document.querySelectorAll(".nav--link"));
 
 const skipAnimation = () => {
   // Intersection Observer Launches
-  console.log("in development ksipping animation");
+  console.log("in development, skipping animation");
 
   skillSetPage.forEach((page) => {
     observeIntroToSkills.observe(page);
