@@ -32,6 +32,7 @@ const nuClicker = (e) => {
   console.log("new", e.target);
 
   if (e === "cta") {
+    console.log("is this working?");
     nuClicker("m--contact");
     return;
   }
