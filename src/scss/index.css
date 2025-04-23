@@ -1416,11 +1416,11 @@ p {
 }
 .footerCloud:nth-child(6) {
   left: 880px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(7) {
   left: 1060px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(8) {
   left: 1240px;
@@ -1428,7 +1428,7 @@ p {
 }
 .footerCloud:nth-child(9) {
   left: 1420px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(10) {
   left: 1600px;
@@ -3812,6 +3812,10 @@ canvas {
   }
 }
 @media only screen and (max-width: 768px) {
+  .arrowLeft,
+  .arrowRight {
+    display: none;
+  }
   .hitsplitterflex .right {
     width: 100%;
   }
@@ -3825,7 +3829,7 @@ canvas {
   }
   .hitsplitterflex .right #mobileMarketingServices #deckOfMarketingCards {
     position: relative;
-    top: unset;
+    top: 10dvh;
     width: 100%;
     height: 80vh; /* Adjust as needed */
   }
@@ -3834,6 +3838,7 @@ canvas {
     width: 94%;
     height: 90%;
     top: unset;
+    left: 0;
     transition: transform 0.2s ease-out;
     background-color: transparent;
   }
@@ -3897,17 +3902,28 @@ canvas {
     width: 100%;
     height: 100dvh;
     background-size: 100%;
-    z-index: 40;
-    opacity: 0.2;
+    z-index: 55;
+    opacity: 1;
     width: 100%;
     position: absolute;
-    top: 10dvh;
+    top: 0;
     left: 0;
     pointer-events: none;
+    padding-top: 2dvh;
+    padding-bottom: 10dvh;
+    flex-direction: column;
+  }
+  .hitsplitterflex #marketingChurch h2 {
+    width: 90%;
+  }
+  .hitsplitterflex #marketingChurch .marketing__quick {
+    margin: unset;
+    width: 100%;
+    text-align: center;
   }
   .hitsplitterflex #marketingChurch #marketingSkillUL {
     bottom: unset;
-    top: 10dvh;
+    top: 70dvh;
   }
   .hitsplitterflex .right {
     z-index: 45;

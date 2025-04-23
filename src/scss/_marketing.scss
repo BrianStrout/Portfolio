@@ -727,6 +727,13 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .arrowLeft,
+  .arrowRight {
+    display: none;
+  }
+
+  // .screen__card-container {
+  //   .screen__card &.front__and-center {
   .hitsplitterflex {
     .right {
       width: 100%;
@@ -741,7 +748,7 @@
 
         #deckOfMarketingCards {
           position: relative;
-          top: unset;
+          top: 10dvh;
           // display: block;
           width: 100%;
           height: 80vh; /* Adjust as needed */
@@ -752,6 +759,7 @@
             width: 94%;
             height: 90%;
             top: unset;
+            left: 0;
             transition: transform 0.2s ease-out;
             background-color: transparent;
 
@@ -776,7 +784,8 @@
       }
     }
   }
-
+  //   }
+  // }
   .computerMarketingServices {
     display: none;
   }
@@ -826,16 +835,31 @@
       // max-height: 280px;
       height: 100dvh;
       background-size: 100%;
-      z-index: 40;
-      opacity: 0.2;
+      z-index: 55;
+      opacity: 1;
       width: 100%;
       position: absolute;
-      top: 10dvh;
+      top: 0;
       left: 0;
       pointer-events: none;
+
+      padding-top: 2dvh;
+      padding-bottom: 10dvh;
+      flex-direction: column;
+
+      h2 {
+        width: 90%;
+      }
+
+      .marketing__quick {
+        margin: unset;
+        width: 100%;
+        text-align: center;
+      }
+
       #marketingSkillUL {
         bottom: unset;
-        top: 10dvh;
+        top: 70dvh;
       }
     }
 
