@@ -1416,7 +1416,7 @@ p {
 }
 .footerCloud:nth-child(6) {
   left: 880px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(7) {
   left: 1060px;
@@ -1424,7 +1424,7 @@ p {
 }
 .footerCloud:nth-child(8) {
   left: 1240px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(9) {
   left: 1420px;
@@ -1432,7 +1432,7 @@ p {
 }
 .footerCloud:nth-child(10) {
   left: 1600px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
 @keyframes cloudbob {
@@ -3090,6 +3090,7 @@ canvas {
     width: 100vw;
     scroll-snap-type: proximity;
     padding: 0px !important;
+    transform: none;
   }
   #websiteGridPresentation .web__grid--left {
     top: 0;
