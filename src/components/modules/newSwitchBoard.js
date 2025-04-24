@@ -31,11 +31,10 @@ const waver = () => {
 const nuClicker = (e) => {
   console.log("new", e.target);
 
-  if (e === "cta") {
-    console.log("is this working?");
-    nuClicker("m--contact");
-    return;
-  }
+  // if (e.target.id === "cta") {
+
+  //   return;
+  // }
 
   if (e === "intro") {
     // document.querySelector(".hm--title").classList.remove("op0");
@@ -68,7 +67,10 @@ const nuClicker = (e) => {
     marketingController(e.target);
   }
 
-  if (e.target.classList.contains("nav--link")) {
+  if (
+    e.target.classList.contains("nav--link") ||
+    e.target.classList.contains("cta")
+  ) {
     console.log("NAV LINK NUMETAL!");
 
     scrollTo(0, 0);
@@ -606,17 +608,28 @@ const nuClicker = (e) => {
       document.querySelector(".sky").classList.toggle("toggle");
       waver();
       break;
-    // case "cta":
-    //   pullFocus = document.querySelector("#sc__contact");
-    //   pullFocus.classList.remove("blur");
-    //   pullFocus.classList.add("front__and-center");
-    //   pullFocus.scrollTo({ top: 0, left: 0, behavior: "instant" });
-    //   pullFocus.childNodes.forEach((child) => {
-    //     if (child.tagName && child.tagName === "DIV") {
-    //       child.classList.add("hit");
-    //     }
-    //   });
-    //   break;
+
+    case "cta":
+      pullFocus = document.querySelector("#sc__contact");
+      pullFocus.classList.remove("blur");
+      pullFocus.classList.add("front__and-center");
+      pullFocus.scrollTo({ top: 0, left: 0, behavior: "instant" });
+      pullFocus.childNodes.forEach((child) => {
+        if (child.tagName && child.tagName === "DIV") {
+          child.classList.add("hit");
+        }
+      });
+
+      setTimeout(() => {
+        document.querySelectorAll(".transition--cover").forEach((transComp) => {
+          transComp.classList.remove("transition--cover");
+        });
+      }, 250);
+      document.getElementById("mobileToggle").classList.toggle("toggle");
+      document.querySelector(".homeNavShell").classList.toggle("toggle");
+      document.querySelector(".sky").classList.toggle("toggle");
+      waver();
+      break;
   }
 
   if (e.target.classList.contains("marketing__mobileCard")) {

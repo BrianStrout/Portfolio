@@ -1201,6 +1201,7 @@ p {
   border-radius: 5px;
   font-family: var(--letter-font);
   font-size: 1.7rem;
+  color: black;
 }
 .cta:hover {
   scale: 1.1;
@@ -1247,6 +1248,7 @@ p {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center top;
+  color: black;
 }
 
 .nav--link {
@@ -1404,23 +1406,23 @@ p {
 }
 .footerCloud:nth-child(3) {
   left: 340px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(4) {
   left: 520px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(5) {
   left: 700px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(6) {
   left: 880px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(7) {
   left: 1060px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(8) {
   left: 1240px;
@@ -1428,11 +1430,11 @@ p {
 }
 .footerCloud:nth-child(9) {
   left: 1420px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(10) {
   left: 1600px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 
 @keyframes cloudbob {
