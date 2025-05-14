@@ -98,7 +98,6 @@ const nuClicker = (e) => {
   switch (e.target.id) {
     case "mobileToggle":
       homeWrap.scrollIntoView({ behavior: "smooth" });
-
       document.getElementById("mobileToggle").classList.toggle("toggle");
       document.querySelector(".homeNavShell").classList.toggle("toggle");
       document.querySelector(".sky").classList.toggle("toggle");
@@ -114,6 +113,9 @@ const nuClicker = (e) => {
 
     case "rotary":
       window.open("https://www.youtube.com/watch?v=RNCwRMOqxVs", "_blank");
+      break;
+    case "thisisbrian":
+      window.open("https://www.youtube.com/watch?v=5khekERvC1c", "_blank");
       break;
     case "ghost":
       window.open("https://www.youtube.com/watch?v=l_2cQxfxDrs", "_blank");

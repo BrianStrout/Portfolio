@@ -213,7 +213,7 @@ const webSiteLaunch = () => {
     }, 4500);
     setTimeout(() => {
       // castle.classList.add("grow");
-
+      document.getElementById("nav--menu").classList.add("introd");
       links.forEach((link) => {
         link.classList.add("introd");
       });
