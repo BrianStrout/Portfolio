@@ -955,6 +955,14 @@ p {
     transform: translateY(0px);
   }
 }
+@media only screen and (max-width: 1300px) {
+  #nav--link {
+    gap: 0;
+  }
+  .nav--link {
+    font-size: 1.4rem;
+  }
+}
 @media only screen and (max-width: 768px) {
   #nav--menu {
     padding-left: 10px;
@@ -1607,15 +1615,15 @@ p {
 }
 .footerCloud:nth-child(1) {
   left: -20px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(2) {
   left: 160px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(3) {
   left: 340px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(4) {
   left: 520px;
@@ -1623,7 +1631,7 @@ p {
 }
 .footerCloud:nth-child(5) {
   left: 700px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(6) {
   left: 880px;
@@ -1631,11 +1639,11 @@ p {
 }
 .footerCloud:nth-child(7) {
   left: 1060px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(8) {
   left: 1240px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(9) {
   left: 1420px;

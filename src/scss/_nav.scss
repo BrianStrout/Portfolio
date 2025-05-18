@@ -99,9 +99,6 @@
     .nav--clouddrops {
       opacity: 1;
     }
-    // .shy__balloon {
-    //   transform: translateY(-150%);
-    // }
   }
 }
 
@@ -111,6 +108,15 @@
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  #nav--link {
+    gap: 0;
+  }
+  .nav--link {
+    font-size: 1.4rem;
   }
 }
 
