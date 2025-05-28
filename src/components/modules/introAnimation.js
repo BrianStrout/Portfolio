@@ -26,10 +26,10 @@ let currentPos = 0;
 let images = [f1, f2, f1, f6, f3, f4, f3, f4, f1, f3, f4, f3, f6, f1, f2];
 let images2 = [b1, b2, b3, b2];
 
-function volgendefoto() {
+const volgendefoto = () => {
   if (++currentPos >= images.length) currentPos = 0;
   image.src = images[currentPos];
-}
+};
 let brianSecondPage = document.getElementById("brianSecondPage");
 let brianSecondPageBox = document.getElementById("brianSecondPageBox");
 const switchFree = document.getElementById("switchFree");
@@ -210,7 +210,7 @@ const webSiteLaunch = () => {
 
       nuClicker("andgo");
       lazyLoader();
-      setInterval(volgendefoto, 0);
+      clearInterval(volgendefoto);
     }, 6500);
   };
 };
