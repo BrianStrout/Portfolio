@@ -31,29 +31,4 @@ const observeEnterringMovieTheater = new IntersectionObserver(
   //   }
 );
 
-// const observeEnterringMovieTheater = new IntersectionObserver(
-//   (entries) => {
-//     entries.forEach((entry) => {
-
-// Only animate between 40% and 90% visible
-//   if (ratio < 0.4 || ratio > 0.9) return;
-
-//   // Normalize to a 0–1 scale
-//   const progress = (ratio - 0.4) / (0.9 - 0.4);
-
-//   const leftCurtain = entry.target.querySelector("#leftCurtain");
-//   const rightCurtain = entry.target.querySelector("#rightCurtain");
-
-//   if (leftCurtain && rightCurtain) {
-//     // Animate in sync: 40% → 90%
-//     const offset = 40 + 50 * progress;
-//     leftCurtain.style.right = `${offset}%`;
-//     rightCurtain.style.left = `${offset}%`;
-//   }
-//     });
-//   },
-//   {
-
-// );
-
 export { observeEnterringMovieTheater };

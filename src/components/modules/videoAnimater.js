@@ -5,7 +5,8 @@ let inViewFrame = { frame: 0 };
 const context = canvas.getContext("2d");
 const frameCount = 80;
 const aniimages = [];
-const currentFrame = (index) => `/src/components/images/animation/${index}.png`;
+const currentFrame = (index) =>
+  `/src/components/images/animation/${index}.webp`;
 
 const populateAnimationSlidesforWebPresentation = () => {
   console.log(

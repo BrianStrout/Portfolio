@@ -4,7 +4,7 @@ import { observeIntroToSkills } from "./observeIntroToSkills.js";
 import { observeIntroToMarketing } from "./observeMarketingPopUp.js";
 import { observeAnimation } from "./observeAnimation.js";
 import { observeFadeUps } from "./observeFadeUps.js";
-import { clicker } from "./freelanceSwitcher.js";
+// import { clicker } from "./freelanceSwitcher.js";
 import { nuClicker } from "./newSwitchBoard.js";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -219,7 +219,7 @@ const skipAnimation = () => {
       });
       document.getElementById("mobileToggle").classList.remove("offset--right");
 
-      clicker("intro");
+      nuClicker("intro");
     }, 0);
   };
 };
