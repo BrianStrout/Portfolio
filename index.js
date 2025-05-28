@@ -12,7 +12,7 @@ import {
   endTouch,
   deck,
 } from "./src/components/modules/marketingCardsSwiper.js";
-// import { observeEnterringMovieTheater } from "./src/components/modules/observeEnterringMovieTheater.js";
+import { observeEnterringMovieTheater } from "./src/components/modules/observeEnterringMovieTheater.js";
 
 const inDEV = false;
 // console.log("is running with dumb erros for node");
@@ -127,9 +127,9 @@ elementsToFadeIn.forEach((fader) => {
   observeFadeUps.observe(fader);
 });
 
-// const movieTheater = document.querySelector("#movieTheater");
+const movieTheater = document.querySelector("#movieTheater");
 
-// observeEnterringMovieTheater.observe(movieTheater);
+observeEnterringMovieTheater.observe(movieTheater);
 
 setupWebsiteGridScroll({
   elementId: "websiteGridPresentation",
