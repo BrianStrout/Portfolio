@@ -204,7 +204,7 @@ const webSiteLaunch = () => {
 
     setTimeout(() => {
       fallingSecond.classList.add("toEarth");
-    }, 4500);
+    }, 1500);
     setTimeout(() => {
       // castle.classList.add("grow");
       document.getElementById("nav--menu").classList.add("introd");
@@ -219,7 +219,7 @@ const webSiteLaunch = () => {
       lazyLoader();
       // console.log(brianFallingAnimation);
       clearInterval(brianFallingAnimation);
-    }, 6500);
+    }, 2500);
   };
 };
 
