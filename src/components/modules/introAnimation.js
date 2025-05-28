@@ -26,10 +26,10 @@ let currentPos = 0;
 let images = [f1, f2, f1, f6, f3, f4, f3, f4, f1, f3, f4, f3, f6, f1, f2];
 let images2 = [b1, b2, b3, b2];
 
-const volgendefoto = () => {
-  if (++currentPos >= images.length) currentPos = 0;
-  image.src = images[currentPos];
-};
+// const intervalSwitch = setInterval(() => {
+//   brianFallingAnimation;
+// }, 200);
+
 let brianSecondPage = document.getElementById("brianSecondPage");
 let brianSecondPageBox = document.getElementById("brianSecondPageBox");
 const switchFree = document.getElementById("switchFree");
@@ -130,8 +130,15 @@ const webSiteLaunch = () => {
     });
   };
 
+  const brianFallingAnimation = setInterval(() => {
+    // console.log(time);
+    if (++currentPos >= images.length) currentPos = 0;
+    image.src = images[currentPos];
+  }, 200);
+
   const cueBrian = () => {
-    setInterval(volgendefoto, 200);
+    console.log("cue?");
+    // brianFallingAnimation;
     fallingShell.classList.add("falling");
 
     setTimeout(() => {
@@ -210,7 +217,8 @@ const webSiteLaunch = () => {
 
       nuClicker("andgo");
       lazyLoader();
-      clearInterval(volgendefoto);
+      // console.log(brianFallingAnimation);
+      clearInterval(brianFallingAnimation);
     }, 6500);
   };
 };
