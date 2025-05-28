@@ -22,7 +22,6 @@ function initMobile() {
   return window.innerWidth <= 768; // Adjust breakpoint as needed
 }
 let mobileView = initMobile();
-
 if (initMobile) {
   console.log("index has registered mobile we be launching listeners");
   deck.addEventListener("touchstart", startTouch);
@@ -81,12 +80,12 @@ var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
 function preventDefault(e) {
   e.preventDefault();
 }
-function preventDefaultForScrollKeys(e) {
-  if (keys[e.keyCode]) {
-    preventDefault(e);
-    return false;
-  }
-}
+// function preventDefaultForScrollKeys(e) {
+//   if (keys[e.keyCode]) {
+//     preventDefault(e);
+//     return false;
+//   }
+// }
 // modern Chrome requires { passive: false } when adding event
 var supportsPassive = false;
 try {
@@ -101,25 +100,25 @@ try {
   );
 } catch (e) {}
 
-var wheelOpt = supportsPassive ? { passive: false } : false;
-var wheelEvent =
-  "onwheel" in document.createElement("div") ? "wheel" : "mousewheel";
+// var wheelOpt = supportsPassive ? { passive: false } : false;
+// var wheelEvent =
+//   "onwheel" in document.createElement("div") ? "wheel" : "mousewheel";
 
 // call this to Disable
-function disableScroll() {
-  window.addEventListener("DOMMouseScroll", preventDefault, false); // older FF
-  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-  window.addEventListener("touchmove", preventDefault, wheelOpt); // mobile
-  window.addEventListener("keydown", preventDefaultForScrollKeys, false);
-}
+// function disableScroll() {
+//   window.addEventListener("DOMMouseScroll", preventDefault, false); // older FF
+//   window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+//   window.addEventListener("touchmove", preventDefault, wheelOpt); // mobile
+//   window.addEventListener("keydown", preventDefaultForScrollKeys, false);
+// }
 
 // call this to Enable
-function enableScroll() {
-  window.removeEventListener("DOMMouseScroll", preventDefault, false);
-  window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
-  window.removeEventListener("touchmove", preventDefault, wheelOpt);
-  window.removeEventListener("keydown", preventDefaultForScrollKeys, false);
-}
+// function enableScroll() {
+//   window.removeEventListener("DOMMouseScroll", preventDefault, false);
+//   window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
+//   window.removeEventListener("touchmove", preventDefault, wheelOpt);
+//   window.removeEventListener("keydown", preventDefaultForScrollKeys, false);
+// }
 
 const elementsToFadeIn = document.querySelectorAll(".fademe");
 elementsToFadeIn.forEach((fader) => {
@@ -127,9 +126,7 @@ elementsToFadeIn.forEach((fader) => {
 });
 
 const movieTheater = document.querySelector("#movieTheater");
-// movieTheater.forEach((theater) => {
-//   observeEnterringMovieTheater(theater);
-// });
+
 observeEnterringMovieTheater.observe(movieTheater);
 
 setupWebsiteGridScroll({
@@ -164,9 +161,9 @@ sideScroll
     "a"
   );
 
-const launchDragListener = () => {
-  console.log("listening for drag");
-  deck.addEventListener("touchstart", cardSwiper(e, startTouch));
-  deck.addEventListener("touchmove", cardSwiper(e, moveTouch));
-  deck.addEventListener("touchend", cardSwiper(e, endTouch));
-};
+// const launchDragListener = () => {
+//   console.log("listening for drag");
+//   deck.addEventListener("touchstart", cardSwiper(e, startTouch));
+//   deck.addEventListener("touchmove", cardSwiper(e, moveTouch));
+//   deck.addEventListener("touchend", cardSwiper(e, endTouch));
+// };
