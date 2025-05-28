@@ -91,9 +91,7 @@ const linkToGmail = document.getElementById("copy-gmail");
 const linkToLinkedIn = document.getElementById("brianlinkedin");
 const linkToGitHub = document.getElementById("briangithub");
 const resumeLink = document.getElementById("resume-link");
-
 const frames = document.querySelectorAll("iframe");
-
 const secondBrian = document.getElementById("fallingSecond");
 const castle = document.getElementById("castle");
 const introsOnScreen = document.querySelectorAll("#introToServices");
@@ -102,16 +100,15 @@ const links = Array.from(document.querySelectorAll(".nav--link"));
 const webSiteLaunch = () => {
   // Intersection Observer Launches
 
-  skillSetPage.forEach((page) => {
-    observeIntroToSkills.observe(page);
-  });
+  // skillSetPage.forEach((page) => {
+  //   observeIntroToSkills.observe(page);
+  // });
 
-  introsOnScreen.forEach((intro) => {
-    observeIntroToServices.observe(intro);
-  });
-  observeIntroToMarketing;
+  // introsOnScreen.forEach((intro) => {
+  //   observeIntroToServices.observe(intro);
+  // });
+  // observeIntroToMarketing;
 
-  setInterval(volgendefoto, 200);
   const body = document.body;
 
   window.addEventListener("onbeforeload", () => {
@@ -134,6 +131,7 @@ const webSiteLaunch = () => {
   };
 
   const cueBrian = () => {
+    setInterval(volgendefoto, 200);
     fallingShell.classList.add("falling");
 
     setTimeout(() => {
@@ -170,12 +168,7 @@ const webSiteLaunch = () => {
     }, 7500);
   });
 
-  firstN.addEventListener("transitionend", function () {
-    // console.log("brian here");
-  });
-
   const clearOut = () => {
-    // console.log("clearing?");
     hiBox.classList.add("up-and-out");
     iamBox.classList.add("up-and-out");
     brian.classList.add("up-and-out");
@@ -197,15 +190,9 @@ const webSiteLaunch = () => {
       });
     }, 2500);
 
-    // setTimeout(() => {
-    //   remainder.classList.remove("unseen");
-    // }, 6000);
-
     setTimeout(() => {
       homeWrap.scrollIntoView({ behavior: "smooth" });
       document.getElementById("wrapperTop").style = "height: 0vh";
-
-      // disableScroll();
     }, 2800);
 
     setTimeout(() => {
@@ -223,6 +210,7 @@ const webSiteLaunch = () => {
 
       nuClicker("andgo");
       lazyLoader();
+      setInterval(volgendefoto, 0);
     }, 6500);
   };
 };

@@ -12,7 +12,7 @@ import {
   endTouch,
   deck,
 } from "./src/components/modules/marketingCardsSwiper.js";
-import { observeEnterringMovieTheater } from "./src/components/modules/observeEnterringMovieTheater.js";
+// import { observeEnterringMovieTheater } from "./src/components/modules/observeEnterringMovieTheater.js";
 
 const inDEV = false;
 // console.log("is running with dumb erros for node");
@@ -76,17 +76,19 @@ const followingLink = (dest) => {
   window.open(`https://${dest}`, "_blank");
 };
 
-var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
-function preventDefault(e) {
-  e.preventDefault();
-}
+// var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
+// function preventDefault(e) {
+//   e.preventDefault();
+// }
 // function preventDefaultForScrollKeys(e) {
 //   if (keys[e.keyCode]) {
 //     preventDefault(e);
 //     return false;
 //   }
 // }
+
 // modern Chrome requires { passive: false } when adding event
+
 var supportsPassive = false;
 try {
   window.addEventListener(
@@ -125,9 +127,9 @@ elementsToFadeIn.forEach((fader) => {
   observeFadeUps.observe(fader);
 });
 
-const movieTheater = document.querySelector("#movieTheater");
+// const movieTheater = document.querySelector("#movieTheater");
 
-observeEnterringMovieTheater.observe(movieTheater);
+// observeEnterringMovieTheater.observe(movieTheater);
 
 setupWebsiteGridScroll({
   elementId: "websiteGridPresentation",
