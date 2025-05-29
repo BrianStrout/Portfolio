@@ -810,7 +810,6 @@ p {
   gap: 1.5rem;
   width: 100%;
   padding-right: 2rem;
-  background-image: url("../components/images/clouds/cloudbanner.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center top;
@@ -1610,7 +1609,7 @@ p {
 }
 .footerCloud:nth-child(2) {
   left: 160px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(3) {
   left: 340px;
@@ -1618,7 +1617,7 @@ p {
 }
 .footerCloud:nth-child(4) {
   left: 520px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(5) {
   left: 700px;
@@ -1626,19 +1625,19 @@ p {
 }
 .footerCloud:nth-child(6) {
   left: 880px;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 .footerCloud:nth-child(7) {
   left: 1060px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(8) {
   left: 1240px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(9) {
   left: 1420px;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .footerCloud:nth-child(10) {
   left: 1600px;
@@ -4332,13 +4331,9 @@ body {
   height: 100vh;
   pointer-events: none;
 }
-
-.clouds-movement-foreground > img {
+.cloudsForward img {
   width: 200px;
-  animation: cloudsInBack;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation: cloudsInBack 2s linear infinite;
 }
 
 .cloudsBackwards {
@@ -4350,6 +4345,8 @@ body {
 }
 
 .cloudsBackwards > img {
+  opacity: 50%;
+  animation: cloudsInBack;
   animation-duration: 6s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -4467,6 +4464,7 @@ body {
 
 .sun,
 .moon {
+  pointer-events: none;
   position: absolute;
   transform-origin: bottom;
   transform: rotate(360deg);

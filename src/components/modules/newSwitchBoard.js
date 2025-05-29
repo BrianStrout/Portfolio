@@ -3,6 +3,9 @@ let pullFocusDeets;
 import { validator } from "./formValidation";
 import { marketingController } from "./marketingArrows";
 // import { cardSwiper } from "./marketingCardsSwiper";
+const moodRing = document.getElementById("moodring");
+const sun = document.getElementById("sun");
+const moon = document.getElementById("moon");
 
 let waving = false;
 
@@ -96,6 +99,12 @@ const nuClicker = (e) => {
   }
 
   switch (e.target.id) {
+    case "moodring":
+      wrapper.classList.toggle("dark");
+      sun.classList.toggle("sunset");
+      moon.classList.toggle("sunset");
+      break;
+
     case "mobileToggle":
       homeWrap.scrollIntoView({ behavior: "smooth" });
       document.getElementById("mobileToggle").classList.toggle("toggle");

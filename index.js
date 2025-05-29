@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 import { webSiteLaunch } from "./src/components/modules/introAnimation.js";
-import { skipAnimation } from "./src/components/modules/skipAnimation.js";
+// import { skipAnimation } from "./src/components/modules/skipAnimation.js";
 import {
   moveTouch,
   startTouch,
@@ -13,10 +13,11 @@ import {
   deck,
 } from "./src/components/modules/marketingCardsSwiper.js";
 import { observeEnterringMovieTheater } from "./src/components/modules/observeEnterringMovieTheater.js";
+webSiteLaunch();
 
 const inDEV = false;
 // console.log("is running with dumb erros for node");
-inDEV ? skipAnimation() : webSiteLaunch();
+// inDEV ? skipAnimation() : webSiteLaunch();
 
 function initMobile() {
   return window.innerWidth <= 768; // Adjust breakpoint as needed

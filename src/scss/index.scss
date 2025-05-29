@@ -110,14 +110,19 @@ body {
   width: 100vw;
   height: 100vh;
   pointer-events: none;
+  img {
+    width: 200px;
+    animation: cloudsInBack 2s linear infinite;
+  }
 }
 
 .clouds-movement-foreground > img {
-  width: 200px;
-  animation: cloudsInBack;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  // background-color: pink;
+  // width: 200px;
+  // animation: cloudsInBack;
+  // animation-duration: 2s;
+  // animation-timing-function: linear;
+  // animation-iteration-count: infinite;
 }
 
 .cloudsBackwards {
@@ -128,6 +133,8 @@ body {
   height: 100vh;
 }
 .cloudsBackwards > img {
+  opacity: 50%;
+  animation: cloudsInBack;
   animation-duration: 6s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -235,6 +242,7 @@ body {
 }
 .sun,
 .moon {
+  pointer-events: none;
   position: absolute;
   transform-origin: bottom;
   transform: rotate(360deg);
